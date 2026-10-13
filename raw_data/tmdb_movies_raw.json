@@ -1,0 +1,4342 @@
+[
+  {
+    "tmdb_id": 862,
+    "title": "Toy Story",
+    "popularity": 37.4993,
+    "overview": "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.",
+    "release_date": "1995-11-22",
+    "genres": [
+      "Family",
+      "Comedy",
+      "Animation",
+      "Adventure"
+    ],
+    "original_language": "en",
+    "vote_average": 7.989,
+    "vote_count": 20654
+  },
+  {
+    "tmdb_id": 8844,
+    "title": "Jumanji",
+    "popularity": 4.3275,
+    "overview": "When siblings Judy and Peter discover an enchanted board game that opens the door to a magical world, they unwittingly invite Alan -- an adult who's been trapped inside the game for 26 years -- into their living room. Alan's only hope for freedom is to finish the game, which proves risky as all three find themselves running from giant rhinoceroses, evil monkeys and other terrifying creatures.",
+    "release_date": "1995-12-15",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 7.249,
+    "vote_count": 11621
+  },
+  {
+    "tmdb_id": 15602,
+    "title": "Grumpier Old Men",
+    "popularity": 5.557,
+    "overview": "A family wedding reignites the ancient feud between next-door neighbors and fishing buddies John and Max. Meanwhile, a sultry Italian divorcée opens a restaurant at the local bait shop, alarming the locals who worry she'll scare the fish away. But she's less interested in seafood than she is in cooking up a hot time with Max.",
+    "release_date": "1995-12-22",
+    "genres": [
+      "Romance",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.468,
+    "vote_count": 447
+  },
+  {
+    "tmdb_id": 31357,
+    "title": "Waiting to Exhale",
+    "popularity": 4.6981,
+    "overview": "Cheated on, mistreated and stepped on, the women are holding their breath, waiting for the elusive \"good man\" to break a string of less-than-stellar lovers. Friends and confidants Vannah, Bernie, Glo and Robin talk it all out, determined to find a better way to breathe.",
+    "release_date": "1995-12-22",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.185,
+    "vote_count": 216
+  },
+  {
+    "tmdb_id": 11862,
+    "title": "Father of the Bride Part II",
+    "popularity": 6.1176,
+    "overview": "Just when George Banks has recovered from his daughter's wedding, he receives the news that she's pregnant ... and that George's wife is expecting too. He was planning on selling their home, but that's a plan that—like George—will have to change with the arrival of both a grandchild and a kid of his own.",
+    "release_date": "1995-12-08",
+    "genres": [
+      "Comedy",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 6.3,
+    "vote_count": 843
+  },
+  {
+    "tmdb_id": 949,
+    "title": "Heat",
+    "popularity": 23.0573,
+    "overview": "Obsessive master thief Neil McCauley leads a top-notch crew on various daring heists throughout Los Angeles while determined detective Vincent Hanna pursues him without rest. Each man recognizes and respects the ability and the dedication of the other even though they are aware their cat-and-mouse game may end in violence.",
+    "release_date": "1995-12-15",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Action"
+    ],
+    "original_language": "en",
+    "vote_average": 7.943,
+    "vote_count": 8778
+  },
+  {
+    "tmdb_id": 11860,
+    "title": "Sabrina",
+    "popularity": 5.5322,
+    "overview": "After her return from school in Paris, a playboy finally takes notice of his family's chauffeur's daughter Sabrina, who's long had a crush on him, but he questions his more serious brother's motives when he warns against getting involved with her.",
+    "release_date": "1995-12-15",
+    "genres": [
+      "Romance",
+      "Drama",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.206,
+    "vote_count": 717
+  },
+  {
+    "tmdb_id": 45325,
+    "title": "Tom and Huck",
+    "popularity": 3.6501,
+    "overview": "A mischievous young boy, Tom Sawyer, witnesses a murder by the deadly Injun Joe. Tom becomes friends with Huckleberry Finn, a boy with no future and no family. Tom has to choose between honoring a friendship or honoring an oath because the town alcoholic is accused of the murder. Tom and Huck go through several adventures trying to retrieve evidence.",
+    "release_date": "1995-12-22",
+    "genres": [
+      "Family",
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 5.308,
+    "vote_count": 221
+  },
+  {
+    "tmdb_id": 9091,
+    "title": "Sudden Death",
+    "popularity": 9.6468,
+    "overview": "When a man's daughter is suddenly taken during a championship hockey game – with the captors demanding a billion dollars by game's end – he frantically sets a plan in motion to rescue her and abort an impending explosion before the final buzzer.",
+    "release_date": "1995-10-27",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 6.05,
+    "vote_count": 854
+  },
+  {
+    "tmdb_id": 710,
+    "title": "GoldenEye",
+    "popularity": 13.8455,
+    "overview": "When a powerful secret defense system is stolen, James Bond is assigned to stop a Russian crime syndicate from using it.",
+    "release_date": "1995-11-16",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 6.902,
+    "vote_count": 4510
+  },
+  {
+    "tmdb_id": 9087,
+    "title": "The American President",
+    "popularity": 6.4307,
+    "overview": "Widowed U.S. president Andrew Shepherd, one of the world's most powerful men, can have anything he wants -- and what he covets most is Sydney Ellen Wade, a Washington lobbyist. But Shepherd's attempts at courting her spark wild rumors and decimate his approval ratings.",
+    "release_date": "1995-11-17",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.528,
+    "vote_count": 814
+  },
+  {
+    "tmdb_id": 12110,
+    "title": "Dracula: Dead and Loving It",
+    "popularity": 7.2737,
+    "overview": "When a lawyer shows up at the vampire's doorstep, he falls prey to his charms and joins him in his search for fresh blood. Enter Professor Van Helsing, who may be the only one able to vanquish the Count.",
+    "release_date": "1995-12-22",
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "original_language": "en",
+    "vote_average": 6.1,
+    "vote_count": 1156
+  },
+  {
+    "tmdb_id": 21032,
+    "title": "Balto",
+    "popularity": 5.3129,
+    "overview": "An outcast half-wolf risks his life to prevent a deadly epidemic from ravaging Nome, Alaska.",
+    "release_date": "1995-12-22",
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Drama",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 7.3,
+    "vote_count": 2266
+  },
+  {
+    "tmdb_id": 10858,
+    "title": "Nixon",
+    "popularity": 4.4862,
+    "overview": "A look at President Richard M. Nixon—a man carrying the fate of the world on his shoulders while battling the self-destructive demands from within—spanning his troubled boyhood in California to the shocking Watergate scandal that would end his Presidency.",
+    "release_date": "1995-12-22",
+    "genres": [
+      "Drama",
+      "History"
+    ],
+    "original_language": "en",
+    "vote_average": 6.817,
+    "vote_count": 415
+  },
+  {
+    "tmdb_id": 1408,
+    "title": "Cutthroat Island",
+    "popularity": 8.0227,
+    "overview": "Morgan Adams and her slave, William Shaw, are on a quest to recover the three portions of a treasure map. Unfortunately, the final portion is held by her murderous uncle, Dawg. Her crew is skeptical of her leadership abilities, so she must complete her quest before they mutiny against her. This is made yet more difficult by the efforts of the British crown to end her pirate raids.",
+    "release_date": "1995-12-22",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.803,
+    "vote_count": 652
+  },
+  {
+    "tmdb_id": 524,
+    "title": "Casino",
+    "popularity": 14.6851,
+    "overview": "In Las Vegas, two best friends--a casino executive and a Mafia enforcer--compete for a gambling empire and a fast-living, fast-loving socialite.",
+    "release_date": "1995-11-22",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 7.999,
+    "vote_count": 6794
+  },
+  {
+    "tmdb_id": 4584,
+    "title": "Sense and Sensibility",
+    "popularity": 14.2321,
+    "overview": "The Dashwood sisters, sensible Elinor and passionate Marianne, learn that their prospects of marriage seem doomed by their family's sudden loss of fortune. After Henry Dashwood dies unexpectedly, his estate must pass on by law to his son. These circumstances leave Mr. Dashwood's wife and daughters without a home and with barely enough money to live on. As Elinor and Marianne struggle to find romantic fulfillment in a society obsessed with financial and social status, they must learn to mix sense with sensibility in their dealings with both money and men.",
+    "release_date": "1995-12-13",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 7.4,
+    "vote_count": 1904
+  },
+  {
+    "tmdb_id": 5,
+    "title": "Four Rooms",
+    "popularity": 7.2003,
+    "overview": "It's Ted the Bellhop's first night on the job...and the hotel's very unusual guests are about to place him in some outrageous predicaments. It seems that this evening's room service is serving up one unbelievable happening after another.",
+    "release_date": "1995-12-09",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.919,
+    "vote_count": 2917
+  },
+  {
+    "tmdb_id": 9273,
+    "title": "Ace Ventura: When Nature Calls",
+    "popularity": 10.4934,
+    "overview": "Summoned from an ashram in Tibet, Ace finds himself on a perilous journey into the jungles of Africa to find Shikaka, the missing sacred animal of the friendly Wachati tribe. He must accomplish this before the wedding of the Wachati's Princess to the prince of the warrior Wachootoos. If Ace fails, the result will be a vicious tribal war.",
+    "release_date": "1995-11-10",
+    "genres": [
+      "Crime",
+      "Comedy",
+      "Adventure"
+    ],
+    "original_language": "en",
+    "vote_average": 6.346,
+    "vote_count": 4739
+  },
+  {
+    "tmdb_id": 11517,
+    "title": "Money Train",
+    "popularity": 9.7356,
+    "overview": "When a vengeful New York transit cop decides to steal a trainload of subway fares, his foster brother—a fellow cop—tries to protect him.",
+    "release_date": "1995-11-21",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 5.876,
+    "vote_count": 904
+  },
+  {
+    "tmdb_id": 8012,
+    "title": "Get Shorty",
+    "popularity": 6.8123,
+    "overview": "Chili Palmer is a Miami mobster who gets sent to L.A. to collect a bad debt from Harry Zimm, a Hollywood producer who specializes in cheesy horror films. When Chili meets Harry's leading lady, the romantic sparks fly. After pitching his own life story as a movie idea, Chili learns that being a mobster and being a Hollywood producer really aren't all that different.",
+    "release_date": "1995-10-20",
+    "genres": [
+      "Comedy",
+      "Thriller",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 6.506,
+    "vote_count": 1266
+  },
+  {
+    "tmdb_id": 1710,
+    "title": "Copycat",
+    "popularity": 6.1132,
+    "overview": "An agoraphobic psychologist and a female detective must work together to take down a serial killer who copies serial killers from the past.",
+    "release_date": "1995-10-27",
+    "genres": [
+      "Thriller",
+      "Crime",
+      "Mystery"
+    ],
+    "original_language": "en",
+    "vote_average": 6.5,
+    "vote_count": 1358
+  },
+  {
+    "tmdb_id": 9691,
+    "title": "Assassins",
+    "popularity": 7.0006,
+    "overview": "Assassin Robert Rath arrives at a funeral to kill a prominent mobster, only to witness a rival hired gun complete the job for him -- with grisly results. Horrified by the murder of innocent bystanders, Rath decides to take one last job and then return to civilian life. But finding his way out of the world of contract killing grows ever more dangerous as Rath falls for his female target and becomes a marked man himself.",
+    "release_date": "1995-10-06",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Crime",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 6.498,
+    "vote_count": 1797
+  },
+  {
+    "tmdb_id": 12665,
+    "title": "Powder",
+    "popularity": 4.8711,
+    "overview": "Harassed by classmates who won't accept his shocking appearance, a shy young man known as \"Powder\" struggles to fit in. But the cruel taunts stop when Powder displays a mysterious power that allows him to do incredible things. This phenomenon changes the lives of all those around him in ways they never could have imagined.",
+    "release_date": "1995-10-27",
+    "genres": [
+      "Drama",
+      "Fantasy"
+    ],
+    "original_language": "en",
+    "vote_average": 7.072,
+    "vote_count": 766
+  },
+  {
+    "tmdb_id": 451,
+    "title": "Leaving Las Vegas",
+    "popularity": 10.8642,
+    "overview": "Ben Sanderson, an alcoholic Hollywood screenwriter who lost everything because of his drinking, arrives in Las Vegas to drink himself to death. There, he meets and forms an uneasy friendship and non-interference pact with prostitute Sera.",
+    "release_date": "1995-10-27",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 7.249,
+    "vote_count": 1732
+  },
+  {
+    "tmdb_id": 16420,
+    "title": "Othello",
+    "popularity": 2.0459,
+    "overview": "The evil Iago pretends to be friend of Othello in order to manipulate him to serve his own end in the film version of this Shakespeare classic.",
+    "release_date": "1995-12-15",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.4,
+    "vote_count": 153
+  },
+  {
+    "tmdb_id": 9263,
+    "title": "Now and Then",
+    "popularity": 6.1618,
+    "overview": "Waxing nostalgic about the bittersweet passage from childhood to puberty, four childhood girlfriends — Teeny, Chrissy, Samantha and Roberta — recall the magical summer of 1970. During their walk down memory lane, they reconcile experiences with boys, secrets, bullies and more.",
+    "release_date": "1995-10-20",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.9,
+    "vote_count": 492
+  },
+  {
+    "tmdb_id": 17015,
+    "title": "Persuasion",
+    "popularity": 3.5496,
+    "overview": "In early 19th-century England, dire financial straits reacquaint the aristocratic Anne Elliot with her wealthy ex-fiance Frederick Wentworth. The two must choose between either putting the past behind them or listening to their hearts.",
+    "release_date": "1995-05-01",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 7.2,
+    "vote_count": 154
+  },
+  {
+    "tmdb_id": 902,
+    "title": "The City of Lost Children",
+    "popularity": 5.4792,
+    "overview": "A scientist in a surrealist society kidnaps children to steal their dreams, hoping that they slow his aging process.",
+    "release_date": "1995-05-17",
+    "genres": [
+      "Fantasy",
+      "Science Fiction",
+      "Adventure"
+    ],
+    "original_language": "fr",
+    "vote_average": 7.2,
+    "vote_count": 1274
+  },
+  {
+    "tmdb_id": 37557,
+    "title": "Shanghai Triad",
+    "popularity": 2.9982,
+    "overview": "Shanghai, China, 1930. When young Shuisheng arrives from the countryside, his uncle Liushu puts him at the service of Bijou, the mistress of Laoda, supreme boss of the Tang Triad, constantly threatened by his enemies, both those he knows and those lurking in the shadows.",
+    "release_date": "1995-09-14",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "original_language": "zh",
+    "vote_average": 6.852,
+    "vote_count": 122
+  },
+  {
+    "tmdb_id": 9909,
+    "title": "Dangerous Minds",
+    "popularity": 11.7747,
+    "overview": "Former Marine Louanne Johnson lands a gig teaching in a pilot program for bright but underachieving teens at a notorious inner-city high school. After having a terrible first day, she decides she must throw decorum to the wind. When Johnson returns to the classroom, she does so armed with a no-nonsense attitude informed by her military training and a fearless determination to better the lives of her students -- no matter what the cost.",
+    "release_date": "1995-08-11",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 7.023,
+    "vote_count": 1355
+  },
+  {
+    "tmdb_id": 63,
+    "title": "Twelve Monkeys",
+    "popularity": 20.6168,
+    "overview": "In the year 2035, convict James Cole reluctantly volunteers to be sent back in time to discover the origin of a deadly virus that wiped out nearly all of the earth's population and forced the survivors into underground communities. But when Cole is mistakenly sent to 1990 instead of 1996, he's arrested and locked up in a mental hospital. There he meets psychiatrist Dr. Kathryn Railly and the son of a famous virus expert who may hold the key to the Army of the 12 Monkeys; thought to be responsible for unleashing the killer disease.",
+    "release_date": "1995-12-29",
+    "genres": [
+      "Science Fiction",
+      "Thriller",
+      "Mystery"
+    ],
+    "original_language": "en",
+    "vote_average": 7.612,
+    "vote_count": 9461
+  },
+  {
+    "tmdb_id": 9598,
+    "title": "Babe",
+    "popularity": 8.079,
+    "overview": "Babe is a little pig who doesn't quite know his place in the world. With a bunch of odd friends, like Ferdinand the duck who thinks he is a rooster and Fly the dog he calls mum, Babe realises that he has the makings to become the greatest sheep pig of all time, and Farmer Hoggett knows it. With the help of the sheep dogs, Babe learns that a pig can be anything that he wants to be.",
+    "release_date": "1995-07-18",
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "Comedy",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 6.3,
+    "vote_count": 3229
+  },
+  {
+    "tmdb_id": 687,
+    "title": "Dead Man Walking",
+    "popularity": 9.9762,
+    "overview": "A death row inmate turns for spiritual guidance to a local nun in the days leading up to his scheduled execution for the murders of a young couple.",
+    "release_date": "1995-12-29",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 7.307,
+    "vote_count": 1548
+  },
+  {
+    "tmdb_id": 33689,
+    "title": "It Takes Two",
+    "popularity": 10.7563,
+    "overview": "Identical 9-year-olds from very different backgrounds: orphaned Amanda and wealthy Alyssa meet at summer camp and decide to switch places -- and play matchmaker between Alyssa's dad, Roger, and the kind social worker who cares for Amanda.",
+    "release_date": "1995-11-17",
+    "genres": [
+      "Comedy",
+      "Family",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.5,
+    "vote_count": 1007
+  },
+  {
+    "tmdb_id": 9603,
+    "title": "Clueless",
+    "popularity": 10.7077,
+    "overview": "Shallow, rich and socially successful Cher is at the top of her Beverly Hills high school's pecking scale. Seeing herself as a matchmaker, Cher first coaxes two teachers into dating each other. Emboldened by her success, she decides to give hopelessly klutzy new student Tai a makeover. When Tai becomes more popular than she is, Cher realizes that her disapproving ex-stepbrother was right about how misguided she was -- and falls for him.",
+    "release_date": "1995-07-19",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 7.238,
+    "vote_count": 4962
+  },
+  {
+    "tmdb_id": 34615,
+    "title": "Cry, the Beloved Country",
+    "popularity": 2.3501,
+    "overview": "A South-African preacher goes to search for his wayward son who has committed a crime in the big city.",
+    "release_date": "1995-12-15",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.8,
+    "vote_count": 28
+  },
+  {
+    "tmdb_id": 31174,
+    "title": "Richard III",
+    "popularity": 4.9272,
+    "overview": "Having helped his brother King Edward IV take the throne of England, the jealous hunchback Richard, Duke of Gloucester, plots to seize power for himself. Masterfully deceiving and plotting against nearly everyone in the royal court, including his eventual wife, Lady Anne, and his brother George, Duke of Clarence, Richard orchestrates a bloody rise to power before finding all his gains jeopardized by those he betrayed.",
+    "release_date": "1995-12-29",
+    "genres": [
+      "Drama",
+      "War"
+    ],
+    "original_language": "en",
+    "vote_average": 6.791,
+    "vote_count": 199
+  },
+  {
+    "tmdb_id": 11443,
+    "title": "Dead Presidents",
+    "popularity": 3.5324,
+    "overview": "On the streets they call cash dead presidents. And that's just what a Vietnam veteran is after when he returns home from the war only to find himself drawn into a life of crime. With the aid of his fellow vets he plans the ultimate heist -- a daring robbery of an armored car filled with unmarked U.S. currency!",
+    "release_date": "1995-09-29",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Action"
+    ],
+    "original_language": "en",
+    "vote_average": 6.7,
+    "vote_count": 347
+  },
+  {
+    "tmdb_id": 35196,
+    "title": "Restoration",
+    "popularity": 3.0032,
+    "overview": "An aspiring young physician, Robert Merivel found himself in the service of King Charles II and saves the life of someone close to the King. Merivel joins the King's court and lives the high life provided to someone of his position. Merivel is ordered to marry his King's mistress in order to divert the queens suspicions. He is given one order by the king and that is not to fall in love. The situation worsens when Merivel finds himself in love with his new wife. Eventually, the King finds out and relieves Merivel of his position and wealth. His fall from grace leaves Merivel where he first started. And through his travels and reunions with an old friend, he rediscovers his love for true medicine and what it really means to be a physician.",
+    "release_date": "1995-12-29",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.1,
+    "vote_count": 145
+  },
+  {
+    "tmdb_id": 9312,
+    "title": "Mortal Kombat",
+    "popularity": 12.1833,
+    "overview": "For nine generations an evil sorcerer has been victorious in hand-to-hand battle against his mortal enemies. If he wins a tenth Mortal Kombat tournament, desolation and evil will reign over the multiverse forever. To save Earth, three warriors must overcome seemingly insurmountable odds, their own inner demons, and superhuman foes.",
+    "release_date": "1995-08-18",
+    "genres": [
+      "Action",
+      "Fantasy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.9,
+    "vote_count": 2684
+  },
+  {
+    "tmdb_id": 577,
+    "title": "To Die For",
+    "popularity": 7.3509,
+    "overview": "Suzanne Stone wants to be a world-famous news anchor and she is willing to do anything to get what she wants. What she lacks in intelligence, she makes up for in cold determination and diabolical wiles. As she pursues her goal with relentless focus, she is forced to destroy anything and anyone that may stand in her way, regardless of the ultimate cost or means necessary.",
+    "release_date": "1995-09-22",
+    "genres": [
+      "Drama",
+      "Comedy",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 6.591,
+    "vote_count": 932
+  },
+  {
+    "tmdb_id": 11861,
+    "title": "How to Make an American Quilt",
+    "popularity": 3.8012,
+    "overview": "Soon-to-be-wed graduate student Finn Dodd develops cold feet when she suspects her fiancé is cheating on her. In order to clear her head, Finn visits her grandmother, Hy, and great aunt, Glady Joe Cleary, in Grasse, Calif. There, Finn learns that Hy and Glady Joe are members of a group of passionate quilters, and over the course of her visit she is regaled with tales of love and life by women who have collected rich experiences and much wisdom.",
+    "release_date": "1995-10-06",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.4,
+    "vote_count": 202
+  },
+  {
+    "tmdb_id": 807,
+    "title": "Se7en",
+    "popularity": 39.8728,
+    "overview": "Two homicide detectives are on a desperate hunt for a serial killer whose crimes are based on the \"seven deadly sins\" in this dark and haunting film that takes viewers from the tortured remains of one victim to the next. The seasoned Det. Somerset researches each sin in an effort to get inside the killer's mind, while his novice partner, Mills, scoffs at his efforts to unravel the case.",
+    "release_date": "1995-09-22",
+    "genres": [
+      "Crime",
+      "Mystery",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 8.4,
+    "vote_count": 23960
+  },
+  {
+    "tmdb_id": 10530,
+    "title": "Pocahontas",
+    "popularity": 11.2174,
+    "overview": "Pocahontas, daughter of a Native American tribe chief, falls in love with an English soldier as colonists invade 17th century Virginia.",
+    "release_date": "1995-06-16",
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.9,
+    "vote_count": 6221
+  },
+  {
+    "tmdb_id": 8391,
+    "title": "When Night Is Falling",
+    "popularity": 2.427,
+    "overview": "Camille is a professor at a Protestant college and is in a long-term relationship with Martin, a respected minister and fellow professor. When Camille meets Petra, a bold and flamboyant performer in a circus troupe, she is inexplicably drawn. Pursuing Petra, Camille throws her whole conservative life into disarray.",
+    "release_date": "1995-02-01",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.3,
+    "vote_count": 95
+  },
+  {
+    "tmdb_id": 629,
+    "title": "The Usual Suspects",
+    "popularity": 22.9806,
+    "overview": "Held in an L.A. interrogation room, Verbal Kint attempts to convince the feds that a mythic crime lord, Keyser Soze, not only exists, but was also responsible for drawing him and his four partners into a multi-million dollar heist that ended with an explosion in San Pedro harbor – leaving few survivors. Verbal lures his interrogators with an incredible story of the crime lord's almost supernatural prowess.",
+    "release_date": "1995-07-19",
+    "genres": [
+      "Drama",
+      "Crime",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 8.162,
+    "vote_count": 11833
+  },
+  {
+    "tmdb_id": 11448,
+    "title": "Mighty Aphrodite",
+    "popularity": 5.272,
+    "overview": "When Lenny and his wife, Amanda, adopt a baby, Lenny realizes that his son is a genius and becomes obsessed with finding the boy's biological mother in hopes that she will be brilliant too. But when he learns that Max's mother is Linda Ash, a kindhearted prostitute and porn star, Lenny is determined to reform her immoral lifestyle. A Greek chorus chimes in to relate the plot to Greek mythology in this quirky comedy.",
+    "release_date": "1995-09-13",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.731,
+    "vote_count": 761
+  },
+  {
+    "tmdb_id": 49133,
+    "title": "Lamerica",
+    "popularity": 1.9453,
+    "overview": "Fiore, an Italian conman, arrives in post Communist Albania with Gino, his young apprentice, to set up a shoe factory that will never open. The con requires a native Albanian, so they designate Spiro, an impoverished and confused former political prisoner as chairman of the board. When Fiore returns to Italy to get government funds for the project, Spiro unexpectedly disappears and Gino sets out on a journey to find him. The search leads him to discover Spiro's tragic personal history and witness Albanian poverty firsthand.",
+    "release_date": "1994-09-09",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "it",
+    "vote_average": 7.2,
+    "vote_count": 67
+  },
+  {
+    "tmdb_id": 26441,
+    "title": "The Big Green",
+    "popularity": 5.9526,
+    "overview": "In a depressed Texas town, British foreign exchange teacher Anna attempts to inject some life into her hopeless kids by introducing them to soccer. They're terrible at first, but Anna and her football-hero assistant whip them into shape. As they work overtime, the pair help kids build their self-esteem and also get involved in solving family squabbles.",
+    "release_date": "1995-09-29",
+    "genres": [
+      "Family",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.6,
+    "vote_count": 211
+  },
+  {
+    "tmdb_id": 97406,
+    "title": "Georgia",
+    "popularity": 1.2725,
+    "overview": "Sadie looks up to her older sister Georgia, a successful folk singer. Unfortunately it is this very obsession — coupled with her self-destructive tendencies and rampant drug abuse — that keeps her spiraling down the drain.",
+    "release_date": "1995-05-19",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 5.7,
+    "vote_count": 47
+  },
+  {
+    "tmdb_id": 9089,
+    "title": "Home for the Holidays",
+    "popularity": 3.4911,
+    "overview": "After losing her job, making out with her soon-to-be former boss, and finding out that her daughter plans to spend Thanksgiving with her boyfriend, Claudia Larson faces spending the holiday with her unhinged family.",
+    "release_date": "1995-11-02",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.3,
+    "vote_count": 197
+  },
+  {
+    "tmdb_id": 11010,
+    "title": "The Postman",
+    "popularity": 5.7101,
+    "overview": "Simple Italian postman learns to love poetry while delivering mail to a famous poet; he uses this to woo local beauty Beatrice.",
+    "release_date": "1994-09-22",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "it",
+    "vote_average": 7.9,
+    "vote_count": 1256
+  },
+  {
+    "tmdb_id": 11359,
+    "title": "The Indian in the Cupboard",
+    "popularity": 5.346,
+    "overview": "A nine-year-old boy gets a plastic Indian and a cupboard for his birthday and finds himself involved in adventure when the Indian comes to life and befriends him.",
+    "release_date": "1995-07-14",
+    "genres": [
+      "Adventure",
+      "Family",
+      "Fantasy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.496,
+    "vote_count": 720
+  },
+  {
+    "tmdb_id": 17182,
+    "title": "Eye for an Eye",
+    "popularity": 6.177,
+    "overview": "It's fire and brimstone time as grieving mother Karen McCann takes justice into her own hands when a kangaroo court in Los Angeles fails to convict Robert Doob, the monster who raped and murdered her 17-year-old daughter.",
+    "release_date": "1996-01-12",
+    "genres": [
+      "Thriller",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.277,
+    "vote_count": 491
+  },
+  {
+    "tmdb_id": 2054,
+    "title": "Mr. Holland's Opus",
+    "popularity": 5.1672,
+    "overview": "In 1965, passionate musician Glenn Holland takes a day job as a high school music teacher, convinced it's just a small obstacle on the road to his true calling: writing a historic opus. As the decades roll by with the composition unwritten but generations of students inspired through his teaching, Holland must redefine his life's purpose.",
+    "release_date": "1995-12-29",
+    "genres": [
+      "Drama",
+      "Music"
+    ],
+    "original_language": "en",
+    "vote_average": 7.0,
+    "vote_count": 472
+  },
+  {
+    "tmdb_id": 10607,
+    "title": "Don't Be a Menace to South Central While Drinking Your Juice in the Hood",
+    "popularity": 11.5157,
+    "overview": "When Ashtray moves to South Central L.A. to live with his father (who appears to be the same age he is) and grandmother (who likes to talk tough and smoke reefer), he falls in with his gang-banging cousin Loc Dog, who along with the requisite pistols and Uzi carries a thermo-nuclear warhead for self-defense. Will Ashtray be able to keep living the straight life?",
+    "release_date": "1996-01-12",
+    "genres": [
+      "Comedy",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 7.05,
+    "vote_count": 1584
+  },
+  {
+    "tmdb_id": 19760,
+    "title": "Two If by Sea",
+    "popularity": 4.4995,
+    "overview": "Frank O'Brien, a petty thief, and his 7-year-long girlfriend Roz want to put an end to their unsteady lifestyle and just do that last job, which involves stealing a valuable painting. Frank takes Roz to an island on the coast of New England, where he wants to sell the painting and also hopes that their sagging relationship will get a positive push back up. Not everything goes as planned.",
+    "release_date": "1996-01-12",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 5.0,
+    "vote_count": 102
+  },
+  {
+    "tmdb_id": 9536,
+    "title": "Bio-Dome",
+    "popularity": 3.3444,
+    "overview": "Moronic best friends get themselves locked inside the Bio-Dome, a science experiment, along with a group of environmental scientists for one year.",
+    "release_date": "1996-01-12",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 4.6,
+    "vote_count": 428
+  },
+  {
+    "tmdb_id": 11525,
+    "title": "Lawnmower Man 2: Beyond Cyberspace",
+    "popularity": 3.0417,
+    "overview": "Now a shattered mind lurking in cyberspace, Jobe plots a return by hijacking a global VR network and rebuilding himself as something far beyond human. As reality starts to glitch, a small group races to stop a digital god who no longer needs a body.",
+    "release_date": "1996-01-12",
+    "genres": [
+      "Science Fiction",
+      "Horror",
+      "Action",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 3.3,
+    "vote_count": 185
+  },
+  {
+    "tmdb_id": 4482,
+    "title": "French Twist",
+    "popularity": 2.8184,
+    "overview": "After learning of her husband's infidelities, a housewife invites an itinerant lesbian to move in with them. None of their lives will ever be the same again.",
+    "release_date": "1995-01-18",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "original_language": "fr",
+    "vote_average": 6.1,
+    "vote_count": 340
+  },
+  {
+    "tmdb_id": 10634,
+    "title": "Friday",
+    "popularity": 8.6783,
+    "overview": "Craig and Smokey are two guys in Los Angeles hanging out on their porch on a Friday afternoon, smoking and drinking, looking for something to do.",
+    "release_date": "1995-04-26",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 7.157,
+    "vote_count": 2122
+  },
+  {
+    "tmdb_id": 755,
+    "title": "From Dusk Till Dawn",
+    "popularity": 15.8212,
+    "overview": "After kidnapping a father and his two kids, the Gecko brothers head south to a seedy Mexican bar to hide out in safety, unaware of its notorious clientele.",
+    "release_date": "1996-01-19",
+    "genres": [
+      "Horror",
+      "Action",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 7.052,
+    "vote_count": 6749
+  },
+  {
+    "tmdb_id": 11859,
+    "title": "Fair Game",
+    "popularity": 5.8262,
+    "overview": "Max Kirkpatrick is a cop who protects Kate McQuean, a civil law attorney, from a renegade KGB team out to terminate her",
+    "release_date": "1995-11-03",
+    "genres": [
+      "Action"
+    ],
+    "original_language": "en",
+    "vote_average": 5.19,
+    "vote_count": 355
+  },
+  {
+    "tmdb_id": 28387,
+    "title": "Kicking and Screaming",
+    "popularity": 2.8626,
+    "overview": "After college graduation, Grover's girlfriend Jane tells him she's moving to Prague to study writing. Grover declines to accompany her, deciding instead to move in with several friends, all of whom can't quite work up the inertia to escape their university's pull. Nobody wants to make any big decisions that would radically alter his life, yet none of them wants to end up like Chet, the professional student who tends bar and is in his tenth year of university studies.",
+    "release_date": "1995-10-06",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.2,
+    "vote_count": 249
+  },
+  {
+    "tmdb_id": 48750,
+    "title": "Les Miserables",
+    "popularity": 1.7606,
+    "overview": "In WWII France, poor and illiterate Henri Fortin is introduced to Victor Hugo's classic novel Les Misérables and begins to see parallels between the book and his own life.",
+    "release_date": "1995-03-22",
+    "genres": [
+      "Drama",
+      "History"
+    ],
+    "original_language": "fr",
+    "vote_average": 6.6,
+    "vote_count": 87
+  },
+  {
+    "tmdb_id": 20927,
+    "title": "Bed of Roses",
+    "popularity": 3.406,
+    "overview": "The seeds of love are planted when Lisa, a high-powered investment banker, receives flowers from a secret admirer. But when his fairy-tale fantasies clash with her workaholic ways, they soon find out that sometimes, it's harder than it seems for love to conquer all.",
+    "release_date": "1996-01-26",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 5.9,
+    "vote_count": 129
+  },
+  {
+    "tmdb_id": 36929,
+    "title": "Big Bully",
+    "popularity": 3.4315,
+    "overview": "A writer returns to his hometown where he faces the childhood nemesis whose life he ultimately ruined, only the bully wants to relive their painful past by torturing him once again.",
+    "release_date": "1996-01-26",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 4.657,
+    "vote_count": 86
+  },
+  {
+    "tmdb_id": 9102,
+    "title": "Screamers",
+    "popularity": 3.5024,
+    "overview": "SIRIUS 6B, Year 2078. On a distant mining planet ravaged by a decade of war, scientists have created the perfect weapon: a blade-wielding, self-replicating race of killing devices known as Screamers designed for one purpose only -- to hunt down and destroy all enemy life forms.",
+    "release_date": "1995-09-08",
+    "genres": [
+      "Horror",
+      "Science Fiction",
+      "War"
+    ],
+    "original_language": "en",
+    "vote_average": 6.2,
+    "vote_count": 634
+  },
+  {
+    "tmdb_id": 124626,
+    "title": "Nico Icon",
+    "popularity": 0.9707,
+    "overview": "A look into the many lives of Christa Päffgen, otherwise known as Nico; from cutie German mädchen to the first of the supermodels, to glamorous diva of the Velvet Underground, to cult item, junkie and hag. Many faces for the same woman, whom, you realize, just couldn't bring herself to care enough to live.",
+    "release_date": "1995-09-08",
+    "genres": [
+      "Documentary"
+    ],
+    "original_language": "en",
+    "vote_average": 8.1,
+    "vote_count": 13
+  },
+  {
+    "tmdb_id": 27526,
+    "title": "The Crossing Guard",
+    "popularity": 4.7888,
+    "overview": "Unable to move on from the loss of his daughter, Freddy, now a shell of the person he was before, swears to kill the man responsible for her death.",
+    "release_date": "1995-01-26",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 6.0,
+    "vote_count": 295
+  },
+  {
+    "tmdb_id": 9623,
+    "title": "The Juror",
+    "popularity": 5.5967,
+    "overview": "Struggling single mother Annie Laird impulsively agrees to serve on a jury, hoping for a little excitement in her humdrum life. But she gets far more than she bargained for when she's forced to sacrifice the truth to save her son from the mob's seductive, psychotic enforcer.",
+    "release_date": "1996-02-02",
+    "genres": [
+      "Thriller",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 5.726,
+    "vote_count": 458
+  },
+  {
+    "tmdb_id": 46785,
+    "title": "The White Balloon",
+    "popularity": 1.7694,
+    "overview": "Several people try to take advantage of a little girl's innocence to hustle money her mom gave to her to buy a goldfish with.",
+    "release_date": "1995-01-02",
+    "genres": [
+      "Drama",
+      "Family"
+    ],
+    "original_language": "fa",
+    "vote_average": 7.484,
+    "vote_count": 129
+  },
+  {
+    "tmdb_id": 400,
+    "title": "Things to Do in Denver When You're Dead",
+    "popularity": 6.9003,
+    "overview": "Five different criminals face imminent death after botching a job quite badly.",
+    "release_date": "1995-12-01",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 6.441,
+    "vote_count": 448
+  },
+  {
+    "tmdb_id": 880,
+    "title": "Antonia's Line",
+    "popularity": 2.3075,
+    "overview": "After World War II, Antonia and her daughter, Danielle, go back to their Dutch hometown, where Antonia's late mother has bestowed a small farm upon her. There, Antonia settles down and joins a tightly-knit but unusual community. Those around her include quirky friend Crooked Finger, would-be suitor Bas and, eventually for Antonia, a granddaughter and great-granddaughter who help create a strong family of empowered women.",
+    "release_date": "1995-09-21",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "original_language": "nl",
+    "vote_average": 6.9,
+    "vote_count": 154
+  },
+  {
+    "tmdb_id": 146599,
+    "title": "Once Upon a Time... When We Were Colored",
+    "popularity": 1.4341,
+    "overview": "A narrator tells the story of his childhood years in a tightly knit Afro-American community in the deep south under racial segregation.",
+    "release_date": "1996-01-26",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 4.2,
+    "vote_count": 6
+  },
+  {
+    "tmdb_id": 8447,
+    "title": "Angels and Insects",
+    "popularity": 1.9663,
+    "overview": "In Victorian England, wealthy patriarch Sir Harald Alabaster invites an impoverished biologist, William Adamson, into his home. There, William tries to continue his work, but is distracted by Alabaster's seductive daughter, Eugenia. William and Eugenia begin a torrid romance, but as the couple become closer, the young scientist begins to realize that dark, disturbing things are happening behind the closed doors of the Alabaster manor.",
+    "release_date": "1995-09-10",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.2,
+    "vote_count": 59
+  },
+  {
+    "tmdb_id": 10534,
+    "title": "White Squall",
+    "popularity": 5.8432,
+    "overview": "In 1960, a hardy group of prep school students boards an old-fashioned sailing ship. With Capt. Christopher Sheldon at the helm, the oceangoing voyage is intended to teach the boys fortitude and discipline. But the youthful crew are about to get some unexpected instruction in survival when they get caught in the clutches of a white squall storm.",
+    "release_date": "1996-02-02",
+    "genres": [
+      "Drama",
+      "Adventure"
+    ],
+    "original_language": "en",
+    "vote_average": 6.27,
+    "vote_count": 424
+  },
+  {
+    "tmdb_id": 17414,
+    "title": "Dunston Checks In",
+    "popularity": 3.8359,
+    "overview": "Hotel manager Robert Grant is forced by his boss to postpone his family vacation when a hotel critic checks in. Trouble is, the critic is really a villainous jewel thief with an orangutan assistant named Dunston. When Dunston gets loose and tries to escape a life of crime -- aided by Robert's sons -- havoc, hijinks and lots of laughs abound!",
+    "release_date": "1996-01-12",
+    "genres": [
+      "Family",
+      "Comedy",
+      "Adventure"
+    ],
+    "original_language": "en",
+    "vote_average": 5.411,
+    "vote_count": 257
+  },
+  {
+    "tmdb_id": 13997,
+    "title": "Black Sheep",
+    "popularity": 5.3041,
+    "overview": "When dignified Albert Donnelly runs for Governor, his team moves to keep his slow-witted and klutzy younger brother, Mike, out of the eye of the media. To baby-sit Mike, the campaign assigns sarcastic Steve, who gets the experience of a lifetime when he tries to take Mike out of town during the election.",
+    "release_date": "1996-02-02",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.1,
+    "vote_count": 477
+  },
+  {
+    "tmdb_id": 2086,
+    "title": "Nick of Time",
+    "popularity": 5.2267,
+    "overview": "An ordinary man is suddenly forced into a plot to kill a politician in exchange for his kidnapped daughter's freedom.",
+    "release_date": "1995-11-22",
+    "genres": [
+      "Thriller",
+      "Crime",
+      "Action"
+    ],
+    "original_language": "en",
+    "vote_average": 6.243,
+    "vote_count": 842
+  },
+  {
+    "tmdb_id": 9095,
+    "title": "Mary Reilly",
+    "popularity": 3.0435,
+    "overview": "A housemaid falls in love with Dr. Jekyll and his darkly mysterious counterpart, Mr. Hyde.",
+    "release_date": "1996-02-23",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 5.8,
+    "vote_count": 349
+  },
+  {
+    "tmdb_id": 12158,
+    "title": "Vampire in Brooklyn",
+    "popularity": 4.1762,
+    "overview": "Detective Rita Veder is assigned to a baffling serial murder case. After examining the crime scene — a corpse-filled ship found adrift at sea — she meets Maximilian, a smooth-talking Caribbean playboy determined to romance her.",
+    "release_date": "1995-10-26",
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Romance",
+      "Fantasy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.1,
+    "vote_count": 662
+  },
+  {
+    "tmdb_id": 9283,
+    "title": "Beautiful Girls",
+    "popularity": 5.2413,
+    "overview": "During a snowy winter in the small fictional town of Knight's Ridge, Massachusetts, a group of lifelong buddies hang out, drink and struggle to connect with the women who affect their decisions, dreams and desires.",
+    "release_date": "1996-02-09",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.7,
+    "vote_count": 423
+  },
+  {
+    "tmdb_id": 9208,
+    "title": "Broken Arrow",
+    "popularity": 11.7555,
+    "overview": "When rogue stealth-fighter pilot Vic Deakins deliberately drops off the radar while on maneuvers, the Air Force ends up with two stolen nuclear warheads -- and Deakins's co-pilot, Riley Hale, is the military's only hope for getting them back. Traversing the deserted canyons of Utah, Hale teams with park ranger Terry Carmichael to put Deakins back in his box.",
+    "release_date": "1996-02-09",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 6.073,
+    "vote_count": 1757
+  },
+  {
+    "tmdb_id": 40154,
+    "title": "In the Bleak Midwinter",
+    "popularity": 1.7605,
+    "overview": "Out of work actor Joe volunteers to help try and save his sister's local church for the community by putting on a Christmas production of Hamlet, somewhat against the advice of his agent Margaretta. As the cast he assembles are still available even at Christmas and are prepared to do it on a 'profit sharing' basis (that is, they may not get paid anything) he cannot expect - and does not get - the cream of the cream. But although they all bring their own problems and foibles along, something bigger starts to emerge in the perhaps aptly named village of Hope.",
+    "release_date": "1995-09-29",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 7.1,
+    "vote_count": 46
+  },
+  {
+    "tmdb_id": 406,
+    "title": "La Haine",
+    "popularity": 8.8786,
+    "overview": "After a chaotic night of rioting in a marginal suburb of Paris, three young friends, Vinz, Hubert and Saïd, wander around unoccupied waiting for news about the state of health of a mutual friend who has been seriously injured when confronting the police.",
+    "release_date": "1995-05-31",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "fr",
+    "vote_average": 8.1,
+    "vote_count": 4742
+  },
+  {
+    "tmdb_id": 63076,
+    "title": "Heidi Fleiss: Hollywood Madam",
+    "popularity": 1.2206,
+    "overview": "A documentary crew from the BBC arrives in L.A. intent on interviewing Heidi Fleiss, a year after her arrest for running a brothel but before her trial. Several months elapse before the interview, so the crew searches for anyone who'll talk about the young woman. Two people have a lot to say to the camera: a retired madam named Alex for whom Fleiss once worked and Fleiss's one-time boyfriend, Ivan Nagy, who introduced her to Alex. Alex and Nagy don't like each other, so the crew shuttles between them with \"she said\" and \"he said.\" When they finally interview Fleiss, they spend their time reciting what Alex and Nagy have had to say and asking her reaction.",
+    "release_date": "1995-12-27",
+    "genres": [
+      "Documentary"
+    ],
+    "original_language": "en",
+    "vote_average": 6.7,
+    "vote_count": 15
+  },
+  {
+    "tmdb_id": 11062,
+    "title": "City Hall",
+    "popularity": 5.2296,
+    "overview": "The accidental shooting of a boy in New York City leads to an investigation by the Deputy Mayor, and unexpectedly far-reaching consequences.",
+    "release_date": "1996-02-16",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 6.0,
+    "vote_count": 337
+  },
+  {
+    "tmdb_id": 13685,
+    "title": "Bottle Rocket",
+    "popularity": 6.2178,
+    "overview": "Upon his release from a mental hospital following a nervous breakdown, the directionless Anthony joins his friend Dignan, who seems far less sane than the former. Dignan has hatched a harebrained scheme for an as-yet-unspecified crime spree that somehow involves his former boss, the (supposedly) legendary Mr. Henry.",
+    "release_date": "1996-02-21",
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.702,
+    "vote_count": 1247
+  },
+  {
+    "tmdb_id": 47475,
+    "title": "Mr. Wrong",
+    "popularity": 1.967,
+    "overview": "A single and lonely woman finds the seemingly perfect man to date, but soon regrets it when his deranged and possessive other personality emerges and worst still, she cannot convince anyone else of his Jekyll/Hyde true nature.",
+    "release_date": "1996-02-16",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 4.1,
+    "vote_count": 67
+  },
+  {
+    "tmdb_id": 2045,
+    "title": "Unforgettable",
+    "popularity": 2.3788,
+    "overview": "Seattle medical examiner David Krane is obsessed with solving his wife's murder. A possible solution presents itself in an experimental \"memory\" serum designed by a neurobiology professor, which has the ability to transfer memories from one person to another, but with potentially fatal consequences.",
+    "release_date": "1996-02-23",
+    "genres": [
+      "Thriller",
+      "Mystery",
+      "Science Fiction"
+    ],
+    "original_language": "en",
+    "vote_average": 5.632,
+    "vote_count": 125
+  },
+  {
+    "tmdb_id": 9614,
+    "title": "Happy Gilmore",
+    "popularity": 14.4915,
+    "overview": "Failed hockey player-turned-golf whiz Happy Gilmore — whose unconventional approach and antics on the green courts the ire of rival Shooter McGavin — is determined to win a PGA tournament so he can save his granny's house with the prize money. Meanwhile, an attractive tour publicist tries to soften Happy's image.",
+    "release_date": "1996-02-16",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.676,
+    "vote_count": 3503
+  },
+  {
+    "tmdb_id": 688,
+    "title": "The Bridges of Madison County",
+    "popularity": 10.0884,
+    "overview": "Photographer Robert Kincaid wanders into the life of housewife Francesca Johnson for four days in the 1960s.",
+    "release_date": "1995-06-02",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 7.7,
+    "vote_count": 2452
+  },
+  {
+    "tmdb_id": 11907,
+    "title": "Nobody Loves Me",
+    "popularity": 1.379,
+    "overview": "On the brink of her 30th birthday, Fanny feels the door to marital happiness closing on her. She is obsessed with death and even visits evening classes on dying, so it seems fitting that she encounters a skeleton in the malfunctioning elevator of her apartment building. The skeleton is her neighbour Orfeo, a Black, gay, self-declared psychic, who convinces her that she is about to meet \"him\". But is it really Lothar, the new yuppie apartment manager ...?",
+    "release_date": "1994-11-07",
+    "genres": [
+      "Drama",
+      "Comedy",
+      "Family"
+    ],
+    "original_language": "de",
+    "vote_average": 6.4,
+    "vote_count": 37
+  },
+  {
+    "tmdb_id": 10874,
+    "title": "Muppet Treasure Island",
+    "popularity": 5.4499,
+    "overview": "Young Jim Hawkins and his two best friends, Gonzo and Rizzo, embark on a voyage across the high seas in search of buried treasure, but soon find that not everyone onboard can be trusted.",
+    "release_date": "1996-02-16",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 6.724,
+    "vote_count": 494
+  },
+  {
+    "tmdb_id": 89333,
+    "title": "Catwalk",
+    "popularity": 1.3808,
+    "overview": "A documentary following Christy Turlington and other models during spring fashion week in Milan, Paris and New York.",
+    "release_date": "1995-12-08",
+    "genres": [
+      "Documentary"
+    ],
+    "original_language": "en",
+    "vote_average": 7.8,
+    "vote_count": 9
+  },
+  {
+    "tmdb_id": 197,
+    "title": "Braveheart",
+    "popularity": 22.6533,
+    "overview": "Enraged at the slaughter of Murron, his new bride and childhood love, Scottish warrior William Wallace slays a platoon of the local English lord's soldiers. This leads the village to revolt and, eventually, the entire country to rise up against English rule.",
+    "release_date": "1995-05-24",
+    "genres": [
+      "Drama",
+      "History",
+      "War"
+    ],
+    "original_language": "en",
+    "vote_average": 7.946,
+    "vote_count": 11514
+  },
+  {
+    "tmdb_id": 103,
+    "title": "Taxi Driver",
+    "popularity": 24.6329,
+    "overview": "Suffering from insomnia, disturbed loner Travis Bickle takes a job as a New York City cabbie, haunting the streets nightly, growing increasingly detached from reality as he dreams of cleaning up the filthy city.",
+    "release_date": "1976-02-09",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 8.1,
+    "vote_count": 13877
+  },
+  {
+    "tmdb_id": 33542,
+    "title": "Rumble in the Bronx",
+    "popularity": 8.1744,
+    "overview": "Keong comes from Hong Kong to visit New York for his uncle's wedding. His uncle runs a market in the Bronx and Keong offers to help out while Uncle is on his honeymoon. During his stay in the Bronx, Keong befriends a neighbor kid and beats up some neighborhood thugs who cause problems at the market. One of those petty thugs in the local gang stumbles into a criminal situation way over his head.",
+    "release_date": "1995-01-21",
+    "genres": [
+      "Crime",
+      "Action",
+      "Comedy",
+      "Thriller"
+    ],
+    "original_language": "cn",
+    "vote_average": 6.86,
+    "vote_count": 1235
+  },
+  {
+    "tmdb_id": 43566,
+    "title": "Before and After",
+    "popularity": 4.2298,
+    "overview": "Two parents deal with the effects when their son is accused of murdering his girlfriend.",
+    "release_date": "1996-02-23",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Mystery"
+    ],
+    "original_language": "en",
+    "vote_average": 5.928,
+    "vote_count": 222
+  },
+  {
+    "tmdb_id": 51352,
+    "title": "Anne Frank Remembered",
+    "popularity": 1.5076,
+    "overview": "Using previously unreleased archival material in addition to contemporary interviews, this Academy Award-winning documentary tells the story of the Frank family and presents the first fully-rounded portrait of their brash and free-spirited daughter Anne, perhaps the world's most famous victim of the Holocaust.",
+    "release_date": "1995-06-08",
+    "genres": [
+      "Documentary"
+    ],
+    "original_language": "en",
+    "vote_average": 7.6,
+    "vote_count": 25
+  },
+  {
+    "tmdb_id": 16934,
+    "title": "The Young Poisoner's Handbook",
+    "popularity": 2.0444,
+    "overview": "Graham Young is a teenage misfit living in suburban London in the 1960s. He hates his stepmother but loves chemistry, and the two impulses unite in a wicked plot to slowly poison her. After she dies, he's found guilty and sent to a psychiatric hospital, where an idealistic doctor thinks he can be cured.",
+    "release_date": "1995-01-20",
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.7,
+    "vote_count": 56
+  },
+  {
+    "tmdb_id": 10324,
+    "title": "If Lucy Fell",
+    "popularity": 2.0845,
+    "overview": "Joe and Lucy are roommates and best friends. Lucy, whose love life is embarrassingly dull, convinces Joe, who is infatuated with a neighbor he's never met, that if they don't have stable romances within a month, they must jump off the Brooklyn Bridge.",
+    "release_date": "1996-03-08",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 5.4,
+    "vote_count": 61
+  },
+  {
+    "tmdb_id": 78406,
+    "title": "Steal Big Steal Little",
+    "popularity": 1.787,
+    "overview": "Ruben and Robby are twin brothers, adopted by Mona, one of the wealthiest - and most eccentric - women in Santa Barbara. Ruben is devoted to Mona, but Robby is more devoted to her money. So when Mona leaves her fortune and estate to Ruben it starts a battle between brothers that soon leads to madness, mayhem, and even attempted murder. On Ruben's side is Lou Perilli an ex-Chicago cop and used car dealer who knows the law - and how to get around it. On Robby's side is ruthless businessman Reed Tyler, who is out to turn a swift profit on Mona's property. Walking a shifty line between them is Eddie Agopian, the family lawyer, who doesn't care which side wins as long as he's on the winner's side. But whether they're stealing big or stealing little, they're all stealing in this hilarious comedy about greed, power... and brotherly love.",
+    "release_date": "1995-09-29",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 4.5,
+    "vote_count": 23
+  },
+  {
+    "tmdb_id": 32119,
+    "title": "The Boys of St. Vincent",
+    "popularity": 1.9,
+    "overview": "The true story of boys being sexually abused at their orphanage, run by a religious community in Newfoundland.",
+    "release_date": "1994-06-03",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 7.1,
+    "vote_count": 46
+  },
+  {
+    "tmdb_id": 11066,
+    "title": "Boomerang",
+    "popularity": 4.3317,
+    "overview": "Marcus is a successful advertising executive who woos and beds women almost at will. After a company merger he finds that his new boss, the ravishing Jacqueline, is treating him in exactly the same way. Completely traumatised by this, his work goes badly downhill.",
+    "release_date": "1992-06-28",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 5.694,
+    "vote_count": 657
+  },
+  {
+    "tmdb_id": 11104,
+    "title": "Chungking Express",
+    "popularity": 13.6719,
+    "overview": "Two melancholic Hong Kong policemen fall in love: one with a mysterious underworld figure, the other with a beautiful and ethereal server at a late-night restaurant.",
+    "release_date": "1994-07-14",
+    "genres": [
+      "Drama",
+      "Comedy",
+      "Romance"
+    ],
+    "original_language": "cn",
+    "vote_average": 8.0,
+    "vote_count": 2308
+  },
+  {
+    "tmdb_id": 2074,
+    "title": "Flirting with Disaster",
+    "popularity": 5.1434,
+    "overview": "Adopted as a child, new father Mel Colpin decides he cannot name his son until he knows his birth parents, and determines to make a cross-country quest to find them. Accompanied by his wife, Nancy, and an inept yet gorgeous adoption agent, Tina, he departs on an epic road trip that quickly devolves into a farce of mistaken identities, wrong turns, and overzealous and love-struck ATF agents.",
+    "release_date": "1996-03-22",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.2,
+    "vote_count": 276
+  },
+  {
+    "tmdb_id": 27793,
+    "title": "The NeverEnding Story III",
+    "popularity": 4.6762,
+    "overview": "A young boy must restore order when a group of bullies steal the magical book that acts as a portal between Earth and the imaginary world of Fantasia.",
+    "release_date": "1994-10-26",
+    "genres": [
+      "Family",
+      "Fantasy",
+      "Adventure",
+      "Comedy"
+    ],
+    "original_language": "de",
+    "vote_average": 4.5,
+    "vote_count": 445
+  },
+  {
+    "tmdb_id": 290157,
+    "title": "Jupiter's Wife",
+    "popularity": 0.5807,
+    "overview": "Michel Negroponte, a documentary filmmaker, meets Maggie one day in Central Park. Maggie claims to be married to the god Jupiter and the daughter of actor Robert Ryan. Michel gets to know Maggie over the next couple of years, and attempts to use her often outlandish stories as clues to reconstruct her past.",
+    "release_date": "1995-09-08",
+    "genres": [
+      "Documentary"
+    ],
+    "original_language": "en",
+    "vote_average": 7.1,
+    "vote_count": 8
+  },
+  {
+    "tmdb_id": 110972,
+    "title": "Pie in the Sky",
+    "popularity": 2.0025,
+    "overview": "A young man obsessed with traffic patterns attempts to reunite with his first love.",
+    "release_date": "1996-02-09",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.7,
+    "vote_count": 16
+  },
+  {
+    "tmdb_id": 11863,
+    "title": "Jade",
+    "popularity": 2.9512,
+    "overview": "When a prominent art dealer is found murdered, the man's death leads to an intriguing investigation steeped in sex, corruption and crime. District Attorney David Corelli gets assigned to the case and discovers that a key suspect is his ex-lover Katrina Gavin, a beautiful psychologist who has settled down with his old friend and peer. As Corelli gets deeper into the case, he uncovers dark secrets with far-reaching implications.",
+    "release_date": "1995-10-11",
+    "genres": [
+      "Thriller",
+      "Crime",
+      "Mystery"
+    ],
+    "original_language": "en",
+    "vote_average": 5.5,
+    "vote_count": 307
+  },
+  {
+    "tmdb_id": 9101,
+    "title": "Down Periscope",
+    "popularity": 7.7195,
+    "overview": "Maverick Navy Lieutenant Commander Tom Dodge will never be a textbook officer, but he's a brilliant seaman who's always wanted to command a nuclear submarine — he's been given one last chance to clean up his record. Unfortunately, Admiral Graham, his nemesis, would rather sink the fleet than give Dodge his own boat. So, Graham stacks the deck against him and assigns Dodge to the Stingray, a diesel-powered WW2 submarine that can barely keep afloat. To make matters worse, Dodge's crew is a collection of maladjusted, mistake-prone misfits. Then, he's tagged the \"enemy\" in a crucial war game, and ordered to take on the U.S. Navy's best.",
+    "release_date": "1996-03-01",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.4,
+    "vote_count": 555
+  },
+  {
+    "tmdb_id": 5757,
+    "title": "Man of the Year",
+    "popularity": 1.4606,
+    "overview": "First-time director Dirk Shafer also penned this raucous \"mockumentary,\" a blend of fact and fiction that re-creates his 1992 reign as Playgirl magazine's Centerfold of the Year. When Shafer chooses to keep the fact that he's gay a secret from the magazine's editors, he finds himself living the ultimate lie -- and incapable of giving female readers what they really want. Will he succumb to his lover's pressures to come out of the closet?",
+    "release_date": "1995-09-15",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 3.6,
+    "vote_count": 8
+  },
+  {
+    "tmdb_id": 9302,
+    "title": "Up Close & Personal",
+    "popularity": 3.9011,
+    "overview": "Tally Atwater has a dream: to be a prime-time network newscaster. She pursues this dream with nothing but ambition, raw talent and a homemade demo tape. Warren Justice is a brilliant, hard edged, veteran newsman. He sees Tally has talent and becomes her mentor. Tally’s career takes a meteoric rise and she and Warren fall in love. The romance that results is as intense and revealing as television news itself. Yet, each breaking story, every videotaped crisis that brings them together, also threatens to drive them apart...",
+    "release_date": "1996-03-01",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.3,
+    "vote_count": 248
+  },
+  {
+    "tmdb_id": 11000,
+    "title": "The Birdcage",
+    "popularity": 9.0019,
+    "overview": "A gay cabaret owner and his drag queen partner agree to put up a false heterosexual front so that their son can introduce them to his fiancée's conservative parents.",
+    "release_date": "1996-03-03",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 7.043,
+    "vote_count": 1433
+  },
+  {
+    "tmdb_id": 16388,
+    "title": "The Brothers McMullen",
+    "popularity": 2.0578,
+    "overview": "Deals with the lives of the three Irish Catholic McMullen brothers from Long Island, New York, over three months, as they grapple with basic ideas and values — love, sex, marriage, religion and family — in the 1990s.",
+    "release_date": "1995-08-11",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.1,
+    "vote_count": 107
+  },
+  {
+    "tmdb_id": 9737,
+    "title": "Bad Boys",
+    "popularity": 14.0216,
+    "overview": "Marcus Burnett is a henpecked family man. Mike Lowrey is a footloose and fancy free ladies' man. Both Miami policemen, they have 72 hours to reclaim a consignment of drugs stolen from under their station's nose. To complicate matters, in order to get the assistance of the sole witness to a murder, they have to pretend to be each other.",
+    "release_date": "1995-04-07",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Crime",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.831,
+    "vote_count": 7193
+  },
+  {
+    "tmdb_id": 30765,
+    "title": "The Amazing Panda Adventure",
+    "popularity": 2.3169,
+    "overview": "Far from home in the lush bamboo forests of China, ten-year-old Ryan Tyler, with the help of a young girl, goes on a wonderful journey to rescue a baby panda taken by poachers.",
+    "release_date": "1995-08-25",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 5.7,
+    "vote_count": 104
+  },
+  {
+    "tmdb_id": 10474,
+    "title": "The Basketball Diaries",
+    "popularity": 7.6744,
+    "overview": "A high school basketball player’s life turns upside down after free-falling into the harrowing world of drug addiction.",
+    "release_date": "1995-04-21",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 7.404,
+    "vote_count": 2301
+  },
+  {
+    "tmdb_id": 22279,
+    "title": "An Awfully Big Adventure",
+    "popularity": 2.7498,
+    "overview": "Liverpool. 1947. Right after World War II, a star struck naive teenage girl joins a shabby theatre troupe in Liverpool. During a winter production of Peter Pan, the play quickly turns into a dark metaphor for youth as she becomes drawn into a web of sexual politics and intrigue and learns about the grown-up world of the theater.",
+    "release_date": "1995-05-11",
+    "genres": [
+      "Romance",
+      "Drama",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.5,
+    "vote_count": 73
+  },
+  {
+    "tmdb_id": 30157,
+    "title": "Amateur",
+    "popularity": 2.4207,
+    "overview": "A man wakes up in an alley, bleeding and with no memory of who he is. He stumbles into a coffee shop and is befriended by a charitable ex-nun who is failing in her attempts to write marketable pornography.",
+    "release_date": "1994-08-05",
+    "genres": [
+      "Crime",
+      "Comedy",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.2,
+    "vote_count": 112
+  },
+  {
+    "tmdb_id": 568,
+    "title": "Apollo 13",
+    "popularity": 10.4061,
+    "overview": "The true story of technical troubles that scuttle the Apollo 13 lunar mission in 1970, risking the lives of astronaut Jim Lovell and his crew, with the failed journey turning into a thrilling saga of heroism. Drifting more than 200,000 miles from Earth, the astronauts work furiously with the ground crew to avert tragedy.",
+    "release_date": "1995-06-30",
+    "genres": [
+      "Drama",
+      "History"
+    ],
+    "original_language": "en",
+    "vote_average": 7.462,
+    "vote_count": 6158
+  },
+  {
+    "tmdb_id": 11780,
+    "title": "Rob Roy",
+    "popularity": 5.2915,
+    "overview": "In the highlands of Scotland in the 1700s, Rob Roy tries to lead his small town to a better future, by borrowing money from the local nobility to buy cattle to herd to market. When the money is stolen, Rob is forced into a Robin Hood lifestyle to defend his family and honour.",
+    "release_date": "1995-04-13",
+    "genres": [
+      "Adventure",
+      "History",
+      "Drama",
+      "Action",
+      "War"
+    ],
+    "original_language": "en",
+    "vote_average": 6.723,
+    "vote_count": 737
+  },
+  {
+    "tmdb_id": 34996,
+    "title": "The Addiction",
+    "popularity": 4.4387,
+    "overview": "A vampiric doctoral student tries to follow the philosophy of a nocturnal comrade and control her thirst for blood.",
+    "release_date": "1995-10-06",
+    "genres": [
+      "Drama",
+      "Horror"
+    ],
+    "original_language": "en",
+    "vote_average": 6.485,
+    "vote_count": 331
+  },
+  {
+    "tmdb_id": 414,
+    "title": "Batman Forever",
+    "popularity": 15.9851,
+    "overview": "Batman faces off against two foes: the schizophrenic, horribly scarred former District Attorney Harvey Dent, aka Two-Face, and the Riddler, a disgruntled ex-Wayne Enterprises inventor seeking revenge against his former employer by unleashing his brain-sucking weapon on Gotham City's residents. As the caped crusader also copes with tortured memories of his parents' murder, he has a new romance, with psychologist Chase Meridian.",
+    "release_date": "1995-06-16",
+    "genres": [
+      "Action",
+      "Crime",
+      "Fantasy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.463,
+    "vote_count": 5781
+  },
+  {
+    "tmdb_id": 649,
+    "title": "Belle de Jour",
+    "popularity": 7.3407,
+    "overview": "Beautiful young housewife Séverine Serizy cannot reconcile her masochistic fantasies with her everyday life alongside dutiful husband Pierre. When her lovestruck friend Henri mentions a secretive high-class brothel run by Madame Anais, Séverine begins to work there during the day under the name Belle de Jour. But when one of her clients grows possessive, she must try to go back to her normal life.",
+    "release_date": "1967-05-24",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "fr",
+    "vote_average": 7.308,
+    "vote_count": 1050
+  },
+  {
+    "tmdb_id": 1873,
+    "title": "Beyond Rangoon",
+    "popularity": 2.3975,
+    "overview": "Dr. Laura Bowman is a young widow who's unwittingly drawn into political turmoil while vacationing in Burma in the late 1980s. Bowman initially left San Francisco with her sister in an attempt to escape painful memories of her husband and son's violent deaths. But her fight to escape to Thailand could prove just as harrowing.",
+    "release_date": "1995-08-25",
+    "genres": [
+      "History",
+      "Thriller",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.5,
+    "vote_count": 88
+  },
+  {
+    "tmdb_id": 5894,
+    "title": "Blue in the Face",
+    "popularity": 3.0364,
+    "overview": "A wacky group of locals visit the neighborhood cigar shop, looking for good times and finding plenty of hilarious fun. But when the greedy owner threatens to close the shop for good and turn it into a trendy vegetarian restaurant, the neighborhood proves they'll do just about anything to save their favorite hangout.",
+    "release_date": "1995-09-15",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.5,
+    "vote_count": 192
+  },
+  {
+    "tmdb_id": 1775,
+    "title": "Canadian Bacon",
+    "popularity": 3.8563,
+    "overview": "The U.S. President, low in the opinion polls, gets talked into raising his popularity by trying to start a cold war with Canada.",
+    "release_date": "1995-06-08",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.7,
+    "vote_count": 270
+  },
+  {
+    "tmdb_id": 8839,
+    "title": "Casper",
+    "popularity": 13.6489,
+    "overview": "Casper is a kind young ghost who peacefully haunts a mansion in Maine. When specialist James Harvey arrives to communicate with Casper and his fellow spirits, he brings along his teenage daughter, Kat. Casper quickly falls in love with Kat, but their budding relationship is complicated not only by his transparent state, but also by his troublemaking apparition uncles and their mischievous antics.",
+    "release_date": "1995-05-26",
+    "genres": [
+      "Fantasy",
+      "Comedy",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 6.35,
+    "vote_count": 5081
+  },
+  {
+    "tmdb_id": 20649,
+    "title": "Clockers",
+    "popularity": 4.0121,
+    "overview": "Strike is a young city drug pusher under the tutelage of drug lord Rodney Little. When a night manager at a fast-food restaurant is found with four bullets in his body, Strike’s older brother turns himself in as the killer. Detective Rocco Klein doesn’t buy the story, however, setting out to find the truth, and it seems that all the fingers point toward Strike & Rodney.",
+    "release_date": "1995-09-15",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Mystery"
+    ],
+    "original_language": "en",
+    "vote_average": 6.7,
+    "vote_count": 374
+  },
+  {
+    "tmdb_id": 10329,
+    "title": "Congo",
+    "popularity": 8.8165,
+    "overview": "Eight people embark on an expedition into the Congo, a mysterious expanse of unexplored Africa, where human greed and the laws of nature have gone berserk.",
+    "release_date": "1995-06-09",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction"
+    ],
+    "original_language": "en",
+    "vote_average": 5.614,
+    "vote_count": 1028
+  },
+  {
+    "tmdb_id": 8963,
+    "title": "Crimson Tide",
+    "popularity": 14.3363,
+    "overview": "After the Cold War, a breakaway Russian republic with nuclear warheads becomes a possible worldwide threat. U.S. submarine Capt. Frank Ramsey signs on a relatively green but highly recommended Lt. Cmdr. Ron Hunter to the USS Alabama, which may be the only ship able to stop a possible Armageddon. When Ramsey insists that the Alabama must act aggressively, Hunter, fearing they will start rather than stop a disaster, leads a potential mutiny to stop him.",
+    "release_date": "1995-05-12",
+    "genres": [
+      "Thriller",
+      "Action",
+      "Drama",
+      "War"
+    ],
+    "original_language": "en",
+    "vote_average": 7.19,
+    "vote_count": 2086
+  },
+  {
+    "tmdb_id": 26564,
+    "title": "Crumb",
+    "popularity": 3.4324,
+    "overview": "This movie chronicles the life and times of R. Crumb. Robert Crumb is the cartoonist/artist who drew Keep On Truckin', Fritz the Cat, and played a major pioneering role in the genesis of underground comix. Through interviews with his mother, two brothers, wife, ex-wife and ex-girlfriends, as well as selections from his vast quantity of graphic art, we are treated to a darkly comic ride through one man's subconscious mind.",
+    "release_date": "1995-04-28",
+    "genres": [
+      "Documentary"
+    ],
+    "original_language": "en",
+    "vote_average": 7.5,
+    "vote_count": 299
+  },
+  {
+    "tmdb_id": 8068,
+    "title": "Desperado",
+    "popularity": 10.0729,
+    "overview": "El Mariachi plunges headfirst into the dark border underworld when he follows a trail of blood to the last of the infamous Mexican drug lords, Bucho, for an action-packed, bullet-riddled showdown. With the help of his friend and a beautiful bookstore owner, El Mariachi tracks Bucho, takes on his army of desperados, and leaves his own trail of blood.",
+    "release_date": "1995-08-25",
+    "genres": [
+      "Thriller",
+      "Action",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 6.933,
+    "vote_count": 3280
+  },
+  {
+    "tmdb_id": 8512,
+    "title": "Devil in a Blue Dress",
+    "popularity": 5.4108,
+    "overview": "In late 1940s Los Angeles, Easy Rawlins is an unemployed black World War II veteran with few job prospects. At a bar, Easy meets DeWitt Albright, a mysterious white man looking for someone to investigate the disappearance of a missing white woman named Daphne Monet, who he suspects is hiding out in one of the city's black jazz clubs. Strapped for money and facing house payments, Easy takes the job, but soon finds himself in over his head.",
+    "release_date": "1995-09-29",
+    "genres": [
+      "Thriller",
+      "Crime",
+      "Drama",
+      "Mystery"
+    ],
+    "original_language": "en",
+    "vote_average": 6.5,
+    "vote_count": 484
+  },
+  {
+    "tmdb_id": 1572,
+    "title": "Die Hard: With a Vengeance",
+    "popularity": 15.5033,
+    "overview": "New York detective John McClane is back and kicking bad-guy butt in the third installment of this action-packed series, which finds him teaming with civilian Zeus Carver to prevent the loss of innocent lives. McClane thought he'd seen it all, until a genius named Simon engages McClane, his new \"partner\" -- and his beloved city -- in a deadly game that demands their concentration.",
+    "release_date": "1995-05-19",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 7.285,
+    "vote_count": 6886
+  },
+  {
+    "tmdb_id": 13552,
+    "title": "The Doom Generation",
+    "popularity": 4.4541,
+    "overview": "Jordan White and Amy Blue, two troubled teens, pick up an adolescent drifter, Xavier Red. Together, the threesome embarks on a sex- and violence-filled journey through a United States of psychos and quickie marts.",
+    "release_date": "1995-10-20",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 6.5,
+    "vote_count": 333
+  },
+  {
+    "tmdb_id": 6520,
+    "title": "First Knight",
+    "popularity": 9.0049,
+    "overview": "The timeless tale of King Arthur and the legend of Camelot are retold in this passionate period drama. Arthur is reluctant to hand the crown to Lancelot, and Guinevere is torn between her loyalty to her husband and her growing love for his rival. But Lancelot must balance his loyalty to the throne with the rewards of true love.",
+    "release_date": "1995-07-07",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.092,
+    "vote_count": 1382
+  },
+  {
+    "tmdb_id": 9073,
+    "title": "Free Willy 2: The Adventure Home",
+    "popularity": 4.9648,
+    "overview": "Jesse becomes reunited with Willy three years after the whale's jump to freedom as the teenager tries to rescue the killer whale and other orcas from an oil spill.",
+    "release_date": "1995-07-19",
+    "genres": [
+      "Family",
+      "Adventure",
+      "Drama",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.926,
+    "vote_count": 666
+  },
+  {
+    "tmdb_id": 10428,
+    "title": "Hackers",
+    "popularity": 10.7679,
+    "overview": "Along with his new friends, a teenager who was arrested by the US Secret Service and banned from using a computer for writing a computer virus discovers a plot by a nefarious hacker, but they must use their computer skills to find the evidence while being pursued by the Secret Service and the evil computer genius behind the virus.",
+    "release_date": "1995-09-14",
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.384,
+    "vote_count": 1566
+  },
+  {
+    "tmdb_id": 17447,
+    "title": "Jeffrey",
+    "popularity": 2.0197,
+    "overview": "Jeffrey, a gay man living in New York City with an overwhelming fear of contracting AIDS, concludes that being celibate is the only option to protect himself. As fate would have it, shortly after his declaration of a sex-free existence, he meets the handsome Steve Howard, his dream man -- except for his HIV-positive status. Facing this dilemma, Jeffrey turns to his best friend and an outrageous priest for guidance.",
+    "release_date": "1995-08-18",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.2,
+    "vote_count": 76
+  },
+  {
+    "tmdb_id": 9886,
+    "title": "Johnny Mnemonic",
+    "popularity": 8.2172,
+    "overview": "In a dystopian 2021, Johnny is a data trafficker who has an implant that allows him to securely store data too sensitive for regular computer networks. On one delivery run, he accepts a package that not only exceeds the implant's safety limits—and will kill him if the data is not removed in time—but also contains information far more important and valuable than he had ever imagined. On a race against time, he must avoid the assassins sent to kill him and remove the data before it, too, ends his life.",
+    "release_date": "1995-05-26",
+    "genres": [
+      "Science Fiction",
+      "Action",
+      "Adventure"
+    ],
+    "original_language": "en",
+    "vote_average": 5.783,
+    "vote_count": 1609
+  },
+  {
+    "tmdb_id": 9482,
+    "title": "Judge Dredd",
+    "popularity": 10.4926,
+    "overview": "In a dystopian future where Judges maintain law and order by acting as judge, jury, and executioner, Dredd fights to prove his innocence after being falsely accused of murder.",
+    "release_date": "1995-06-30",
+    "genres": [
+      "Science Fiction",
+      "Action"
+    ],
+    "original_language": "en",
+    "vote_average": 5.855,
+    "vote_count": 2867
+  },
+  {
+    "tmdb_id": 19326,
+    "title": "Jury Duty",
+    "popularity": 2.6074,
+    "overview": "When jobless Tommy Collins discovers that sequestered jurors earn free room and board as well as $5-a-day, he gets himself assigned to a jury in a murder trial. Once there, he does everything he can to prolong the trial and deliberations and make the sequestration more comfortable for himself.",
+    "release_date": "1995-04-12",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 4.4,
+    "vote_count": 131
+  },
+  {
+    "tmdb_id": 9344,
+    "title": "Kids",
+    "popularity": 6.5544,
+    "overview": "A group of bored, disaffected New York City teenagers spend a day skating, smoking, drinking, partying, deflowering virgins, and getting into fights.",
+    "release_date": "1995-07-21",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 6.871,
+    "vote_count": 1372
+  },
+  {
+    "tmdb_id": 9071,
+    "title": "Living in Oblivion",
+    "popularity": 2.9756,
+    "overview": "Low-budget independent filmmaker Nick Reve tries to keep everything together as his production is plagued with an insecure actress, a megalomaniac star, a pretentious beret-wearing director of photography, and lousy catering.",
+    "release_date": "1995-07-21",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 7.2,
+    "vote_count": 342
+  },
+  {
+    "tmdb_id": 8973,
+    "title": "Lord of Illusions",
+    "popularity": 2.8985,
+    "overview": "During a routine case in L.A., NY private investigator Harry D'Amour stumbles over members of a fanatic cult who are preparing for the resurrection of their leader Nix, a powerful magician who was killed 13 years earlier.",
+    "release_date": "1995-08-25",
+    "genres": [
+      "Horror",
+      "Fantasy",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 5.9,
+    "vote_count": 395
+  },
+  {
+    "tmdb_id": 15730,
+    "title": "Love & Human Remains",
+    "popularity": 2.7147,
+    "overview": "In a Canadian metropolis, failed actor David shares a place with the bookish Candy, whom he dated before coming out as gay. While David, who now waits tables, pursues an aimless romance with a younger coworker, Candy dabbles in both same-sex and heterosexual affairs. As David and Candy's odd assortment of friends — including a telepathic sex worker and an ill-tempered yuppie — pass in and out of their beds, a serial murder stalks the city's women.",
+    "release_date": "1994-07-22",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 5.786,
+    "vote_count": 49
+  },
+  {
+    "tmdb_id": 47608,
+    "title": "Mad Love",
+    "popularity": 3.0386,
+    "overview": "Matt falls for Casey, the new girl in school. She's fun-loving and eccentric, but there's a darkness to her whimsy that Matt can't begin to comprehend. When Casey attempts to commit suicide, her parents place her in a mental institution. Matt springs her out, and together the young lovers head on a road trip. They believe their love can \"cure\" Casey's problems. Matt starts to wonder, though, if are they inspired or misguided.",
+    "release_date": "1995-05-26",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 5.2,
+    "vote_count": 125
+  },
+  {
+    "tmdb_id": 2293,
+    "title": "Mallrats",
+    "popularity": 4.4061,
+    "overview": "Both dumped by their girlfriends, two best friends seek refuge in the local mall. Eventually, they decide to try and win back their significant others and take care of their respective nemeses.",
+    "release_date": "1995-10-20",
+    "genres": [
+      "Romance",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.757,
+    "vote_count": 1452
+  },
+  {
+    "tmdb_id": 9070,
+    "title": "Mighty Morphin Power Rangers: The Movie",
+    "popularity": 5.3322,
+    "overview": "Six incredible teens out-maneuver and defeat evil everywhere as the Mighty Morphin Power Rangers, but this time the Power Rangers may have met their match when they face off with Ivan Ooze, the most sinister monster the galaxy has ever seen.",
+    "release_date": "1995-06-30",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction",
+      "Fantasy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.894,
+    "vote_count": 803
+  },
+  {
+    "tmdb_id": 48787,
+    "title": "Mute Witness",
+    "popularity": 4.0474,
+    "overview": "When a mute makeup/special effects artist working on a low-budget slasher film gets locked in a dilapidated Moscow movie studio late one night, she thinks she witnesses the making of a snuff film. Thus begins a night of terror.",
+    "release_date": "1995-09-15",
+    "genres": [
+      "Thriller",
+      "Horror",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 6.5,
+    "vote_count": 170
+  },
+  {
+    "tmdb_id": 34574,
+    "title": "Nadja",
+    "popularity": 1.9352,
+    "overview": "In a contemporary New York City, members of a dysfunctional family of vampires are trying to come to terms with each other, in the wake of their father's death. Meanwhile, they are being hunted by Dr. Van Helsing and his hapless nephew. As in all good vampire movies, forces of love are pitted against forces of destruction.",
+    "release_date": "1995-09-01",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 5.7,
+    "vote_count": 64
+  },
+  {
+    "tmdb_id": 1642,
+    "title": "The Net",
+    "popularity": 9.1794,
+    "overview": "Angela Bennett is a freelance computer systems analyst who tracks down software viruses. At night, she hooks up to the internet and chats to others 'surfing the net'. While de-bugging a new high-tech game for a cyber friend, she comes across a top secret program and becomes the target of a mysterious organization, who will stop at nothing to erase her identity and her existence in order to protect the project.",
+    "release_date": "1995-07-28",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Mystery",
+      "Thriller",
+      "Action"
+    ],
+    "original_language": "en",
+    "vote_average": 6.058,
+    "vote_count": 1597
+  },
+  {
+    "tmdb_id": 11472,
+    "title": "Nine Months",
+    "popularity": 6.5447,
+    "overview": "When he finds out his longtime girlfriend is pregnant, a commitment-phobe realizes he might have to change his lifestyle for better or much, much worse.",
+    "release_date": "1995-07-12",
+    "genres": [
+      "Romance",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.717,
+    "vote_count": 728
+  },
+  {
+    "tmdb_id": 36196,
+    "title": "Party Girl",
+    "popularity": 2.8604,
+    "overview": "Although Mary has little income, she still finds ways to spend her nights at clubs. After being arrested for throwing an illegal rave, she asks her aunt Judy for bail money. Judy then finds Mary a job at her library so that Mary can repay her. Initially, Mary finds the job as a clerk boring and stifling, and prefers to get to know a street food vendor whom she likes. However, Mary must refocus her life once she loses her job and apartment.",
+    "release_date": "1995-06-09",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.6,
+    "vote_count": 108
+  },
+  {
+    "tmdb_id": 11980,
+    "title": "The Prophecy",
+    "popularity": 6.4387,
+    "overview": "The angel Gabriel comes to Earth to collect a soul which will end the stalemated war in Heaven. However, it is hidden inside of a Native American girl and only a former priest and a schoolteacher can stop him.",
+    "release_date": "1995-08-05",
+    "genres": [
+      "Thriller",
+      "Horror",
+      "Action",
+      "Fantasy",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.5,
+    "vote_count": 588
+  },
+  {
+    "tmdb_id": 58372,
+    "title": "Reckless",
+    "popularity": 1.1839,
+    "overview": "On Christmas Eve, a relentlessly cheerful woman escapes from the killers hired by her husband, and embarks on a series of strange encounters.",
+    "release_date": "1995-11-17",
+    "genres": [
+      "Fantasy",
+      "Comedy",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.6,
+    "vote_count": 9
+  },
+  {
+    "tmdb_id": 32646,
+    "title": "Safe",
+    "popularity": 2.7388,
+    "overview": "Carol White, a Los Angeles housewife in the late 1980s, comes down with a debilitating illness with no clear diagnosis.",
+    "release_date": "1995-06-23",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 7.0,
+    "vote_count": 367
+  },
+  {
+    "tmdb_id": 10533,
+    "title": "The Scarlet Letter",
+    "popularity": 5.9818,
+    "overview": "Set in puritanical Boston in the mid 1600s, the story of seamstress Hester Prynne, who is outcast after she becomes pregnant by a respected reverend. She refuses to divulge the name of the father, is \"convicted\" of adultery and forced to wear a scarlet \"A\" until an Indian attack unites the Puritans and leads to a reevaluation of their laws and morals.",
+    "release_date": "1995-10-13",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.1,
+    "vote_count": 540
+  },
+  {
+    "tmdb_id": 10802,
+    "title": "Showgirls",
+    "popularity": 10.1437,
+    "overview": "Fresh to Las Vegas with no connections, Nomi Malone takes a job as an exotic dancer. Her talents are quickly noticed by Cristal, a headlining dancer who senses an opportunity to bolster her own act. But Nomi won’t play second fiddle and soon begins her venomous path to the top, ruthlessly backstabbing anyone who gets in her way.",
+    "release_date": "1995-09-22",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 5.6,
+    "vote_count": 1456
+  },
+  {
+    "tmdb_id": 10149,
+    "title": "Smoke",
+    "popularity": 3.5493,
+    "overview": "Writer Paul Benjamin is nearly hit by a bus when he leaves Auggie Wren's smoke shop. Stranger Rashid Cole  saves his life, and soon middle-aged Paul tells homeless Rashid that he wouldn't mind a short-term housemate. Still grieving over his wife's murder, Paul is moved by both Rashid's quest to reconnect with his father and Auggie's discovery that a woman who might be his daughter is about to give birth.",
+    "release_date": "1995-06-09",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 7.19,
+    "vote_count": 554
+  },
+  {
+    "tmdb_id": 18402,
+    "title": "Something to Talk About",
+    "popularity": 3.7925,
+    "overview": "Grace King Bichon, who is managing her father's riding-stable, discovers that her husband Eddie is deceiving her with another woman. After confronting him in the middle of the night on the streets of their small home town, she decides to stay at her sister Emma Rae's house for a while to make up her mind. Breaking out of her everyday life, she starts to question the authority of everyone.",
+    "release_date": "1995-08-04",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 5.643,
+    "vote_count": 266
+  },
+  {
+    "tmdb_id": 9348,
+    "title": "Species",
+    "popularity": 8.5793,
+    "overview": "In 1993, the Search for Extra Terrestrial Intelligence Project receives a transmission detailing an alien DNA structure, along with instructions on how to splice it with human DNA. The result is Sil, a sensual but deadly creature who can change from a beautiful woman to an armour-plated killing machine in the blink of an eye.",
+    "release_date": "1995-07-07",
+    "genres": [
+      "Science Fiction",
+      "Horror",
+      "Action"
+    ],
+    "original_language": "en",
+    "vote_average": 6.0,
+    "vote_count": 1950
+  },
+  {
+    "tmdb_id": 281,
+    "title": "Strange Days",
+    "popularity": 7.9916,
+    "overview": "In the last days of 1999, ex-cop turned street hustler Lenny Nero receives a disc which contains the memories of the murder of a prostitute. With the help of bodyguard Mace, he starts to investigate and is pulled deeper and deeper in a whirl of murder, blackmail and intrigue.",
+    "release_date": "1995-10-13",
+    "genres": [
+      "Crime",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 7.018,
+    "vote_count": 1631
+  },
+  {
+    "tmdb_id": 5967,
+    "title": "The Umbrellas of Cherbourg",
+    "popularity": 6.2829,
+    "overview": "This simple romantic tragedy begins in 1957. Guy Foucher, a 20-year-old French auto mechanic, has fallen in love with 17-year-old Geneviève Emery, an employee in her widowed mother's chic but financially embattled umbrella shop. On the evening before Guy is to leave for a two-year tour of combat in Algeria, he and Geneviève make love. She becomes pregnant and must choose between waiting for Guy's return or accepting an offer of marriage from a wealthy diamond merchant.",
+    "release_date": "1964-02-19",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "fr",
+    "vote_average": 7.4,
+    "vote_count": 917
+  },
+  {
+    "tmdb_id": 47939,
+    "title": "Three Wishes",
+    "popularity": 3.3689,
+    "overview": "While Jane Holman is driving with her two sons, she accidentally runs into a drifter, Jack McCloud, who breaks his leg. Being responsible, Jane invites Jack, and his dog, to stay at her home until his leg has healed. Jack struggles to adapt their lifestyle, and finds himself loved by the family.",
+    "release_date": "1995-10-27",
+    "genres": [
+      "Fantasy",
+      "Family",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.2,
+    "vote_count": 90
+  },
+  {
+    "tmdb_id": 36834,
+    "title": "Total Eclipse",
+    "popularity": 5.3383,
+    "overview": "Young, wild poet Arthur Rimbaud and his mentor Paul Verlaine engage in a fierce, forbidden romance while feeling the effects of a hellish artistic lifestyle.",
+    "release_date": "1995-11-03",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.411,
+    "vote_count": 570
+  },
+  {
+    "tmdb_id": 9090,
+    "title": "To Wong Foo, Thanks for Everything! Julie Newmar",
+    "popularity": 6.9117,
+    "overview": "Veteran drag queens Vida Boheme and Noxeema Jackson take novice Chi-Chi Rodriguez under their wing on a madcap road trip across the country to compete in the Drag Queen of America pageant in Los Angeles.",
+    "release_date": "1995-09-08",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 7.481,
+    "vote_count": 855
+  },
+  {
+    "tmdb_id": 3512,
+    "title": "Under Siege 2: Dark Territory",
+    "popularity": 7.9234,
+    "overview": "A passenger train has been hijacked by an electronics expert and turned into an untraceable command center for a weapons satellite. He has planned to blow up Washington DC and only one man can stop him, former Navy SEAL Casey Ryback.",
+    "release_date": "1995-07-13",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 5.9,
+    "vote_count": 1075
+  },
+  {
+    "tmdb_id": 52856,
+    "title": "Unstrung Heroes",
+    "popularity": 1.2474,
+    "overview": "Steven Lidz, unhappy with his home life since his mother became sick, moves in with his two eccentric uncles. As Steven grows closer to his uncles, he learns how to cope with his emotions and to value his own uniqueness.",
+    "release_date": "1995-09-15",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 6.1,
+    "vote_count": 32
+  },
+  {
+    "tmdb_id": 77350,
+    "title": "Unzipped",
+    "popularity": 1.4661,
+    "overview": "Isaac Mizrahi, one of the most successful designers in high fashion, plans his fall 1994 collection.",
+    "release_date": "1995-08-11",
+    "genres": [
+      "Documentary"
+    ],
+    "original_language": "en",
+    "vote_average": 5.4,
+    "vote_count": 19
+  },
+  {
+    "tmdb_id": 9560,
+    "title": "A Walk in the Clouds",
+    "popularity": 13.6842,
+    "overview": "World War II vet Paul Sutton falls for a pregnant and unwed woman who persuades him -- during their first encounter -- to pose as her husband so she can face her family.",
+    "release_date": "1995-05-27",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 7.379,
+    "vote_count": 1162
+  },
+  {
+    "tmdb_id": 9804,
+    "title": "Waterworld",
+    "popularity": 12.2348,
+    "overview": "In a futuristic world where the polar ice caps have melted and made Earth a liquid planet, a beautiful barmaid rescues a mutant seafarer from a floating island prison. They escape, along with her young charge, Enola, and sail off aboard his ship. But the trio soon becomes the target of a menacing pirate who covets the map to 'Dryland'—which is tattooed on Enola's back.",
+    "release_date": "1995-07-28",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Science Fiction"
+    ],
+    "original_language": "en",
+    "vote_average": 6.245,
+    "vote_count": 4266
+  },
+  {
+    "tmdb_id": 31611,
+    "title": "White Man's Burden",
+    "popularity": 2.8174,
+    "overview": "The story takes place in alternative America where the blacks are members of social elite, and whites are inhabitants of inner city ghettos. Louis Pinnock is a white worker in a chocolate factory, loving husband and father of two children. While delivering a package for black CEO Thaddeus Thomas, he is mistaken for a voyeur and, as a result, loses his job, gets beaten by black cops and his family gets evicted from their home. Desperate Pinnock takes a gun and kidnaps Thomas, demanding justice.",
+    "release_date": "1995-12-01",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 5.057,
+    "vote_count": 90
+  },
+  {
+    "tmdb_id": 65796,
+    "title": "Wild Bill",
+    "popularity": 3.5664,
+    "overview": "Biopic about famous gunslinger Wild Bill Hickock. The early career of legendary lawman is telescoped and culminates in his relocation in Deadwood and a reunion with Calamity Jane.",
+    "release_date": "1995-12-01",
+    "genres": [
+      "Western"
+    ],
+    "original_language": "en",
+    "vote_average": 5.7,
+    "vote_count": 183
+  },
+  {
+    "tmdb_id": 49805,
+    "title": "The Browning Version",
+    "popularity": 2.2979,
+    "overview": "Andrew Crocker-Harris is an embittered and disliked teacher of Greek and Latin at a British prep school. After nearly 20 years of service, he is being forced to retire for 'health reasons', and perhaps may not even be given a pension. The boys regard him as a Hitler, with some justification. His unfaithful wife Laura tries to hurt him in any way she can. Andrew must come to terms with his failed life and at least regain his own self-esteem.",
+    "release_date": "1994-06-08",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.4,
+    "vote_count": 66
+  },
+  {
+    "tmdb_id": 26258,
+    "title": "Bushwhacked",
+    "popularity": 2.558,
+    "overview": "A inept courier realises he has been used by criminals to deliver money. On the run from both the criminals and police, he poses as a Scout leader and leads a scout group on a hike through the mountains.",
+    "release_date": "1995-08-04",
+    "genres": [
+      "Adventure",
+      "Family",
+      "Comedy",
+      "Action"
+    ],
+    "original_language": "en",
+    "vote_average": 5.397,
+    "vote_count": 132
+  },
+  {
+    "tmdb_id": 50797,
+    "title": "Burnt by the Sun",
+    "popularity": 2.1728,
+    "overview": "Russia, 1936: revolutionary hero Colonel Kotov is spending an idyllic summer in his dacha with his young wife and six-year-old daughter Nadia and other assorted family and friends. Things change dramatically with the unheralded arrival of Cousin Dmitri from Moscow, who charms the women and little Nadia with his games and pianistic bravura. But Kotov isn't fooled: this is the time of Stalin's repression, with telephone calls in the middle of the night spelling doom - and he knows that Dmitri isn't paying a social call...",
+    "release_date": "1994-05-01",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "ru",
+    "vote_average": 6.937,
+    "vote_count": 215
+  },
+  {
+    "tmdb_id": 19155,
+    "title": "Before the Rain",
+    "popularity": 1.9725,
+    "overview": "The circularity of violence seen in a story that circles on itself. In Macedonia, during the war in Bosnia, Christians hunt an ethnic Albanian girl who may have murdered one of their own. A young monk who's taken a vow of silence offers her protection. In London, a photographic editor who's pregnant needs to talk it out with her estranged husband and chooses a toney restaurant.",
+    "release_date": "1994-06-09",
+    "genres": [
+      "Drama",
+      "War"
+    ],
+    "original_language": "mk",
+    "vote_average": 7.3,
+    "vote_count": 195
+  },
+  {
+    "tmdb_id": 76,
+    "title": "Before Sunrise",
+    "popularity": 15.8218,
+    "overview": "An unexpected meeting on a train leads two travelers to spend an evening wandering through Vienna. As the night unfolds, they share stories and conversations about life and love, exploring new ideas while a quiet intimacy grows between them, knowing it may be their only night together.",
+    "release_date": "1995-01-27",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 7.968,
+    "vote_count": 4904
+  },
+  {
+    "tmdb_id": 11017,
+    "title": "Billy Madison",
+    "popularity": 7.0986,
+    "overview": "Billy Madison is the 27 year-old son of Bryan Madison, a very rich man who has made his living in the hotel industry. Billy stands to inherit his father's empire, but only if he can make it through all 12 grades, 2 weeks per grade, to prove that he has what it takes to run the family business.",
+    "release_date": "1995-02-10",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.182,
+    "vote_count": 1888
+  },
+  {
+    "tmdb_id": 37141,
+    "title": "The Babysitter",
+    "popularity": 4.0805,
+    "overview": "Jennifer is a lovely teen who has been hired to baby-sit the kids of Harry Tucker and his wife, Dolly. The Tuckers go to a party and proceed to get inebriated, with Mr. Tucker fantasizing about his beautiful baby sitter. Meanwhile, Jack, her boyfriend, and Mark, another guy interested in her, decide to spy on Jennifer at the Tucker house, with each young man also fixated on her.",
+    "release_date": "1995-10-17",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 5.136,
+    "vote_count": 198
+  },
+  {
+    "tmdb_id": 9382,
+    "title": "Boys on the Side",
+    "popularity": 6.7639,
+    "overview": "After breaking up with her girlfriend, a nightclub singer, Jane, answers a personal ad from Robin, a real estate agent with AIDS, seeking a cross-country travel partner. On their journey from New York City to Los Angeles, the two stop by Pittsburgh to pick up Jane's friend Holly, who is trying to escape an abusive relationship. With three distinct personalities, the women must overcome their differences to help one another.",
+    "release_date": "1995-02-03",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.4,
+    "vote_count": 272
+  },
+  {
+    "tmdb_id": 6715,
+    "title": "The Cure",
+    "popularity": 4.7345,
+    "overview": "Erik, a loner, finds a friend in Dexter, an eleven-year-old boy with AIDS. They vow to find a cure for AIDS together and save Dexter's life in an eventful summer.",
+    "release_date": "1995-04-21",
+    "genres": [
+      "Drama",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 7.9,
+    "vote_count": 372
+  },
+  {
+    "tmdb_id": 18256,
+    "title": "Castle Freak",
+    "popularity": 3.715,
+    "overview": "John Reilly discovers that his family's newly inherited castle in Italy is haunted by a relentless, bloodthirsty creature.",
+    "release_date": "1996-04-20",
+    "genres": [
+      "Thriller",
+      "Drama",
+      "Horror",
+      "Mystery"
+    ],
+    "original_language": "en",
+    "vote_average": 6.1,
+    "vote_count": 250
+  },
+  {
+    "tmdb_id": 22625,
+    "title": "Circle of Friends",
+    "popularity": 3.2031,
+    "overview": "Three girlhood friends now at college share first loves, first kisses and first betrayals. At the center of it all is the best-looking boy on campus. Can a self-conscious dreamer hook the biggest fish in the pond?",
+    "release_date": "1995-04-07",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.3,
+    "vote_count": 99
+  },
+  {
+    "tmdb_id": 2292,
+    "title": "Clerks",
+    "popularity": 6.2555,
+    "overview": "Convenience and video store clerks Dante and Randal are sharp-witted, potty-mouthed and bored out of their minds. So in between needling customers, the counter jockeys play hockey on the roof, visit a funeral home and deal with their love lives.",
+    "release_date": "1994-10-19",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 7.362,
+    "vote_count": 2887
+  },
+  {
+    "tmdb_id": 1909,
+    "title": "Don Juan DeMarco",
+    "popularity": 4.3038,
+    "overview": "John Arnold DeMarco is a man who believes he is Don Juan, the greatest lover in the world. Clad in a cape and mask, DeMarco undergoes psychiatric treatment with Dr. Jack Mickler to cure him of his apparent delusion. But the psychiatric sessions have an unexpected effect on the psychiatric staff and, most profoundly, Dr Mickler, who rekindles the romance in his complacent marriage.",
+    "release_date": "1994-10-12",
+    "genres": [
+      "Romance",
+      "Drama",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.751,
+    "vote_count": 830
+  },
+  {
+    "tmdb_id": 8984,
+    "title": "Disclosure",
+    "popularity": 5.8519,
+    "overview": "A computer specialist is sued for sexual harassment by a former lover turned boss who initiated the act forcefully, which threatens both his career and his personal life.",
+    "release_date": "1994-12-09",
+    "genres": [
+      "Thriller",
+      "Drama",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 6.245,
+    "vote_count": 1319
+  },
+  {
+    "tmdb_id": 4954,
+    "title": "Drop Zone",
+    "popularity": 4.6492,
+    "overview": "A daring prison break from an airliner at 30,000 feet leaves U.S. Marshal Pete Nessip mourning a brother and gunning for revenge. After being ordered to turn in his badge, he seeks out Jessie Crossman, a noted skydiver, and offers to sponsor her crew for the annual Independence Day parachuting show in Washington, D.C., if she trains him. Meanwhile, the mastermind behind the mid-air jailbreak is planning a daring computer theft on Independence Day.",
+    "release_date": "1994-12-08",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 5.8,
+    "vote_count": 479
+  },
+  {
+    "tmdb_id": 62488,
+    "title": "Destiny Turns on the Radio",
+    "popularity": 1.9749,
+    "overview": "Johnny Destiny burns into Las Vegas in his hot Plymouth RoadRunner, stopping only to pick up a stranger stranded in the desert. But then, things aren't always as they seem. Anything can happen in that town of many possibilities...especially since there's been some weird electrical disturbances. As the stranger, fresh out of prison, tries to put his life back together--to recover his money from an old bank heist and the girl he lost in doing the job--something keeps interfering with his plans. Is it fate...or just Destiny?",
+    "release_date": "1995-04-28",
+    "genres": [
+      "Crime",
+      "Comedy",
+      "Fantasy"
+    ],
+    "original_language": "en",
+    "vote_average": 4.98,
+    "vote_count": 50
+  },
+  {
+    "tmdb_id": 10531,
+    "title": "Death and the Maiden",
+    "popularity": 4.6402,
+    "overview": "A political activist is convinced that her guest is a man who once tortured her for the government.",
+    "release_date": "1994-05-04",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 7.1,
+    "vote_count": 588
+  },
+  {
+    "tmdb_id": 11929,
+    "title": "Dolores Claiborne",
+    "popularity": 6.5162,
+    "overview": "Dolores Claiborne was accused of killing her abusive husband twenty years ago, but the court's findings were inconclusive and she was allowed to walk free. Now she has been accused of killing her employer, Vera Donovan, and this time there is a witness who can place her at the scene of the crime. Things look bad for Dolores when her daughter Selena, a successful Manhattan magazine writer, returns to cover the story.",
+    "release_date": "1995-03-24",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Mystery"
+    ],
+    "original_language": "en",
+    "vote_average": 7.261,
+    "vote_count": 915
+  },
+  {
+    "tmdb_id": 8467,
+    "title": "Dumb and Dumber",
+    "popularity": 22.702,
+    "overview": "Lloyd and Harry are two men whose stupidity is really indescribable. When Mary, a beautiful woman, loses an important suitcase with money before she leaves for Aspen, the two friends (who have found the suitcase) decide to return it to her. After some \"adventures\" they finally get to Aspen where, using the lost money they live it up and fight for Mary's heart.",
+    "release_date": "1994-12-16",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.666,
+    "vote_count": 6989
+  },
+  {
+    "tmdb_id": 10451,
+    "title": "Eat Drink Man Woman",
+    "popularity": 4.8926,
+    "overview": "Retired and widowed Chinese master chef Chu lives in modern day Taipei, with his three attractive daughters, all of whom are unattached. Soon, each daughter encounters a new man in their lives. When these new relationships blossom, stereotypes are broken and the living situation within the family changes.",
+    "release_date": "1994-08-03",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "zh",
+    "vote_average": 7.611,
+    "vote_count": 427
+  },
+  {
+    "tmdb_id": 20156,
+    "title": "Exotica",
+    "popularity": 3.5243,
+    "overview": "In the upscale Toronto strip club Exotica, dancer Christina is visited nightly by the obsessive Francis, a depressed tax auditor. Her ex-boyfriend, the club's MC, Eric, still jealously pines for her even as he introduces her onstage, but Eric is having his own relationship problems with the club's female owner. Thomas, a mysterious pet-shop owner, is about to become unexpectedly involved in their lives.",
+    "release_date": "1994-09-29",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.6,
+    "vote_count": 406
+  },
+  {
+    "tmdb_id": 18395,
+    "title": "Exit to Eden",
+    "popularity": 2.5308,
+    "overview": "Photographer Elliot Slater has inadvertently snapped the only existing photos of elusive jewel thief Omar. When Elliot leaves for a private vacation on an S&M island, he is followed by Omar, Omar's partner, Nina, and undercover police officers Fred and Sheila. Unaware of the number of people chasing him, Elliot enjoys his stay at the resort, and finds himself falling in love with head dominatrix Lisa.",
+    "release_date": "1994-10-14",
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 4.2,
+    "vote_count": 102
+  },
+  {
+    "tmdb_id": 522,
+    "title": "Ed Wood",
+    "popularity": 5.2378,
+    "overview": "The mostly true story of the legendary \"worst director of all time\", who, with the help of his strange friends, filmed countless B-movies without ever becoming famous or successful.",
+    "release_date": "1994-09-28",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "History"
+    ],
+    "original_language": "en",
+    "vote_average": 7.476,
+    "vote_count": 2602
+  },
+  {
+    "tmdb_id": 397,
+    "title": "French Kiss",
+    "popularity": 5.293,
+    "overview": "After her fiancee admits to infidelity while on a business trip in France, a woman attempts to get her lover back and marry him by traveling to Paris despite her crippling fear of flying.  On the way she unwittingly smuggles something of value that has a charming crook chasing her across France as she chases after her future husband.",
+    "release_date": "1995-05-05",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.5,
+    "vote_count": 826
+  },
+  {
+    "tmdb_id": 10525,
+    "title": "Forget Paris",
+    "popularity": 2.8248,
+    "overview": "Mickey Gordon is a basketball referee who travels to France to bury his father. Ellen Andrews is an American living in Paris who works for the airline he flies on. They meet and fall in love, but their relationship goes through many difficult patches.",
+    "release_date": "1995-05-19",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.323,
+    "vote_count": 167
+  },
+  {
+    "tmdb_id": 27985,
+    "title": "Far from Home: The Adventures of Yellow Dog",
+    "popularity": 2.4473,
+    "overview": "Teenager Angus adopts a stray dog and names him Yellow. Several days later, while travelling along the coast of British Columbia with Angus's father, John, the boy and dog become stranded when turbulent waters capsize their boat. Angus's parents relentlessly badger rescue teams. Angus, schooled by his father in wilderness survival skills, and assisted by the intelligent Yellow Dog, tries to attract rescuers.",
+    "release_date": "1995-01-13",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 6.248,
+    "vote_count": 105
+  },
+  {
+    "tmdb_id": 15789,
+    "title": "A Goofy Movie",
+    "popularity": 14.3815,
+    "overview": "Goofy’s teenage son Max is desperate to impress his crush and fit in at school. After well-meaning but ignorant Goofy suddenly whisks him away on a cross-country road trip—messing up Max’s first date plans in the process—Goofy’s old-school parenting and Max’s desire for independence lead to a vacation of hilarious mishaps, as they both learn to see eye to eye and listen to each other.",
+    "release_date": "1995-04-05",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Romance",
+      "Animation",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 7.04,
+    "vote_count": 1978
+  },
+  {
+    "tmdb_id": 27303,
+    "title": "Hideaway",
+    "popularity": 3.2423,
+    "overview": "Hatch Harrison, his wife, Lindsey, and their daughter, Regina, are enjoying a pleasant drive when a car crash leaves wife and daughter unharmed but kills Hatch. However, an ingenious doctor, Jonas Nyebern, manages to revive Hatch after two lifeless hours. But Hatch does not come back unchanged. He begins to suffer horrible visions of murder -- only to find out the visions are the sights of a serial killer.",
+    "release_date": "1995-03-03",
+    "genres": [
+      "Drama",
+      "Thriller",
+      "Horror"
+    ],
+    "original_language": "en",
+    "vote_average": 5.189,
+    "vote_count": 175
+  },
+  {
+    "tmdb_id": 21183,
+    "title": "Fluke",
+    "popularity": 4.0839,
+    "overview": "Workaholic Thomas Johnson dies in an auto accident and reincarnates as a dog. Remembering some of his previous being, he returns to his wife and son to protect them from the man who caused his accident. But, as time goes by, his memories return, and Thomas realizes he wasn't such a good husband and father.",
+    "release_date": "1995-06-02",
+    "genres": [
+      "Drama",
+      "Adventure",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 7.0,
+    "vote_count": 289
+  },
+  {
+    "tmdb_id": 10954,
+    "title": "Farinelli",
+    "popularity": 2.7675,
+    "overview": "The life and career of Italian opera singer Farinelli, considered one of the greatest castrato singers of all time.",
+    "release_date": "1994-12-01",
+    "genres": [
+      "History",
+      "Drama",
+      "Music"
+    ],
+    "original_language": "fr",
+    "vote_average": 6.6,
+    "vote_count": 200
+  },
+  {
+    "tmdb_id": 47867,
+    "title": "Gordy",
+    "popularity": 1.1104,
+    "overview": "A talking pig named Gordy becomes involved in a quest to save his family from the slaughterhouse.",
+    "release_date": "1995-05-12",
+    "genres": [
+      "Drama",
+      "Family",
+      "Fantasy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.4,
+    "vote_count": 34
+  },
+  {
+    "tmdb_id": 14275,
+    "title": "Hoop Dreams",
+    "popularity": 2.1967,
+    "overview": "Every school day, African-American teenagers William Gates and Arthur Agee travel 90 minutes each way from inner-city Chicago to St. Joseph High School in Westchester, Illinois, a predominately white suburban school well-known for the excellence of its basketball program. Gates and Agee dream of NBA stardom, and with the support of their close-knit families, they battle the social and physical obstacles that stand in their way. This acclaimed documentary was shot over the course of five years.",
+    "release_date": "1994-09-12",
+    "genres": [
+      "Documentary"
+    ],
+    "original_language": "en",
+    "vote_average": 7.6,
+    "vote_count": 345
+  },
+  {
+    "tmdb_id": 1024,
+    "title": "Heavenly Creatures",
+    "popularity": 4.664,
+    "overview": "Precocious teenager Juliet moves to New Zealand with her family and soon befriends the quiet, brooding Pauline through their shared love of fantasy and literature. This friendship gradually develops into an intense and obsessive bond.",
+    "release_date": "1994-09-12",
+    "genres": [
+      "Drama",
+      "Fantasy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.954,
+    "vote_count": 1072
+  },
+  {
+    "tmdb_id": 17207,
+    "title": "Houseguest",
+    "popularity": 1.8368,
+    "overview": "In hot water with the mob over an unpaid debt, a con man poses as a family friend in an affluent Pennsylvania suburb.",
+    "release_date": "1995-01-06",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.5,
+    "vote_count": 81
+  },
+  {
+    "tmdb_id": 13701,
+    "title": "Immortal Beloved",
+    "popularity": 4.6756,
+    "overview": "A chronicle of the life of infamous classical composer Ludwig van Beethoven and his painful struggle with hearing loss. Following Beethoven's death in 1827, his assistant, Schindler, searches for an elusive woman referred to in the composer's love letters as \"immortal beloved.\" As Schindler solves the mystery, a series of flashbacks reveal Beethoven's transformation from passionate young man to troubled musical genius.",
+    "release_date": "1994-12-16",
+    "genres": [
+      "Drama",
+      "Music",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 7.1,
+    "vote_count": 384
+  },
+  {
+    "tmdb_id": 14819,
+    "title": "Heavyweights",
+    "popularity": 3.6761,
+    "overview": "Camp Hope is a summer retreat for overweight boys run by a kindly couple who make the campers feel comfortable with their extra pounds. But when tyrannical fitness guru Tony buys the camp, he puts the kids on a cruel regimen that goes too far. Sick of the endless weeks of \"all work and no play,\" the kids stage a coup and reclaim their summer of fun.",
+    "release_date": "1995-02-17",
+    "genres": [
+      "Family",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.174,
+    "vote_count": 432
+  },
+  {
+    "tmdb_id": 32631,
+    "title": "The Hunted",
+    "popularity": 4.8325,
+    "overview": "Paul Racine, a high-powered American business executive in Japan, is catapulted into a maze of danger and intrigue after he and his sexy companion are the targets of assassins hired by the ruthless Kinjo.  To survive, Racine must join forces with a powerful samurai and together they will fight the force of evil in an awesome battle rooted in centuries of brutal conflict.",
+    "release_date": "1995-02-24",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 5.718,
+    "vote_count": 131
+  },
+  {
+    "tmdb_id": 11777,
+    "title": "I.Q.",
+    "popularity": 3.1496,
+    "overview": "Albert Einstein helps a young man who's in love with Einstein's niece to catch her attention by pretending temporarily to be a great physicist.",
+    "release_date": "1994-12-24",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.023,
+    "vote_count": 511
+  },
+  {
+    "tmdb_id": 628,
+    "title": "Interview with the Vampire",
+    "popularity": 16.9509,
+    "overview": "A vampire relates his epic life story of love, betrayal, loneliness, and dark hunger to an over-curious reporter.",
+    "release_date": "1994-11-11",
+    "genres": [
+      "Horror",
+      "Drama",
+      "Fantasy"
+    ],
+    "original_language": "en",
+    "vote_average": 7.386,
+    "vote_count": 6659
+  },
+  {
+    "tmdb_id": 87729,
+    "title": "Jefferson in Paris",
+    "popularity": 2.2211,
+    "overview": "His wife having recently died, Thomas Jefferson accepts the post of United States ambassador to pre-revolutionary France, though he finds it difficult to adjust to life in a country where the aristocracy subjugates an increasingly restless peasantry. In Paris, he becomes smitten with cultured artist Maria Cosway, but, when his daughter visits from Virginia accompanied by her attractive slave, Sally Hemings, Jefferson's attentions are diverted.",
+    "release_date": "1995-03-31",
+    "genres": [
+      "Drama",
+      "Romance",
+      "History"
+    ],
+    "original_language": "en",
+    "vote_average": 5.1,
+    "vote_count": 50
+  },
+  {
+    "tmdb_id": 18713,
+    "title": "The Jerky Boys",
+    "popularity": 2.0488,
+    "overview": "When two unemployed telephone pranksters decide to use their vocal \"talents\" to impersonate a Chicago mob boss and curry favor with organized crime in New York, the trouble begins. It isn't long before Johnny and Kamal (the \"Jerky Boys\" of crank call fame) are wanted by the local mafia, the police, and their neighbor.",
+    "release_date": "1995-02-03",
+    "genres": [
+      "Comedy",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 4.4,
+    "vote_count": 35
+  },
+  {
+    "tmdb_id": 6280,
+    "title": "Junior",
+    "popularity": 4.3837,
+    "overview": "A research scientist becomes the world's first pregnant man in order to test a drug he and a colleague have designed for expectant women. To carry out the trial, he has an embryo implant, believing that he will only carry the baby for three months – hardly expecting to face the prospect of giving birth.",
+    "release_date": "1994-11-22",
+    "genres": [
+      "Comedy",
+      "Science Fiction"
+    ],
+    "original_language": "en",
+    "vote_average": 5.2,
+    "vote_count": 1716
+  },
+  {
+    "tmdb_id": 9061,
+    "title": "Just Cause",
+    "popularity": 4.8128,
+    "overview": "A Harvard professor is lured back into the courtroom after twenty-five years to take the case of a young black man condemned to death for the horrific murder of a child.",
+    "release_date": "1995-02-17",
+    "genres": [
+      "Action",
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 6.259,
+    "vote_count": 651
+  },
+  {
+    "tmdb_id": 37108,
+    "title": "A Kid in King Arthur's Court",
+    "popularity": 3.2272,
+    "overview": "A Southern California kid named Calvin Fuller is magically transported to the medieval kingdom of Camelot through a crack in the ground caused by an earthquake. Once there, he learns he was summoned by the wizard Merlin, who needs Calvin to save Camelot. Using dazzling modern inventions, can Calvin help King Arthur retain his crown and thwart the evil Lord Belasco?",
+    "release_date": "1995-08-11",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Comedy",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 5.0,
+    "vote_count": 202
+  },
+  {
+    "tmdb_id": 6071,
+    "title": "Kiss of Death",
+    "popularity": 6.3934,
+    "overview": "Jimmy Kilmartin's an ex-con who's trying to go straight. But he can't say no to a quick driving job because his so-called friend's life is threatened. The job is for Little Junior Brown, a violent and powerful villain. When things go wrong, Jimmy is left to do the time, and his whole life is turned upside-down, but if that wasn't enough, the cops won't leave Jimmy alone when he gets out... They want Little Junior Brown.",
+    "release_date": "1995-04-21",
+    "genres": [
+      "Crime",
+      "Thriller",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 5.701,
+    "vote_count": 374
+  },
+  {
+    "tmdb_id": 11,
+    "title": "Star Wars",
+    "popularity": 41.0922,
+    "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+    "release_date": "1977-05-25",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Science Fiction"
+    ],
+    "original_language": "en",
+    "vote_average": 8.207,
+    "vote_count": 22994
+  },
+  {
+    "tmdb_id": 9587,
+    "title": "Little Women",
+    "popularity": 9.6922,
+    "overview": "Four sisters come of age in America in the aftermath of the Civil War.",
+    "release_date": "1994-12-21",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 7.266,
+    "vote_count": 1379
+  },
+  {
+    "tmdb_id": 19101,
+    "title": "A Little Princess",
+    "popularity": 5.0379,
+    "overview": "When her father enlists to fight for the British in WWI, young Sara Crewe goes to New York to attend the same boarding school her late mother attended. She soon clashes with the severe headmistress, Miss Minchin, who attempts to stifle Sara's creativity and sense of self-worth.",
+    "release_date": "1995-05-10",
+    "genres": [
+      "Drama",
+      "Family",
+      "Fantasy"
+    ],
+    "original_language": "en",
+    "vote_average": 7.6,
+    "vote_count": 1077
+  },
+  {
+    "tmdb_id": 49980,
+    "title": "Ladybird Ladybird",
+    "popularity": 1.6631,
+    "overview": "Maggie has had four children, by four different fathers, removed by social services because of a previous violent relationship. When she meets Jorge, a gentle Latin American refugee, she gradually sees her chance for happiness, but her past still haunts her.",
+    "release_date": "1994-02-18",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 7.2,
+    "vote_count": 108
+  },
+  {
+    "tmdb_id": 18183,
+    "title": "Like Water for Chocolate",
+    "popularity": 3.8422,
+    "overview": "Tita is passionately in love with Pedro, but her controlling mother forbids her from marrying him. When Pedro marries her sister, Tita throws herself into her cooking and discovers she can transfer her emotions through the food she prepares, infecting all who eat it with her intense heartbreak.",
+    "release_date": "1992-04-16",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "es",
+    "vote_average": 7.275,
+    "vote_count": 571
+  },
+  {
+    "tmdb_id": 4476,
+    "title": "Legends of the Fall",
+    "popularity": 13.5168,
+    "overview": "In early 20th-century Montana, Col. William Ludlow lives on a ranch in the wilderness with his sons, Alfred, Tristan, and Samuel. Eventually, the unconventional but close-knit family are bound by loyalty, tested by war, and torn apart by love, as told over the course of several decades in this epic saga.",
+    "release_date": "1994-12-23",
+    "genres": [
+      "Drama",
+      "Western",
+      "Romance",
+      "War"
+    ],
+    "original_language": "en",
+    "vote_average": 7.4,
+    "vote_count": 2967
+  },
+  {
+    "tmdb_id": 11008,
+    "title": "Major Payne",
+    "popularity": 6.494,
+    "overview": "Major Benson Winifred Payne is being discharged from the Marines. Payne is a killin' machine, but the wars of the world are no longer fought on the battlefield. A career Marine, he has no idea what to do as a civilian, so his commander finds him a job - commanding officer of a local school's JROTC program, a bunch of ragtag losers with no hope.",
+    "release_date": "1995-03-24",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 6.521,
+    "vote_count": 945
+  },
+  {
+    "tmdb_id": 32325,
+    "title": "Mi Vida Loca",
+    "popularity": 2.3933,
+    "overview": "Two Indigenous Latina bestfriends, Mousie and Sad Girl live in a contemporary Los Angeles poor Indigenous Hispanic American neighborhood. But when Sad Girl becomes pregnant by Mousie's boyfriend, a drug dealer named Ernesto, the two become bitter enemies. While their dispute escalates towards violence, the violence of the world around them soon also impacts their lives.",
+    "release_date": "1994-06-08",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.6,
+    "vote_count": 37
+  },
+  {
+    "tmdb_id": 43742,
+    "title": "Love Affair",
+    "popularity": 2.7886,
+    "overview": "Ex-football star Mike Gambril meets Terry McKay on a flight to Sydney, which is forced to land on a small atoll. They become romantic on board a ship sent to take them to a larger island. They agree to meet in New York three months later to see if the attraction is real. One shows up but the other doesn't. However, a chance meeting brings them together again.",
+    "release_date": "1994-10-21",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 5.5,
+    "vote_count": 65
+  },
+  {
+    "tmdb_id": 28313,
+    "title": "Losing Isaiah",
+    "popularity": 4.2404,
+    "overview": "Khaila Richards, a crack-addicted single mother, accidentally leaves her baby in a dumpster while high and returns the next day in a panic to find he is missing. In reality, the baby has been adopted by a warm-hearted social worker, Margaret Lewin, and her husband, Charles. Years later, Khaila has gone through rehab and holds a steady job. After learning that her child is still alive, she challenges Margaret for the custody.",
+    "release_date": "1995-03-17",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.509,
+    "vote_count": 111
+  },
+  {
+    "tmdb_id": 11318,
+    "title": "The Madness of King George",
+    "popularity": 3.2526,
+    "overview": "Aging King George III of England is exhibiting signs of madness, a problem little understood in 1788. As the monarch alternates between bouts of confusion and near-violent outbursts of temper, his hapless doctors attempt the ineffectual cures of the day. Meanwhile, Queen Charlotte and Prime Minister William Pitt the Younger attempt to prevent the king's political enemies, led by the Prince of Wales, from usurping the throne.",
+    "release_date": "1994-12-28",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "History"
+    ],
+    "original_language": "en",
+    "vote_average": 6.8,
+    "vote_count": 277
+  },
+  {
+    "tmdb_id": 3036,
+    "title": "Mary Shelley's Frankenstein",
+    "popularity": 5.8901,
+    "overview": "Victor Frankenstein is a promising young doctor who, devastated by the death of his mother during childbirth, becomes obsessed with bringing the dead back to life. His experiments lead to the creation of a monster, which Frankenstein has put together with the remains of corpses. It's not long before Frankenstein regrets his actions.",
+    "release_date": "1994-11-04",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Science Fiction",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.433,
+    "vote_count": 1424
+  },
+  {
+    "tmdb_id": 40490,
+    "title": "Man of the House",
+    "popularity": 3.6891,
+    "overview": "Ben Archer is not happy. His mother, Sandy, has just met a man, and it looks like things are pretty serious. Driven by a fear of abandonment, Ben tries anything and everything to ruin the \"love bubble\" which surrounds his mom. However, after Ben and Jack's experiences in the Indian Guides, the two become much closer.",
+    "release_date": "1995-03-03",
+    "genres": [
+      "Comedy",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 5.4,
+    "vote_count": 198
+  },
+  {
+    "tmdb_id": 24070,
+    "title": "Mixed Nuts",
+    "popularity": 4.7595,
+    "overview": "The events of a crisis hotline business on one crazy night during the Christmas holidays.",
+    "release_date": "1994-12-21",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 5.4,
+    "vote_count": 227
+  },
+  {
+    "tmdb_id": 8986,
+    "title": "Milk Money",
+    "popularity": 4.0852,
+    "overview": "Three young boys pool their money and pay V, a kindhearted prostitute, to strip for them. Afterward, she drives them home to the suburbs -- but then her car breaks down. It's just as well, though, because a mobster named Waltzer is after her, and V realizes the suburbs are the perfect place to hide. But things get a lot more complicated when V falls in love with Tom, a single father who is unaware of her real profession.",
+    "release_date": "1994-08-31",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.5,
+    "vote_count": 325
+  },
+  {
+    "tmdb_id": 10510,
+    "title": "Miracle on 34th Street",
+    "popularity": 10.1871,
+    "overview": "Six-year-old Susan Walker has doubts about childhood's most enduring miracle—Santa Claus. Her mother told her the secret about Santa a long time ago, but, after meeting a special department store Santa who's convinced he's the real thing, Susan is given the most precious gift of all—something to believe in.",
+    "release_date": "1994-11-18",
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 6.8,
+    "vote_count": 1200
+  },
+  {
+    "tmdb_id": 17402,
+    "title": "Miami Rhapsody",
+    "popularity": 2.9173,
+    "overview": "Even though Gwyn Marcus is engaged to her boyfriend, Matt, she is still afraid of commitment. While she admires her parents' loving relationship, she discovers that her family has not always been faithful in marriage, making it harder than ever to settle down. As her mother pressures her to get married, and plenty of attractive men appear in her life, Gwyn learns that she must balance her career, relationships and marriage to be truly happy.",
+    "release_date": "1995-01-27",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 5.3,
+    "vote_count": 61
+  },
+  {
+    "tmdb_id": 38722,
+    "title": "My Family",
+    "popularity": 2.9281,
+    "overview": "Traces over three generations an immigrant family's trials, tribulations, tragedies, and triumphs. Maria and Jose, the first generation, come to Los Angeles, meet, marry, face deportation all in the 1930s. They establish their family in East L.A., and their children Chucho, Paco, Memo, Irene, Toni, and Jimmy deal with youth culture and the L.A. police in the '50s. As the second generation become adults in the '60s, the focus shifts to Jimmy, his marriage to Isabel (a Salvadorian refugee), their son, and Jimmy's journey to becoming a responsible parent.",
+    "release_date": "1995-05-03",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 7.444,
+    "vote_count": 90
+  },
+  {
+    "tmdb_id": 8438,
+    "title": "Murder in the First",
+    "popularity": 6.8885,
+    "overview": "A young, inexperienced public defender is assigned to defend an inmate accused of committing murder while behind bars.",
+    "release_date": "1995-01-20",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 7.1,
+    "vote_count": 637
+  },
+  {
+    "tmdb_id": 11593,
+    "title": "Nobody's Fool",
+    "popularity": 4.7786,
+    "overview": "A rascally man nearing retirement juggles a workers' compensation suit while secretly working for his nemesis and flirting with his nemesis' young wife. As his estranged son returns, he faces new family responsibilities, while a banker plots to evict him from his home.",
+    "release_date": "1994-12-23",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.889,
+    "vote_count": 361
+  },
+  {
+    "tmdb_id": 1945,
+    "title": "Nell",
+    "popularity": 3.2217,
+    "overview": "In a remote woodland cabin, a small town doctor discovers Nell — a beautiful young hermit woman with many secrets.",
+    "release_date": "1994-12-23",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 6.528,
+    "vote_count": 567
+  },
+  {
+    "tmdb_id": 39310,
+    "title": "New Jersey Drive",
+    "popularity": 2.2004,
+    "overview": "Jason and Midget are two young, black teenagers living in Newark, New Jersey, the unofficial car theft capital of the world. Their favourite pastime is that of everybody in their neighbourhood: stealing cars and joyriding. The trouble starts when they steal a police car and the cops launch a violent offensive that involves beating and even shooting suspects.",
+    "release_date": "1995-04-19",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 6.2,
+    "vote_count": 50
+  },
+  {
+    "tmdb_id": 109560,
+    "title": "New York Undercover Cop",
+    "popularity": 1.9014,
+    "overview": "Allegedly based on a true story, this film follows the life of Toshi, a Japanese man living in America and working with the New York City police. After being recommended for undercover work, Toshi decides to go after a gang lead by Hawk. Hawk and Toshi soon become friends, although Hawk's second-in-command, Tito, is suspicious of the newcomer. Will Toshi be able to bring the gang down, or will his cover be blown before he can finish the assignment?",
+    "release_date": "1993-08-14",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Crime",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 3.8,
+    "vote_count": 10
+  },
+  {
+    "tmdb_id": 56428,
+    "title": "Beyond Bedlam",
+    "popularity": 1.2684,
+    "overview": "An experiment gone awry places a neurologist and a homicide detective in a psychopath's nightmarish world.",
+    "release_date": "1994-04-22",
+    "genres": [
+      "Horror"
+    ],
+    "original_language": "en",
+    "vote_average": 5.1,
+    "vote_count": 10
+  },
+  {
+    "tmdb_id": 131957,
+    "title": "Nina Takes a Lover",
+    "popularity": 1.4026,
+    "overview": "When Nina's husband goes out of town for several weeks on a business trip, Nina hooks up with a photographer. Told from a reporter's point of view, his interviews with Nina and the photographer provide comic insights.",
+    "release_date": "1995-03-03",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 5.6,
+    "vote_count": 15
+  },
+  {
+    "tmdb_id": 241,
+    "title": "Natural Born Killers",
+    "popularity": 13.5316,
+    "overview": "Two victims of traumatized childhoods become lovers and serial murderers irresponsibly glorified by the mass media.",
+    "release_date": "1994-08-26",
+    "genres": [
+      "Crime",
+      "Thriller",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 7.045,
+    "vote_count": 3947
+  },
+  {
+    "tmdb_id": 9058,
+    "title": "Only You",
+    "popularity": 5.6573,
+    "overview": "Two childhood paranormal incidents have convinced schoolteacher Faith Corvatch that her true love is a guy named 'Damon Bradley', but she has yet to meet him. Preparing to marry podiatrist Dwayne in ten days, Faith receives a phone call from Dwayne's old classmate Damon Bradley, who is on his way to Venice. She impulsively decides to fly to Italy with the hope of finally encountering the man of her dreams. Accompanying her on the trip is her sister-in-law and best friend Kate, who has just left her husband, Faith's brother Larry.",
+    "release_date": "1994-03-04",
+    "genres": [
+      "Romance",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.732,
+    "vote_count": 586
+  },
+  {
+    "tmdb_id": 527,
+    "title": "Once Were Warriors",
+    "popularity": 3.753,
+    "overview": "In a violent relationship, it takes a mother’s strength to save herself and her children from the man she loved. Once Were Warriors is a violent love story set against a contemporary urban backdrop.",
+    "release_date": "1994-09-02",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 7.383,
+    "vote_count": 517
+  },
+  {
+    "tmdb_id": 18220,
+    "title": "Poison Ivy 2: Lily",
+    "popularity": 4.2108,
+    "overview": "A young and naive college art student becomes obsessed with assuming the identity and personality of a departed coed who used to live in her room, and in so doing causes complications that result in two men, a student and her art professor, lusting after her.",
+    "release_date": "1996-04-26",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 4.8,
+    "vote_count": 152
+  },
+  {
+    "tmdb_id": 6950,
+    "title": "Outbreak",
+    "popularity": 7.9771,
+    "overview": "A deadly airborne virus finds its way into the USA and starts killing off people at an epidemic rate. Col. Sam Daniels' job is to stop the virus spreading from a small town, which must be quarantined, and to prevent an over reaction by the White House.",
+    "release_date": "1995-03-10",
+    "genres": [
+      "Action",
+      "Drama",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 6.6,
+    "vote_count": 2606
+  },
+  {
+    "tmdb_id": 101,
+    "title": "Léon: The Professional",
+    "popularity": 32.0502,
+    "overview": "Léon, the top hit man in New York, has earned a rep as an effective \"cleaner\". But when his next-door neighbors are wiped out by a loose-cannon DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathilda's thoughts turn to revenge, and she considers following in Léon's footsteps.",
+    "release_date": "1994-09-14",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Action"
+    ],
+    "original_language": "fr",
+    "vote_average": 8.3,
+    "vote_count": 16639
+  },
+  {
+    "tmdb_id": 63020,
+    "title": "The Perez Family",
+    "popularity": 2.0485,
+    "overview": "In the midst of the Mariel boat lift -- a hurried exodus of refugees from Cuba going to America -- an immigration clerk accidentally presumes that dissident Juan Raul Perez and Dorita Evita Perez are married. United by their last name and a mutual resolve to emigrate, Dorita and Juan agree to play along. But it gets complicated when the two begin falling for each other just as Juan reunites with his wife, Carmela, whom he hasn't seen in decades.",
+    "release_date": "1995-05-12",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.1,
+    "vote_count": 43
+  },
+  {
+    "tmdb_id": 2307,
+    "title": "A Pyromaniac's Love Story",
+    "popularity": 2.2761,
+    "overview": "A pastry boy and the son of a hair-piece mogul become involved in an arson scandal. Sergio is offered a bribe in exchange for taking the blame for the fire that destroys his workplace. Garet, the real arsonist, is apalled that someone else would try to take credit for his act of love. Before long, Sergio and Garet become entangled in a zany love-quadrangle involving Hattie and Stephanie. Written by Brian Whiting",
+    "release_date": "1995-04-28",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 5.3,
+    "vote_count": 17
+  },
+  {
+    "tmdb_id": 680,
+    "title": "Pulp Fiction",
+    "popularity": 43.6942,
+    "overview": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",
+    "release_date": "1994-09-10",
+    "genres": [
+      "Thriller",
+      "Crime",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 8.5,
+    "vote_count": 31070
+  },
+  {
+    "tmdb_id": 25296,
+    "title": "Pushing Hands",
+    "popularity": 2.1576,
+    "overview": "Mr. Chu is an elderly widower who teaches tai chi chuan in Beijing. He moves to America to live with his son's family, but finds the cultural adjustment difficult. Since his daughter-in-law is a white woman who does not speak Chinese, Mr. Chu's son, Alex, must mediate.",
+    "release_date": "1991-12-07",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "original_language": "zh",
+    "vote_average": 7.3,
+    "vote_count": 93
+  },
+  {
+    "tmdb_id": 40156,
+    "title": "Priest",
+    "popularity": 2.4498,
+    "overview": "The deeply held religious convictions of an idealistic young priest are challenged when he must face extraordinary events within his own congregation.",
+    "release_date": "1995-03-17",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.3,
+    "vote_count": 155
+  },
+  {
+    "tmdb_id": 11450,
+    "title": "Quiz Show",
+    "popularity": 5.4282,
+    "overview": "Herbert Stempel's transformation into an unexpected television personality unfolds as he secures victory on the cherished American game show, 'Twenty-One.' However, when the show introduces the highly skilled contestant Charles Van Doren to replace Stempel, it compels Stempel to let out his frustrations and call out the show as rigged. Lawyer Richard Goodwin steps in and attempts to uncover the orchestrated deception behind the scenes.",
+    "release_date": "1994-08-25",
+    "genres": [
+      "History",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 7.247,
+    "vote_count": 1028
+  },
+  {
+    "tmdb_id": 30304,
+    "title": "Picture Bride",
+    "popularity": 2.1316,
+    "overview": "Riyo, an orphaned 17-year old, sails from Yokohama to Hawaii in 1918 to marry Matsuji, a man she has never met. Hoping to escape a troubled past and start anew, Riyo is bitterly disappointed upon her arrival: her husband is twice her age. The miserable girl finds solace with her new friend Kana, a young mother who helps Riyo accept her new life.",
+    "release_date": "1995-05-05",
+    "genres": [
+      "Drama",
+      "History"
+    ],
+    "original_language": "en",
+    "vote_average": 6.5,
+    "vote_count": 25
+  },
+  {
+    "tmdb_id": 10452,
+    "title": "Queen Margot",
+    "popularity": 4.8791,
+    "overview": "Paris, Kingdom of France, August 18, 1572. To avoid the outbreak of a religious war, the Catholic princess Marguerite de Valois, sister of the feeble King Charles IX, marries the Huguenot King Henry III of Navarre.",
+    "release_date": "1994-05-13",
+    "genres": [
+      "Drama",
+      "History",
+      "Romance"
+    ],
+    "original_language": "fr",
+    "vote_average": 7.2,
+    "vote_count": 441
+  },
+  {
+    "tmdb_id": 12106,
+    "title": "The Quick and the Dead",
+    "popularity": 11.938,
+    "overview": "A mysterious woman comes to compete in a quick-draw elimination tournament, in a town taken over by a notorious gunman.",
+    "release_date": "1995-02-09",
+    "genres": [
+      "Western",
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 6.6,
+    "vote_count": 2062
+  },
+  {
+    "tmdb_id": 161495,
+    "title": "Roommates",
+    "popularity": 1.8457,
+    "overview": "An elderly, yet young-at-heart man, moves in with his grandson, and both their lives turn upside-down.",
+    "release_date": "1995-03-03",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.7,
+    "vote_count": 32
+  },
+  {
+    "tmdb_id": 3586,
+    "title": "Prêt-à-Porter",
+    "popularity": 4.948,
+    "overview": "During Paris Fashion Week, models, designers and industry hot shots gather to work, mingle, argue and try to seduce one another.",
+    "release_date": "1994-12-23",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.235,
+    "vote_count": 236
+  },
+  {
+    "tmdb_id": 110,
+    "title": "Three Colors: Red",
+    "popularity": 6.7993,
+    "overview": "Part-time model Valentine unexpectedly befriends a retired judge after she runs over his dog. At first, the grumpy man shows no concern about the dog, and Valentine decides to keep it. But the two form a bond when she returns to his house and catches him listening to his neighbors’ phone calls.",
+    "release_date": "1994-05-18",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Romance"
+    ],
+    "original_language": "fr",
+    "vote_average": 7.9,
+    "vote_count": 1611
+  },
+  {
+    "tmdb_id": 108,
+    "title": "Three Colors: Blue",
+    "popularity": 6.487,
+    "overview": "The wife of a famous composer survives a car accident that kills her husband and daughter. Now alone, she shakes off her old identity and explores her newfound freedom but finds that she is unbreakably bound to other humans, including her husband’s mistress, whose existence she never suspected.",
+    "release_date": "1993-09-08",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "fr",
+    "vote_average": 7.6,
+    "vote_count": 1968
+  },
+  {
+    "tmdb_id": 109,
+    "title": "Three Colors: White",
+    "popularity": 8.0821,
+    "overview": "Polish immigrant Karol Karol finds himself out of a marriage, a job and a country when his French wife, Dominique, divorces him after six months due to his impotence. Forced to leave France after losing the business they jointly owned, Karol enlists fellow Polish expatriate Mikołaj to smuggle him back to their homeland.",
+    "release_date": "1994-01-26",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Mystery"
+    ],
+    "original_language": "fr",
+    "vote_average": 7.4,
+    "vote_count": 1383
+  },
+  {
+    "tmdb_id": 36357,
+    "title": "Rent-a-Kid",
+    "popularity": 2.4311,
+    "overview": "Harry Habert, owner of a rental company, has an original idea—to rent baby's from a nearby orphanage to local families. He rents the Ward siblings, 2 boys and a girl, to his first customers.",
+    "release_date": "1995-01-01",
+    "genres": [
+      "Comedy",
+      "Family",
+      "TV Movie"
+    ],
+    "original_language": "en",
+    "vote_average": 5.6,
+    "vote_count": 81
+  },
+  {
+    "tmdb_id": 92769,
+    "title": "Relative Fear",
+    "popularity": 1.7296,
+    "overview": "Linda and Peter Pratman's son Adam is autistic, but they still love him and hope that he'll at least start talking some day. However he's teased and abused by the kids of the neighborhood and his grandpa . When several people around Adam die an unexpected death, his parents start to suspect Adam - is he just simulating to be so ignorant about his environment?",
+    "release_date": "1994-12-16",
+    "genres": [
+      "Horror",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 5.2,
+    "vote_count": 10
+  },
+  {
+    "tmdb_id": 28033,
+    "title": "Stuart Saves His Family",
+    "popularity": 2.3545,
+    "overview": "A self-help advocate struggles to put his dysfunctional family in its place.",
+    "release_date": "1995-04-12",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 5.2,
+    "vote_count": 28
+  },
+  {
+    "tmdb_id": 22586,
+    "title": "The Swan Princess",
+    "popularity": 8.8959,
+    "overview": "The beautiful princess Odette is transformed into a swan by an evil sorcerer's spell. Held captive at an enchanted lake, she befriends Jean-Bob the frog, Speed the turtle and Puffin the bird. Despite their struggle to keep the princess safe, these good-natured creatures can do nothing about the sorcerer's spell, which can only be broken by a vow of everlasting love.",
+    "release_date": "1994-11-18",
+    "genres": [
+      "Family",
+      "Animation",
+      "Fantasy",
+      "Adventure",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.6,
+    "vote_count": 1057
+  },
+  {
+    "tmdb_id": 14334,
+    "title": "The Secret of Roan Inish",
+    "popularity": 2.6058,
+    "overview": "Ten-year-old Fiona is sent to live with her grandparents in a small fishing village in Donegal, Ireland. She soon learns the local legend that an ancestor of hers married a Selkie – a seal who can turn into a human. Years earlier, her baby brother was washed out to sea and never seen again, so when Fiona spies a naked little boy on the abandoned Isle of Roan Inish, she is compelled to investigate.",
+    "release_date": "1994-05-14",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Family",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.7,
+    "vote_count": 103
+  },
+  {
+    "tmdb_id": 2636,
+    "title": "The Specialist",
+    "popularity": 10.2941,
+    "overview": "May Munro is a woman obsessed with getting revenge on the people who murdered her parents when she was still a girl. She hires Ray Quick, a retired explosives expert, to kill her parents' killers. When Ned Trent, embittered ex-partner of Quick's, is assigned to protect one of Quick's potential victims, a deadly game of cat and mouse ensues.",
+    "release_date": "1994-10-07",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 5.951,
+    "vote_count": 1517
+  },
+  {
+    "tmdb_id": 2164,
+    "title": "Stargate",
+    "popularity": 10.1052,
+    "overview": "An interstellar teleportation device, found in Egypt, leads to a planet with humans resembling ancient Egyptians who worship the god Ra.",
+    "release_date": "1994-10-28",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction"
+    ],
+    "original_language": "en",
+    "vote_average": 7.035,
+    "vote_count": 4000
+  },
+  {
+    "tmdb_id": 11395,
+    "title": "The Santa Clause",
+    "popularity": 9.2864,
+    "overview": "On Christmas Eve, divorced dad Scott Calvin and his son discover Santa Claus has fallen off their roof. When Scott takes the reins of the magical sleigh, he finds he is now the new Santa, and must convince a world of disbelievers, including himself.",
+    "release_date": "1994-11-11",
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "Comedy",
+      "Family"
+    ],
+    "original_language": "en",
+    "vote_average": 6.53,
+    "vote_count": 2384
+  },
+  {
+    "tmdb_id": 278,
+    "title": "The Shawshank Redemption",
+    "popularity": 57.5971,
+    "overview": "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+    "release_date": "1994-09-23",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "original_language": "en",
+    "vote_average": 8.732,
+    "vote_count": 31557
+  },
+  {
+    "tmdb_id": 9905,
+    "title": "Shallow Grave",
+    "popularity": 6.4391,
+    "overview": "When David, Juliet, and Alex find their new roommate dead with a large sum of money, they agree to hide the body and keep the cash. However, this newfound fortune gradually corrodes their friendship.",
+    "release_date": "1994-12-22",
+    "genres": [
+      "Crime",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 6.98,
+    "vote_count": 1213
+  },
+  {
+    "tmdb_id": 87078,
+    "title": "Suture",
+    "popularity": 1.396,
+    "overview": "A man named Clay  flies into Phoenix for a reunion with his long-lost half-brother Vincent.",
+    "release_date": "1993-09-14",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 6.5,
+    "vote_count": 43
+  },
+  {
+    "tmdb_id": 12527,
+    "title": "Strawberry and Chocolate",
+    "popularity": 2.5716,
+    "overview": "In 1979 Cuba, flamboyant gay artist Diego attempts to seduce  straitlaced David, an idealistic young communist, and fails dismally. But David conspires to be \"friends\" with Diego so he can monitor the artist's subversive life for the state. As Diego and David discuss politics, individuality and personal expression in Castro's Cuba, a genuine friendship develops between the two.",
+    "release_date": "1993-12-01",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "original_language": "es",
+    "vote_average": 7.0,
+    "vote_count": 86
+  },
+  {
+    "tmdb_id": 20306,
+    "title": "Swimming with Sharks",
+    "popularity": 2.6534,
+    "overview": "Guy is a young film executive who's willing to do whatever it takes to make it in Hollywood. He begins working for famed producer Buddy Ackerman, a domineering, manipulative, coldhearted boss. When Guy also finds out that his cynical girlfriend, Dawn, has been using sex as a career move, he reaches his limit. Guy decides to exact revenge on Buddy by kidnapping him and subjecting him to cruel and unusual punishment.",
+    "release_date": "1994-09-10",
+    "genres": [
+      "Crime",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.63,
+    "vote_count": 346
+  },
+  {
+    "tmdb_id": 36614,
+    "title": "The Sum of Us",
+    "popularity": 2.4477,
+    "overview": "A widowed father has to deal with two complex issues: while he is searching for \"Miss Right,\" his son, who is in his 20s and gay, is searching for \"Mr. Right.\"",
+    "release_date": "1994-07-28",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.8,
+    "vote_count": 78
+  },
+  {
+    "tmdb_id": 27993,
+    "title": "National Lampoon's Senior Trip",
+    "popularity": 2.737,
+    "overview": "While on detention, a group of misfits and slackers have to write a letter to the President explaining what is wrong with the education system. There is only one problem, the President loves it! Hence, the group must travel to Washington to meet the Main Man.",
+    "release_date": "1995-09-08",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 5.5,
+    "vote_count": 103
+  },
+  {
+    "tmdb_id": 31439,
+    "title": "To Live",
+    "popularity": 5.7993,
+    "overview": "Married couple Fugui and Jiazhen endure tumultuous events in mid-20th century mainland China as their personal fortunes move from wealthy landownership to peasantry.",
+    "release_date": "1994-05-18",
+    "genres": [
+      "Drama",
+      "Romance",
+      "War"
+    ],
+    "original_language": "zh",
+    "vote_average": 8.1,
+    "vote_count": 396
+  },
+  {
+    "tmdb_id": 9067,
+    "title": "Tank Girl",
+    "popularity": 4.6138,
+    "overview": "After a comet disrupts the rain cycle of Earth, the planet has become a desolate, barren desert by the year 2033. With resources scarce, Kesslee, head of the powerful and evil Water & Power Corporation, the de facto government, has taken control of the water supply. Unwilling to cower under Kesslee's tyrannical rule, a pair of outlaws known as Tank Girl and Jet Girl rise up, joining the mysterious rebel Rippers to destroy the corrupt system.",
+    "release_date": "1995-03-31",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Science Fiction"
+    ],
+    "original_language": "en",
+    "vote_average": 5.5,
+    "vote_count": 603
+  },
+  {
+    "tmdb_id": 9059,
+    "title": "Tales from the Crypt: Demon Knight",
+    "popularity": 5.8517,
+    "overview": "Ex-soldier Frank Brayker is the guardian of an ancient key that can unlock tremendous evil; the sinister Collector is a demon who wants the key so he can initiate the apocalypse. On the run from wicked mercenaries for almost 90 years, Brayker finally stops in at a boarding house in New Mexico where — with the help of its residents — he plans to face off against the Collector and his band of ghouls, preventing them from ever seizing the key.",
+    "release_date": "1995-01-13",
+    "genres": [
+      "Horror",
+      "Comedy",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 6.9,
+    "vote_count": 596
+  },
+  {
+    "tmdb_id": 193,
+    "title": "Star Trek: Generations",
+    "popularity": 6.1818,
+    "overview": "Captain Jean-Luc Picard and the crew of the Enterprise-D find themselves at odds with the renegade scientist Soran who is destroying entire star systems. Only one man can help Picard stop Soran's scheme...and he's been dead for seventy-eight years.",
+    "release_date": "1994-11-18",
+    "genres": [
+      "Science Fiction",
+      "Action",
+      "Adventure",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 6.525,
+    "vote_count": 1570
+  },
+  {
+    "tmdb_id": 25066,
+    "title": "Tales from the Hood",
+    "popularity": 3.2583,
+    "overview": "A strange mortician tells four horrific tales to three drug dealers that he traps in a local funeral parlor.",
+    "release_date": "1995-05-24",
+    "genres": [
+      "Horror",
+      "Crime",
+      "Thriller",
+      "Drama",
+      "Fantasy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.265,
+    "vote_count": 202
+  },
+  {
+    "tmdb_id": 46797,
+    "title": "Tom & Viv",
+    "popularity": 1.5791,
+    "overview": "The story of the marriage of the poet T. S. Eliot to socialite Vivienne Haigh-Wood, which had to cope with her gynaecological and emotional problems and his growing fame.",
+    "release_date": "1994-04-15",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "original_language": "en",
+    "vote_average": 6.1,
+    "vote_count": 34
+  },
+  {
+    "tmdb_id": 12122,
+    "title": "Village of the Damned",
+    "popularity": 8.4674,
+    "overview": "An American village is visited by some unknown life form which leaves the women of the village pregnant. Nine months later, the babies are born, and they all look normal, but it doesn't take the \"parents\" long to realize that the kids are not human or humane.",
+    "release_date": "1995-04-28",
+    "genres": [
+      "Thriller",
+      "Horror",
+      "Science Fiction"
+    ],
+    "original_language": "en",
+    "vote_average": 6.099,
+    "vote_count": 963
+  },
+  {
+    "tmdb_id": 11381,
+    "title": "Tommy Boy",
+    "popularity": 5.5479,
+    "overview": "To save the family business, two ne’er-do-well traveling salesmen hit the road with disastrously funny consequences.",
+    "release_date": "1995-03-31",
+    "genres": [
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 6.801,
+    "vote_count": 1103
+  },
+  {
+    "tmdb_id": 32636,
+    "title": "Vanya on 42nd Street",
+    "popularity": 2.5845,
+    "overview": "An uninterrupted rehearsal of Chekhov's 'Uncle Vanya' plays out by a company of actors. The setting: their run-down theater with an unusable stage and crumbling ceiling. The play is shown act by act with the briefest of breaks to move props or for refreshments. The lack of costumes, real props and scenery is soon forgotten.",
+    "release_date": "1994-10-19",
+    "genres": [
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.7,
+    "vote_count": 99
+  },
+  {
+    "tmdb_id": 36141,
+    "title": "The Underneath",
+    "popularity": 4.0754,
+    "overview": "A recovering gambling addict attempts to reconcile with his family and friends but finds trouble and temptation when caught between feelings for his ex-wife and her dangerous hoodlum boyfriend.",
+    "release_date": "1995-04-28",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 5.7,
+    "vote_count": 93
+  },
+  {
+    "tmdb_id": 95963,
+    "title": "The Walking Dead",
+    "popularity": 1.3554,
+    "overview": "Five young marines on a suicide mission in Vietnam, struggle for survival in a jungle minefield. The mean streets of home did not prepare them for this.",
+    "release_date": "1995-02-24",
+    "genres": [
+      "Drama",
+      "War",
+      "Action"
+    ],
+    "original_language": "en",
+    "vote_average": 6.0,
+    "vote_count": 31
+  },
+  {
+    "tmdb_id": 1587,
+    "title": "What's Eating Gilbert Grape",
+    "popularity": 12.6305,
+    "overview": "Gilbert Grape is a small-town young man with a lot of responsibility. Chief among his concerns are his mother, who is so overweight that she can't leave the house, and his mentally impaired younger brother, Arnie, who has a knack for finding trouble. Settled into a job at a grocery store and an ongoing affair with local woman Betty Carver, Gilbert finally has his life shaken up by the free-spirited Becky.",
+    "release_date": "1993-12-17",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 7.654,
+    "vote_count": 4409
+  },
+  {
+    "tmdb_id": 9271,
+    "title": "Virtuosity",
+    "popularity": 3.9689,
+    "overview": "The Law Enforcement Technology Advancement Centre (LETAC) has developed SID version 6.7: a Sadistic, Intelligent, and Dangerous virtual reality entity which is synthesized from the personalities of more than 150 serial killers, and only one man can stop him.",
+    "release_date": "1995-08-04",
+    "genres": [
+      "Action",
+      "Crime",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "original_language": "en",
+    "vote_average": 5.5,
+    "vote_count": 641
+  },
+  {
+    "tmdb_id": 2064,
+    "title": "While You Were Sleeping",
+    "popularity": 10.132,
+    "overview": "A transit worker pulls commuter Peter off railway tracks after he's mugged, but—while he's in a coma—his family mistakenly thinks she's Peter's fiancée, and she doesn't correct them. Things get more complicated when she falls for his brother, who's not quite sure that she's who she claims to be.",
+    "release_date": "1995-04-21",
+    "genres": [
+      "Romance",
+      "Comedy"
+    ],
+    "original_language": "en",
+    "vote_average": 7.039,
+    "vote_count": 2080
+  },
+  {
+    "tmdb_id": 19855,
+    "title": "The War",
+    "popularity": 3.3763,
+    "overview": "The son of a Vietnam War Veteran must deal with neighborhood bullies as well as his dad's post-traumatic stress disorder while growing up in the deep south in the 1970's.",
+    "release_date": "1994-11-04",
+    "genres": [
+      "Drama",
+      "War"
+    ],
+    "original_language": "en",
+    "vote_average": 6.7,
+    "vote_count": 233
+  },
+  {
+    "tmdb_id": 60855,
+    "title": "Double Happiness",
+    "popularity": 1.1731,
+    "overview": "Jade Li is a feisty, 20-something Chinese Canadian, trying to achieve that happy medium between giving in to her parent's wishes and fulfilling her own needs and desires – double happiness. Naturally, something's got to give and when love beckons in the shape of Mark, a white university student, the façade of the perfect Chinese daughter begins to slip.",
+    "release_date": "1994-09-07",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Drama"
+    ],
+    "original_language": "en",
+    "vote_average": 6.5,
+    "vote_count": 20
+  }
+]

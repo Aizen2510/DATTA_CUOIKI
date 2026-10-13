@@ -1,0 +1,8 @@
+apache-airflow==2.10.5
+minio==7.2.20
+pandas==2.1.4
+psycopg2-binary==2.9.10
+requests==2.32.3
+SQLAlchemy==1.4.54
+pyarrow==26.0.0
+numpy==1.26.4

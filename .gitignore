@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.env
+.venv/
+ENV/
+
+# Data storage & database volumes
+dw_data/
+minio_storage/
+staging/
+
+# Airflow runtime & metadata
+airflow_home/
+airflow.db
+airflow.cfg
+*.pid
+logs/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
