@@ -12,6 +12,12 @@ MINIO_ACCESS_KEY = "minioadmin"
 MINIO_SECRET_KEY = "minioadmin"
 BUCKET_NAME = "raw-datalake"
 
+# Cấu hình kết nối Data Warehouse (PostgreSQL)
+DW_URL = os.getenv(
+    "DW_URL",
+    "postgresql://dw_user:dw_password@localhost:5434/dw_movies"
+)
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STAGING_DIR = os.getenv("STAGING_DIR", os.path.join(BASE_DIR, "staging"))
 
