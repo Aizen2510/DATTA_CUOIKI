@@ -1,6 +1,10 @@
 import io
 import json
 import os
+import sys
+
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
 import numpy as np
 import pandas as pd
 from minio import Minio
@@ -11,6 +15,7 @@ MINIO_ENDPOINT = "localhost:9000"
 MINIO_ACCESS_KEY = "minioadmin"
 MINIO_SECRET_KEY = "minioadmin"
 BUCKET_NAME = "raw-datalake"
+DW_URL = os.getenv("DW_URL", "postgresql://dw_user:dw_password@localhost:5434/dw_movies")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STAGING_DIR = os.getenv("STAGING_DIR", os.path.join(BASE_DIR, "staging"))
