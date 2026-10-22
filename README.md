@@ -1,131 +1,224 @@
 # HỆ THỐNG XỬ LÝ DỮ LIỆU & DATA WAREHOUSE (MOVIELENS + TMDB)
 
-Dự án xây dựng pipeline kỹ thuật dữ liệu hoàn chỉnh từ thu thập, lưu trữ dữ liệu thô (Data Lake), chuyển đổi chuẩn hóa (ETL) theo mô hình hình sao (Star Schema), lưu trữ vào kho dữ liệu (Data Warehouse) và điều phối tự động với Apache Airflow.
+Dự án xây dựng quy trình Kỹ thuật Dữ liệu (Data Engineering) hoàn chỉnh: từ thu thập đa nguồn, lưu trữ hồ dữ liệu thô (Data Lake), xử lý chuẩn hóa ETL theo mô hình hình sao (Star Schema có Bridge Table), lưu trữ vào Kho dữ liệu (Data Warehouse) trên PostgreSQL, đến điều phối và kiểm định chất lượng tự động bằng Apache Airflow.
 
 ---
 
-## 1. Cấu trúc thư mục & Giải thích tác dụng các file
+## 1. Tác dụng của Kho Dữ liệu (Data Warehouse) này
 
-```text
-Data_cuoi_ky/
-├── docker-compose.yml          # Quản lý container MinIO (S3 Object Storage) & PostgreSQL (Data Warehouse)
-├── fetch_raw_data.py           # Thu thập (Crawl) dữ liệu bổ sung từ TMDB API
-├── ingest_to_minio.py          # Nạp dữ liệu thô từ máy local lên MinIO Data Lake
-├── etl_process.py              # Script ETL độc lập: Trích xuất, làm sạch, biến đổi và nạp vào PostgreSQL
-├── start_airflow.sh            # Script tiện ích 1 chạm để khởi động Airflow Web UI & Scheduler
-├── dags/
-│   └── movielens_etl_dag.py    # Định nghĩa DAG Airflow điều phối tự động toàn bộ luồng ETL
-├── raw_data/                   # Chứa dữ liệu gốc (movies.csv, ratings.csv, links.csv, tmdb_movies_raw.json)
-├── minio_storage/              # Dữ liệu volume ánh xạ từ container MinIO
-├── dw_data/                    # Dữ liệu volume ánh xạ từ container PostgreSQL Data Warehouse
-├── airflow_home/               # Metadata DB và cấu hình chạy Airflow
-└── venv/                       # Môi trường ảo Python (đã cài đủ airflow, pandas, sqlalchemy, minio,...)
+Kho dữ liệu này được thiết kế theo chuẩn OLAP nhằm phục vụ 2 mục đích cốt lõi:
+
+### 1.1. Phục vụ Phân tích Kinh doanh & Trực quan hóa (BI / Analytics)
+- **Phân tích hành vi người dùng:** Tần suất đánh giá, thói quen cho điểm (khắt khe hay dễ dãi), mức độ gắn bó theo thời gian.
+- **Phân tích xu hướng phim & thị hiếu:** Thống kê top phim, điểm đánh giá trung bình theo từng thập niên/năm phát hành.
+- **Phân tích đa chiều theo thể loại:** Nhờ bảng cầu nối `bridge_movie_genre`, người phân tích có thể lọc và mổ xẻ chính xác doanh số/lượt xem theo từng thể loại mà không làm sai lệch số liệu của các phim đa thể loại.
+- **Phân tích xu hướng theo chu kỳ thời gian:** Đánh giá khối lượng tương tác theo khung giờ trong ngày, ngày trong tuần, quý và năm.
+
+### 1.2. Phục vụ Khai phá Dữ liệu & Học máy (Machine Learning / Recommendation System)
+- **Lọc cộng tác (Collaborative Filtering):** Bảng `fact_rating` cung cấp sẵn ma trận tương tác User – Item chuẩn hóa (610 người dùng $\times$ 9.724 bộ phim với 100.836 tương tác) làm đầu vào hoàn hảo cho các mô hình Matrix Factorization (SVD, NMF), ALS, hoặc Neural Collaborative Filtering.
+- **Gợi ý dựa trên nội dung (Content-based Filtering):** Bảng `dim_movie` và `bridge_movie_genre` kết hợp thể loại, năm phát hành cùng trường mô tả nội dung `overview` từ TMDB, sẵn sàng cho các kỹ thuật TF-IDF, CountVectorizer hoặc sinh Movie Embeddings.
+
+---
+
+## 2. Mô hình Kho Dữ liệu (Star Schema + Bridge Table)
+
+Kho dữ liệu được tổ chức theo kiến trúc **Mô hình hình sao mở rộng (Star Schema with Bridge Table)** với đầy đủ ràng buộc khóa chính (PK), khóa ngoại (FK) và chỉ mục B-tree (Index):
+
+```mermaid
+erDiagram
+    dim_user ||--o{ fact_rating : "user_id"
+    dim_movie ||--o{ fact_rating : "movie_id"
+    dim_time ||--o{ fact_rating : "time_id"
+    dim_movie ||--o{ bridge_movie_genre : "movie_id"
+    dim_genre ||--o{ bridge_movie_genre : "genre_id"
+
+    dim_user {
+        int user_id PK
+    }
+    dim_movie {
+        int movie_id PK
+        text title
+        text genres
+        int release_year
+        int release_decade
+        int tmdb_id
+        float popularity
+        float vote_average
+        int vote_count
+        text overview
+        boolean has_tmdb_metadata
+    }
+    dim_genre {
+        int genre_id PK
+        varchar genre_name UK
+    }
+    bridge_movie_genre {
+        int movie_id PK, FK
+        int genre_id PK, FK
+    }
+    dim_time {
+        bigint time_id PK
+        timestamp hour_timestamp
+        int hour
+        int day
+        int month
+        int quarter
+        int year
+        int day_of_week
+        varchar day_name
+    }
+    fact_rating {
+        int user_id PK, FK
+        int movie_id PK, FK
+        bigint time_id FK
+        float rating
+        timestamp rating_timestamp
+    }
 ```
 
-### Chi tiết vai trò từng file:
+### Chi tiết các bảng trong Data Warehouse:
 
-| Tên File | Vai trò & Chức năng chi tiết |
-|---|---|
-| **[docker-compose.yml](docker-compose.yml)** | Khởi tạo hạ tầng:<br>• **MinIO** (cổng `9000` cho S3 API, `9001` cho Web Console).<br>• **PostgreSQL** (cổng `5434:5432`, DB `dw_movies`) làm Data Warehouse lưu trữ bảng Fact và Dimension. |
-| **[fetch_raw_data.py](fetch_raw_data.py)** | Đọc danh sách `tmdbId` từ `links.csv`, gọi REST API của TMDB để lấy metadata phim (popularity, vote_average, overview, genres...) và lưu thành file bán cấu trúc `raw_data/tmdb_movies_raw.json`. |
-| **[ingest_to_minio.py](ingest_to_minio.py)** | Đóng vai trò **Raw Ingestion Layer**: Quét các file trong `raw_data/`, tự động tạo bucket `raw-datalake` trên MinIO nếu chưa có và upload phân loại vào 2 thư mục prefix:<br>• `/movielens`: các file structured `.csv`<br>• `/tmdb`: file semi-structured `.json` |
-| **[etl_process.py](etl_process.py)** | Thực hiện quy trình ETL chuẩn:<br>• **Extract**: Đọc trực tiếp từ MinIO Data Lake.<br>• **Transform**: Khử trùng lặp, tách năm/thập niên phát hành, ghép nối thông tin TMDB, chuẩn hóa theo mô hình Star Schema (`dim_user`, `dim_time`, `dim_genre`, `dim_movie`, `fact_rating`).<br>• **Load**: Nạp toàn bộ vào PostgreSQL Data Warehouse. |
-| **[dags/movielens_etl_dag.py](dags/movielens_etl_dag.py)** | Pipeline điều phối (Orchestration) của **Apache Airflow**: Định nghĩa DAG `movielens_data_warehouse_etl` để tự động hóa hoặc lập lịch chạy quy trình ETL. |
-| **[start_airflow.sh](start_airflow.sh)** | Script Shell hỗ trợ khởi chạy nhanh Apache Airflow Standalone chỉ bằng một câu lệnh, tự động in thông tin tài khoản đăng nhập `admin/admin`. |
-
----
-
-## 2. Thông tin tài khoản & Cổng dịch vụ
-
-| Dịch vụ | Địa chỉ truy cập | Username | Password | Database |
-|---|---|---|---|---|
-| **Airflow Web UI** | `http://localhost:8080` | `admin` | `admin` | - |
-| **MinIO Web Console** | `http://localhost:9001` | `minioadmin` | `minioadmin` | - |
-| **MinIO S3 API** | `http://localhost:9000` | `minioadmin` | `minioadmin` | Bucket: `raw-datalake` |
-| **PostgreSQL DW** | `localhost:5434` | `dw_user` | `dw_password` | `dw_movies` |
+| Tên bảng | Loại bảng | Số bản ghi | Khóa chính (PK) | Mô tả chi tiết |
+|---|---|---:|---|---|
+| **`dim_user`** | Dimension | 610 | `user_id` | Đại diện cho các tài khoản người dùng thực hiện đánh giá. |
+| **`dim_movie`** | Dimension | 9.742 | `movie_id` | Chứa thông tin phim chuẩn hóa (tiêu đề sạch, năm, thập niên) ghép với metadata TMDB (`popularity`, `vote_average`, `overview`, `has_tmdb_metadata`). |
+| **`dim_genre`** | Dimension | 19 | `genre_id` | Danh mục 19 thể loại phim chuẩn hóa (Action, Comedy, Drama,...). |
+| **`bridge_movie_genre`** | Bridge (Cầu nối) | 22.050 | `(movie_id, genre_id)` | Giải quyết quan hệ Nhiều - Nhiều (N-N) giữa Phim và Thể loại, hỗ trợ Power BI phân tích thể loại chính xác. |
+| **`dim_time`** | Dimension | 7.761 | `time_id` | Grain chuẩn hóa theo giờ (`%Y%m%d%H`), cung cấp các cấp độ ngày, tháng, quý, năm, thứ trong tuần. |
+| **`fact_rating`** | Fact (Sự kiện) | 100.836 | `(user_id, movie_id)` | Bảng sự kiện chứa điểm số (`rating`), mốc thời gian chi tiết (`rating_timestamp`), nối tới 3 chiều: user, movie, time. |
 
 ---
 
-## 3. Hướng dẫn chạy dự án từ A - Z
+## 3. Cấu hình & Thông tin kết nối Database
 
-Mở Terminal tại thư mục gốc của dự án (`/home/aizen/Data_cuoi_ky`) và thực hiện theo thứ tự các bước sau:
+| Dịch vụ | Địa chỉ | Port | Username | Password | Database / Bucket |
+|---|---|---:|---|---|---|
+| **PostgreSQL DW** | `localhost` | **`5434`** | `dw_user` | `dw_password` | `dw_movies` |
+| **MinIO Data Lake (Web)** | `http://localhost:9001` | `9001` | `minioadmin` | `minioadmin` | Bucket: `raw-datalake` |
+| **MinIO S3 API** | `localhost:9000` | `9000` | `minioadmin` | `minioadmin` | `raw-datalake` |
+| **Airflow Web UI** | `http://localhost:8080` | `8080` | `admin` | `admin` | DAG: `movielens_data_warehouse_etl` |
 
-### Bước 1: Khởi động Hạ tầng Docker (MinIO & PostgreSQL)
+*Chuỗi kết nối chuẩn (Connection String):*
+```text
+postgresql://dw_user:dw_password@localhost:5434/dw_movies
+```
+
+---
+
+## 4. Cách sử dụng Kho Dữ liệu (Data Warehouse)
+
+### 4.1. Kết nối với Power BI để làm Dashboard
+1. Mở **Power BI Desktop** $\rightarrow$ chọn **Get Data** $\rightarrow$ **PostgreSQL database**.
+2. **Server:** `localhost:5434` | **Database:** `dw_movies` | Chế độ: **Import**.
+3. Nhập User `dw_user`, Password `dw_password`.
+4. Tích chọn toàn bộ 6 bảng (`dim_user`, `dim_movie`, `dim_genre`, `bridge_movie_genre`, `dim_time`, `fact_rating`).
+5. **Cấu hình Model View:**
+   - Kéo các đường nối khóa ngoại từ các bảng Dim tới Fact theo diagram ở Mục 2.
+   - Để lọc Fact theo Thể loại: Click đúp vào đường nối giữa `dim_movie` và `bridge_movie_genre` $\rightarrow$ đổi **Cross filter direction** thành **Both**.
+6. **Bộ DAX mẫu khuyến nghị:**
+   ```dax
+   Total Ratings = COUNTROWS(fact_rating)
+   Average Rating = ROUND(AVERAGE(fact_rating[rating]), 2)
+   Total Movies = DISTINCTCOUNT(dim_movie[movie_id])
+   Total Active Users = DISTINCTCOUNT(fact_rating[user_id])
+   ```
+
+### 4.2. Truy vấn trực tiếp bằng SQL trong VS Code / DBeaver
+Dự án đã chuẩn bị sẵn file [query_dw.sql](query_dw.sql) chứa các câu truy vấn mẫu:
+- **Top 10 phim được đánh giá cao nhất:**
+  ```sql
+  SELECT m.title, m.release_year, ROUND(AVG(f.rating)::numeric, 2) AS avg_rating, COUNT(f.rating) AS total_ratings
+  FROM fact_rating f
+  JOIN dim_movie m ON f.movie_id = m.movie_id
+  GROUP BY m.movie_id, m.title, m.release_year
+  HAVING COUNT(f.rating) >= 50
+  ORDER BY avg_rating DESC, total_ratings DESC LIMIT 10;
+  ```
+- **Thống kê phân phối phim theo thể loại qua bảng Bridge:**
+  ```sql
+  SELECT g.genre_name, COUNT(b.movie_id) AS total_movies
+  FROM dim_genre g
+  JOIN bridge_movie_genre b ON g.genre_id = b.genre_id
+  GROUP BY g.genre_id, g.genre_name ORDER BY total_movies DESC;
+  ```
+
+### 4.3. Đọc dữ liệu vào Python phục vụ Machine Learning
+```python
+import pandas as pd
+from sqlalchemy import create_engine
+
+engine = create_engine("postgresql://dw_user:dw_password@localhost:5434/dw_movies")
+
+# Lấy ma trận đánh giá cho Collaborative Filtering
+df_ratings = pd.read_sql("SELECT user_id, movie_id, rating FROM fact_rating;", engine)
+
+# Lấy thông tin phim và thể loại cho Content-based Filtering
+df_movies = pd.read_sql("SELECT movie_id, title, genres, release_year, overview FROM dim_movie;", engine)
+```
+
+---
+
+## 5. Quy trình vận hành Pipeline ETL tự động
+
+Quy trình ETL được tự động hóa từ Data Lake tới Data Warehouse thông qua 5 công đoạn được điều phối bởi Apache Airflow:
+
+```mermaid
+graph LR
+    A[1. extract_from_minio] --> B[2. clean_and_transform]
+    B --> C[3. load_dimension_tables]
+    C --> D[4. load_fact_rating]
+    D --> E[5. validate_data_warehouse]
+```
+
+1. **`extract_from_minio`:** Trích xuất song song 5 đối tượng từ MinIO Data Lake (`raw-datalake`).
+2. **`clean_and_transform`:**
+   - Làm sạch Ratings, khử trùng lặp cặp `(user_id, movie_id)`.
+   - Chuẩn hóa `dim_time` theo grain giờ nhất quán (`hour_timestamp`).
+   - Tách và chuẩn hóa danh mục thể loại `dim_genre` và sinh bảng cầu nối `bridge_movie_genre`.
+   - Ghép metadata TMDB, gán cờ `has_tmdb_metadata` và giữ `NULL` điểm vote cho phim chưa có dữ liệu.
+3. **`load_dimension_tables`:** Tự động tạo DDL chuẩn có đầy đủ ràng buộc PK/FK, làm sạch dữ liệu cũ an toàn bằng `TRUNCATE CASCADE` và nạp dữ liệu các bảng chiều bằng `append`.
+4. **`load_fact_rating`:** Nạp bảng sự kiện `fact_rating` đảm bảo tính toàn vẹn tham chiếu.
+5. **`validate_data_warehouse`:** Khâu kiểm định chất lượng tự động (Data Quality Gate):
+   - Kiểm tra số lượng bản ghi (> 0).
+   - Kiểm tra tính duy nhất và không Null trên tất cả Primary Key.
+   - Kiểm tra tính toàn vẹn tham chiếu khóa ngoại (0 orphan records).
+   - Kiểm tra miền giá trị hợp lệ của Rating [0.5, 5.0].
+
+---
+
+## 6. Hướng dẫn khởi chạy toàn bộ hệ thống từ đầu
+
+### Bước 1: Khởi động Hạ tầng Docker
 ```bash
 docker compose up -d
 ```
-> Kiểm tra cả 2 container đang chạy bằng: `docker ps`
 
----
-
-### Bước 2: Kích hoạt môi trường ảo Python
-Dự án dùng chung 1 thư mục `venv` duy nhất đã cài đặt đầy đủ dependencies:
+### Bước 2: Kích hoạt Virtual Environment
 ```bash
 source venv/bin/activate
 ```
 
----
-
-### Bước 3 (Tùy chọn): Thu thập dữ liệu mới từ TMDB API
-*(Chỉ chạy khi bạn muốn cào lại hoặc cập nhật dữ liệu JSON mới từ TMDB)*
-```bash
-python fetch_raw_data.py
-```
-> Dữ liệu kết quả sẽ được ghi vào file `raw_data/tmdb_movies_raw.json`.
-
----
-
-### Bước 4: Đẩy dữ liệu thô vào MinIO Data Lake (Ingestion)
+### Bước 3 (Nếu cần nạp lại Data Lake):
 ```bash
 python ingest_to_minio.py
 ```
-> Kết quả: Tải 5 file (`movies.csv`, `ratings.csv`, `links.csv`, `tags.csv`, `tmdb_movies_raw.json`) lên bucket `raw-datalake` trên MinIO. Bạn có thể mở `http://localhost:9001` để kiểm tra.
 
----
+### Bước 4: Chạy toàn bộ luồng ETL & Kiểm định Data Quality
 
-### Bước 5: Thực hiện ETL nạp vào Data Warehouse
+**Cách 1: Chạy test nhanh qua Airflow CLI (Khuyên dùng):**
+```bash
+export AIRFLOW_HOME="$(pwd)/airflow_home"
+export AIRFLOW__CORE__DAGS_FOLDER="$(pwd)/dags"
+airflow dags test movielens_data_warehouse_etl 2026-10-18
+```
 
-Bạn có thể chọn **1 trong 2 cách** sau:
-
-#### Cách 5.1: Chạy trực tiếp qua Python script (Nhanh nhất)
+**Cách 2: Chạy trực tiếp qua script Python:**
 ```bash
 python etl_process.py
 ```
 
-#### Cách 5.2: Chạy điều phối qua Apache Airflow (Theo yêu cầu đề bài)
-
-**Cách A - Chạy test nhanh DAG qua Terminal:**
-```bash
-export AIRFLOW_HOME="$(pwd)/airflow_home"
-airflow dags test movielens_data_warehouse_etl 2026-01-01 --subdir dags
-```
-
-**Cách B - Bật giao diện Airflow Web UI:**
+**Cách 3: Khởi chạy Airflow Web UI & Scheduler:**
 ```bash
 ./start_airflow.sh
 ```
-1. Truy cập: `http://localhost:8080`
-2. Đăng nhập với: `admin` / `admin`
-3. Tìm DAG **`movielens_data_warehouse_etl`**, gạt nút sang **ON** (Unpause) và ấn nút **Trigger DAG** (biểu tượng Play) ở góc phải để thực thi.
-
----
-
-### Bước 6: Kiểm tra kết quả trong Data Warehouse (PostgreSQL)
-
-Chạy lệnh sau để kiểm đếm số bản ghi trong từng bảng:
-```bash
-docker exec postgres_dw psql -U dw_user -d dw_movies -c "
-SELECT 'dim_user' as tbl, count(*) FROM dim_user
-UNION ALL SELECT 'dim_movie', count(*) FROM dim_movie
-UNION ALL SELECT 'dim_time', count(*) FROM dim_time
-UNION ALL SELECT 'dim_genre', count(*) FROM dim_genre
-UNION ALL SELECT 'fact_rating', count(*) FROM fact_rating;
-"
-```
-
-**Kết quả chuẩn:**
-- `dim_user`: **610** người dùng
-- `dim_movie`: **9,742** bộ phim
-- `dim_time`: **7,761** mốc thời gian
-- `dim_genre`: **19** thể loại phim
-- `fact_rating`: **100,836** bản ghi đánh giá
+Truy cập [http://localhost:8080](http://localhost:8080), đăng nhập `admin`/`admin` và bấm **Trigger DAG** `movielens_data_warehouse_etl`.

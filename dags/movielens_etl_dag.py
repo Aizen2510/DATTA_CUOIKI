@@ -13,21 +13,22 @@ from etl_process import (
     extract_data,
     transform_data,
     load_dimension_tables,
-    load_fact_rating
+    load_fact_rating,
+    validate_data_warehouse
 )
 
 default_args = {
     'owner': 'aizen',
     'depends_on_past': False,
     'start_date': datetime(2026, 1, 1),
-    'retries': 0,
+    'retries': 1,
     'retry_delay': timedelta(minutes=1),
 }
 
 with DAG(
     dag_id='movielens_data_warehouse_etl',
     default_args=default_args,
-    description='Tự động trích xuất từ MinIO, làm sạch và nạp vào Data Warehouse theo Star Schema',
+    description='Tự động trích xuất từ MinIO, làm sạch, nạp vào Data Warehouse Star Schema & kiểm tra chất lượng tự động',
     schedule_interval='@daily',
     catchup=False
 ) as dag:
@@ -38,23 +39,29 @@ with DAG(
         python_callable=extract_data
     )
 
-    # Task 2: Làm sạch, khử trùng lặp và chuẩn hóa dữ liệu
+    # Task 2: Làm sạch, khử trùng lặp và chuẩn hóa dữ liệu (Star Schema + Bridge)
     task_transform = PythonOperator(
         task_id='clean_and_transform',
         python_callable=transform_data
     )
 
-    # Task 3: Nạp các bảng Dimension vào PostgreSQL DW
+    # Task 3: Khởi tạo schema PK/FK và nạp các bảng Dimension + Bridge
     task_load_dims = PythonOperator(
         task_id='load_dimension_tables',
         python_callable=load_dimension_tables
     )
 
-    # Task 4: Nạp bảng Fact vào PostgreSQL DW
+    # Task 4: Nạp bảng Fact Rating vào PostgreSQL DW
     task_load_fact = PythonOperator(
         task_id='load_fact_rating',
         python_callable=load_fact_rating
     )
 
-    # Pipeline: Thứ tự thực thi chuẩn ETL
-    task_extract >> task_transform >> task_load_dims >> task_load_fact
+    # Task 5: Kiểm định chất lượng dữ liệu tự động (Data Quality Check)
+    task_validate = PythonOperator(
+        task_id='validate_data_warehouse',
+        python_callable=validate_data_warehouse
+    )
+
+    # Pipeline: Thứ tự thực thi chuẩn ETL Data Warehouse
+    task_extract >> task_transform >> task_load_dims >> task_load_fact >> task_validate

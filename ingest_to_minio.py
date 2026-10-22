@@ -3,9 +3,7 @@ import mimetypes
 from minio import Minio
 from minio.error import S3Error
 
-# ============================================================
 #  Cấu hình kết nối MinIO
-# ============================================================
 MINIO_ENDPOINT  = "localhost:9000"
 MINIO_ACCESS_KEY = "minioadmin"
 MINIO_SECRET_KEY = "minioadmin"
