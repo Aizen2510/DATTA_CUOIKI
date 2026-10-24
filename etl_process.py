@@ -37,7 +37,7 @@ BUCKET_NAME = os.getenv("BUCKET_NAME", "raw-datalake")
 
 DW_URL = os.getenv(
     "DW_URL",
-    "postgresql://dw_user:dw_password@localhost:5434/dw_movies"
+    "postgresql://dw_user:B23DCCC@localhost:5434/dw_movies"
 )
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STAGING_DIR = os.getenv("STAGING_DIR", os.path.join(BASE_DIR, "staging"))

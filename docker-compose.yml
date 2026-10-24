@@ -17,7 +17,7 @@ services:
     container_name: postgres_dw
     environment:
       POSTGRES_USER: dw_user
-      POSTGRES_PASSWORD: dw_password
+      POSTGRES_PASSWORD: B23DCCC
       POSTGRES_DB: dw_movies
     ports:
       - "5434:5432"

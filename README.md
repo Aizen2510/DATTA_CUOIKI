@@ -93,14 +93,14 @@ erDiagram
 
 | Dịch vụ | Địa chỉ | Port | Username | Password | Database / Bucket |
 |---|---|---:|---|---|---|
-| **PostgreSQL DW** | `localhost` | **`5434`** | `dw_user` | `dw_password` | `dw_movies` |
+| **PostgreSQL DW** | `localhost` | **`5434`** | `dw_user` | `B23DCCC` | `dw_movies` |
 | **MinIO Data Lake (Web)** | `http://localhost:9001` | `9001` | `minioadmin` | `minioadmin` | Bucket: `raw-datalake` |
 | **MinIO S3 API** | `localhost:9000` | `9000` | `minioadmin` | `minioadmin` | `raw-datalake` |
 | **Airflow Web UI** | `http://localhost:8080` | `8080` | `admin` | `admin` | DAG: `movielens_data_warehouse_etl` |
 
 *Chuỗi kết nối chuẩn (Connection String):*
 ```text
-postgresql://dw_user:dw_password@localhost:5434/dw_movies
+postgresql://dw_user:B23DCCC@localhost:5434/dw_movies
 ```
 
 ---
@@ -110,7 +110,7 @@ postgresql://dw_user:dw_password@localhost:5434/dw_movies
 ### 4.1. Kết nối với Power BI để làm Dashboard
 1. Mở **Power BI Desktop** $\rightarrow$ chọn **Get Data** $\rightarrow$ **PostgreSQL database**.
 2. **Server:** `localhost:5434` | **Database:** `dw_movies` | Chế độ: **Import**.
-3. Nhập User `dw_user`, Password `dw_password`.
+3. Nhập User `dw_user`, Password `B23DCCC`.
 4. Tích chọn toàn bộ 6 bảng (`dim_user`, `dim_movie`, `dim_genre`, `bridge_movie_genre`, `dim_time`, `fact_rating`).
 5. **Cấu hình Model View:**
    - Kéo các đường nối khóa ngoại từ các bảng Dim tới Fact theo diagram ở Mục 2.
