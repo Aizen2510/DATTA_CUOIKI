@@ -4,11 +4,11 @@ from minio import Minio
 from minio.error import S3Error
 
 #  Cấu hình kết nối MinIO
-MINIO_ENDPOINT  = "localhost:9000"
-MINIO_ACCESS_KEY = "minioadmin"
-MINIO_SECRET_KEY = "minioadmin"
-BUCKET_NAME      = "raw-datalake"
-DATA_DIR         = "raw_data"
+MINIO_ENDPOINT = os.getenv("MINIO_ENDPOINT", "localhost:9000")
+MINIO_ACCESS_KEY = os.getenv("MINIO_ACCESS_KEY")
+MINIO_SECRET_KEY = os.getenv("MINIO_SECRET_KEY")
+BUCKET_NAME = os.getenv("BUCKET_NAME", "raw-datalake")
+DATA_DIR = os.getenv("DATA_DIR", os.path.join(os.path.dirname(os.path.abspath(__file__)), "raw_data"))
 
 # Ánh xạ: tên file local → đường dẫn object trên MinIO (Data Lake)
 UPLOAD_MAP = {
@@ -26,6 +26,18 @@ def upload_raw_to_minio():
     - Phân vùng dữ liệu: /movielens (CSV) và /tmdb (JSON).
     - Không xử lý hoặc biến đổi dữ liệu gốc (nguyên tắc Data Lake).
     """
+
+    if not MINIO_ACCESS_KEY or not MINIO_SECRET_KEY:
+        raise RuntimeError("Set MINIO_ACCESS_KEY and MINIO_SECRET_KEY in the environment.")
+
+    missing_files = [
+        local_file for local_file in UPLOAD_MAP
+        if not os.path.exists(os.path.join(DATA_DIR, local_file))
+    ]
+    if missing_files:
+        raise FileNotFoundError(
+            f"Required raw source files are missing from {DATA_DIR}: {', '.join(missing_files)}"
+        )
 
     # 1. Khởi tạo MinIO Client
     client = Minio(
@@ -77,6 +89,7 @@ def upload_raw_to_minio():
             success_count += 1
         except S3Error as exc:
             print(f"  [✘] LỖI khi tải '{local_file}': {exc}")
+            raise
 
     print("="*60)
     print(f"  KẾT QUẢ: {success_count}/{len(UPLOAD_MAP)} file đã được nạp thành công.")

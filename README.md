@@ -91,16 +91,16 @@ erDiagram
 
 ## 3. Cấu hình & Thông tin kết nối Database
 
-| Dịch vụ | Địa chỉ | Port | Username | Password | Database / Bucket |
+| Dịch vụ | Địa chỉ | Port | Tài khoản và mật khẩu | Database / Bucket |
 |---|---|---:|---|---|---|
-| **PostgreSQL DW** | `localhost` | **`5434`** | `dw_user` | `B23DCCC` | `dw_movies` |
-| **MinIO Data Lake (Web)** | `http://localhost:9001` | `9001` | `minioadmin` | `minioadmin` | Bucket: `raw-datalake` |
-| **MinIO S3 API** | `localhost:9000` | `9000` | `minioadmin` | `minioadmin` | `raw-datalake` |
-| **Airflow Web UI** | `http://localhost:8080` | `8080` | `admin` | `admin` | DAG: `movielens_data_warehouse_etl` |
+| **PostgreSQL DW** | `localhost` | **`5434`** | Set in local `.env` | `dw_movies` |
+| **MinIO Data Lake (Web)** | `http://localhost:9001` | `9001` | Set in local `.env` | Bucket: `raw-datalake` |
+| **MinIO S3 API** | `localhost:9000` | `9000` | Set in local `.env` | `raw-datalake` |
+| **Airflow Web UI** | `http://localhost:8080` | `8080` | Set in local `.env` | DAG: `movielens_data_warehouse_etl` |
 
 *Chuỗi kết nối chuẩn (Connection String):*
 ```text
-postgresql://dw_user:B23DCCC@localhost:5434/dw_movies
+postgresql://<DW_USER>:<DW_PASSWORD>@localhost:5434/<DW_DATABASE>
 ```
 
 ---
@@ -110,7 +110,7 @@ postgresql://dw_user:B23DCCC@localhost:5434/dw_movies
 ### 4.1. Kết nối với Power BI để làm Dashboard
 1. Mở **Power BI Desktop** $\rightarrow$ chọn **Get Data** $\rightarrow$ **PostgreSQL database**.
 2. **Server:** `localhost:5434` | **Database:** `dw_movies` | Chế độ: **Import**.
-3. Nhập User `dw_user`, Password `B23DCCC`.
+3. Nhập user/password đã cấu hình trong `.env` (với volume PostgreSQL cũ, phải dùng đúng tài khoản đã khởi tạo volume đó).
 4. Tích chọn toàn bộ 6 bảng (`dim_user`, `dim_movie`, `dim_genre`, `bridge_movie_genre`, `dim_time`, `fact_rating`).
 5. **Cấu hình Model View:**
    - Kéo các đường nối khóa ngoại từ các bảng Dim tới Fact theo diagram ở Mục 2.
@@ -160,25 +160,27 @@ df_movies = pd.read_sql("SELECT movie_id, title, genres, release_year, overview 
 
 ## 5. Quy trình vận hành Pipeline ETL tự động
 
-Quy trình ETL được tự động hóa từ Data Lake tới Data Warehouse thông qua 5 công đoạn được điều phối bởi Apache Airflow:
+Quy trình xử lý snapshot dữ liệu hiện có được điều phối qua 6 task Apache Airflow:
 
 ```mermaid
 graph LR
-    A[1. extract_from_minio] --> B[2. clean_and_transform]
-    B --> C[3. load_dimension_tables]
-    C --> D[4. load_fact_rating]
-    D --> E[5. validate_data_warehouse]
+    A[1. ingest_raw_to_minio] --> B[2. extract_from_minio]
+    B --> C[3. clean_and_transform]
+    C --> D[4. load_dimension_tables]
+    D --> E[5. load_fact_rating]
+    E --> F[6. validate_data_warehouse]
 ```
 
-1. **`extract_from_minio`:** Trích xuất song song 5 đối tượng từ MinIO Data Lake (`raw-datalake`).
-2. **`clean_and_transform`:**
+1. **`ingest_raw_to_minio`:** Upload snapshot trong `raw_data/` lên MinIO bucket `raw-datalake`.
+2. **`extract_from_minio`:** Đọc các object MovieLens/TMDB cần ETL từ MinIO vào `staging/`.
+3. **`clean_and_transform`:**
    - Làm sạch Ratings, khử trùng lặp cặp `(user_id, movie_id)`.
    - Chuẩn hóa `dim_time` theo grain giờ nhất quán (`hour_timestamp`).
    - Tách và chuẩn hóa danh mục thể loại `dim_genre` và sinh bảng cầu nối `bridge_movie_genre`.
    - Ghép metadata TMDB, gán cờ `has_tmdb_metadata` và giữ `NULL` điểm vote cho phim chưa có dữ liệu.
-3. **`load_dimension_tables`:** Tự động tạo DDL chuẩn có đầy đủ ràng buộc PK/FK, làm sạch dữ liệu cũ an toàn bằng `TRUNCATE CASCADE` và nạp dữ liệu các bảng chiều bằng `append`.
-4. **`load_fact_rating`:** Nạp bảng sự kiện `fact_rating` đảm bảo tính toàn vẹn tham chiếu.
-5. **`validate_data_warehouse`:** Khâu kiểm định chất lượng tự động (Data Quality Gate):
+4. **`load_dimension_tables`:** Tạo DDL nếu chưa có, sau đó upsert dimensions/bridge theo khóa; không xóa các dòng cũ.
+5. **`load_fact_rating`:** Upsert `fact_rating` theo khóa `(user_id, movie_id)` để chạy lại không tạo bản ghi trùng.
+6. **`validate_data_warehouse`:** Khâu kiểm định chất lượng tự động (Data Quality Gate):
    - Kiểm tra số lượng bản ghi (> 0).
    - Kiểm tra tính duy nhất và không Null trên tất cả Primary Key.
    - Kiểm tra tính toàn vẹn tham chiếu khóa ngoại (0 orphan records).
@@ -188,37 +190,22 @@ graph LR
 
 ## 6. Hướng dẫn khởi chạy toàn bộ hệ thống từ đầu
 
-### Bước 1: Khởi động Hạ tầng Docker
-```bash
-docker compose up -d
+### Bước 1: Tạo file `.env` và khởi động toàn bộ hạ tầng Docker
+Trong PowerShell:
+```powershell
+Copy-Item .env.example .env
+notepad .env
+.\start_airflow.ps1
 ```
+Thay giá trị mẫu trong `.env` bằng thông tin riêng trước khi chạy script; dùng mật khẩu dạng URL-safe (chữ và số). Không đưa `.env` lên Git. Nếu đã có `dw_data` hoặc `minio_storage`, giữ đúng thông tin đăng nhập đang dùng với volume hiện có; Compose không tự đổi thông tin đăng nhập được lưu trong volume PostgreSQL.
 
-### Bước 2: Kích hoạt Virtual Environment
-```bash
-source venv/bin/activate
+### Bước 2: Kiểm tra và kích hoạt DAG
+```powershell
+docker compose ps
+docker compose logs --tail 100 airflow-scheduler
+docker compose exec airflow-scheduler airflow dags list
+docker compose exec airflow-scheduler airflow dags list-import-errors
 ```
+Truy cập [http://localhost:8080](http://localhost:8080), đăng nhập bằng tài khoản trong `.env`, bật DAG `movielens_data_warehouse_etl` nếu đang paused rồi bấm **Trigger DAG**.
 
-### Bước 3 (Nếu cần nạp lại Data Lake):
-```bash
-python ingest_to_minio.py
-```
-
-### Bước 4: Chạy toàn bộ luồng ETL & Kiểm định Data Quality
-
-**Cách 1: Chạy test nhanh qua Airflow CLI (Khuyên dùng):**
-```bash
-export AIRFLOW_HOME="$(pwd)/airflow_home"
-export AIRFLOW__CORE__DAGS_FOLDER="$(pwd)/dags"
-airflow dags test movielens_data_warehouse_etl 2026-10-18
-```
-
-**Cách 2: Chạy trực tiếp qua script Python:**
-```bash
-python etl_process.py
-```
-
-**Cách 3: Khởi chạy Airflow Web UI & Scheduler:**
-```bash
-./start_airflow.sh
-```
-Truy cập [http://localhost:8080](http://localhost:8080), đăng nhập `admin`/`admin` và bấm **Trigger DAG** `movielens_data_warehouse_etl`.
+Lịch `@daily` điều phối ETL hằng ngày. Mỗi lần chạy DAG upload snapshot hiện có trong `raw_data/` lên MinIO; việc đó không tải MovieLens mới. `fetch_raw_data.py` chỉ lấy metadata TMDB khi được gọi riêng với `TMDB_API_KEY`.

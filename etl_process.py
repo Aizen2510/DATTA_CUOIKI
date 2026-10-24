@@ -19,7 +19,7 @@ if hasattr(sys.stdout, 'reconfigure'):
 import numpy as np
 import pandas as pd
 from minio import Minio
-from sqlalchemy import create_engine, text
+from sqlalchemy import create_engine, inspect, text
 
 # Cấu hình logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -31,20 +31,19 @@ logger = logging.getLogger("ETL_Process")
 # CẤU HÌNH KẾT NỐI
 # ============================================================
 MINIO_ENDPOINT = os.getenv("MINIO_ENDPOINT", "localhost:9000")
-MINIO_ACCESS_KEY = os.getenv("MINIO_ACCESS_KEY", "minioadmin")
-MINIO_SECRET_KEY = os.getenv("MINIO_SECRET_KEY", "minioadmin")
+MINIO_ACCESS_KEY = os.getenv("MINIO_ACCESS_KEY")
+MINIO_SECRET_KEY = os.getenv("MINIO_SECRET_KEY")
 BUCKET_NAME = os.getenv("BUCKET_NAME", "raw-datalake")
 
-DW_URL = os.getenv(
-    "DW_URL",
-    "postgresql://dw_user:B23DCCC@localhost:5434/dw_movies"
-)
+DW_URL = os.getenv("DW_URL")
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STAGING_DIR = os.getenv("STAGING_DIR", os.path.join(BASE_DIR, "staging"))
 os.makedirs(STAGING_DIR, exist_ok=True)
 
 
 def get_minio_client():
+    if not MINIO_ACCESS_KEY or not MINIO_SECRET_KEY:
+        raise RuntimeError("Set MINIO_ACCESS_KEY and MINIO_SECRET_KEY in the environment.")
     return Minio(
         MINIO_ENDPOINT,
         access_key=MINIO_ACCESS_KEY,
@@ -54,6 +53,8 @@ def get_minio_client():
 
 
 def get_dw_engine():
+    if not DW_URL:
+        raise RuntimeError("Set DW_URL in the environment; credentials must not be hard-coded.")
     return create_engine(DW_URL)
 
 
@@ -316,53 +317,92 @@ def transform_data():
 # ============================================================
 # 3. LOAD DIMENSIONS & BRIDGE (Nạp bảng chiều vào Postgres)
 # ============================================================
+def _upsert_dataframe(conn, dataframe, table_name, key_columns, update_columns):
+    """Load a dataframe through a transaction-scoped staging table and PostgreSQL upsert."""
+    if dataframe.empty:
+        logger.warning("Không có dòng mới để nạp vào %s.", table_name)
+        return
+    staging_table = f"_etl_stage_{table_name}"
+    dataframe.to_sql(staging_table, con=conn, if_exists="replace", index=False, chunksize=10000)
+    quoted_columns = ", ".join(f'"{column}"' for column in dataframe.columns)
+    conflict_keys = ", ".join(f'"{column}"' for column in key_columns)
+    if update_columns:
+        update_clause = ", ".join(
+            f'"{column}" = EXCLUDED."{column}"' for column in update_columns
+        )
+        conflict_action = f"DO UPDATE SET {update_clause}"
+    else:
+        conflict_action = "DO NOTHING"
+    conn.execute(text(
+        f'INSERT INTO "{table_name}" ({quoted_columns}) '
+        f'SELECT {quoted_columns} FROM "{staging_table}" '
+        f'ON CONFLICT ({conflict_keys}) {conflict_action};'
+    ))
+    conn.execute(text(f'DROP TABLE "{staging_table}";'))
+
+
+def _verify_conflict_keys(engine, table_name, key_columns):
+    """Fail before loading if an existing table lacks the unique key required for upsert."""
+    inspector = inspect(engine)
+    primary_key = set(inspector.get_pk_constraint(table_name).get("constrained_columns") or [])
+    unique_keys = [
+        set(item.get("column_names") or [])
+        for item in inspector.get_unique_constraints(table_name)
+    ]
+    required = set(key_columns)
+    if required != primary_key and required not in unique_keys:
+        raise RuntimeError(
+            f"Table {table_name} needs a PRIMARY KEY or UNIQUE constraint on "
+            f"({', '.join(key_columns)}) for safe upsert. Existing tables are not altered "
+            "automatically; inspect and back up the database before applying a schema migration."
+        )
+
+
 def load_dimension_tables():
-    """Nạp các bảng Dimension và Bridge vào Data Warehouse sau khi khởi tạo DDL an toàn."""
-    logger.info("[3/4] Nạp các bảng Dimension & Bridge vào PostgreSQL Data Warehouse...")
+    """Upsert dimensions and bridge atomically; existing DW rows are retained."""
+    logger.info("[3/4] Nạp/upsert các bảng Dimension & Bridge...")
     init_schema()
     engine = get_dw_engine()
-
-    dim_user = pd.read_pickle(os.path.join(STAGING_DIR, "dim_user.pkl"))
-    dim_movie = pd.read_pickle(os.path.join(STAGING_DIR, "dim_movie.pkl"))
-    dim_genre = pd.read_pickle(os.path.join(STAGING_DIR, "dim_genre.pkl"))
-    bridge_movie_genre = pd.read_pickle(os.path.join(STAGING_DIR, "bridge_movie_genre.pkl"))
-    dim_time = pd.read_pickle(os.path.join(STAGING_DIR, "dim_time.pkl"))
-
-    # Làm sạch dữ liệu cũ theo đúng thứ tự ràng buộc khóa ngoại (CASCADE)
+    dataframes = {
+        "dim_user": pd.read_pickle(os.path.join(STAGING_DIR, "dim_user.pkl")),
+        "dim_movie": pd.read_pickle(os.path.join(STAGING_DIR, "dim_movie.pkl")),
+        "dim_genre": pd.read_pickle(os.path.join(STAGING_DIR, "dim_genre.pkl")),
+        "bridge_movie_genre": pd.read_pickle(os.path.join(STAGING_DIR, "bridge_movie_genre.pkl")),
+        "dim_time": pd.read_pickle(os.path.join(STAGING_DIR, "dim_time.pkl")),
+    }
+    upsert_spec = [
+        ("dim_user", ["user_id"], []),
+        ("dim_movie", ["movie_id"], ["title", "genres", "release_year", "release_decade", "tmdb_id",
+                                     "popularity", "vote_average", "vote_count", "overview", "has_tmdb_metadata"]),
+        ("dim_genre", ["genre_id"], ["genre_name"]),
+        ("dim_time", ["time_id"], ["hour_timestamp", "hour", "day", "month", "quarter", "year",
+                                   "day_of_week", "day_name"]),
+        ("bridge_movie_genre", ["movie_id", "genre_id"], []),
+    ]
+    for table, keys, _updates in upsert_spec:
+        _verify_conflict_keys(engine, table, keys)
     with engine.begin() as conn:
-        logger.info("Xóa dữ liệu cũ an toàn qua TRUNCATE CASCADE...")
-        conn.execute(text("TRUNCATE TABLE fact_rating, bridge_movie_genre, dim_user, dim_movie, dim_genre, dim_time CASCADE;"))
-
-    # Nạp Dimension tables bằng if_exists='append' để bảo toàn PK/FK schema
-    dim_user.to_sql("dim_user", con=engine, if_exists="append", index=False, chunksize=5000)
-    logger.info(f" -> Đã nạp dim_user: {len(dim_user)} bản ghi.")
-
-    dim_movie.to_sql("dim_movie", con=engine, if_exists="append", index=False, chunksize=5000)
-    logger.info(f" -> Đã nạp dim_movie: {len(dim_movie)} bản ghi.")
-
-    dim_genre.to_sql("dim_genre", con=engine, if_exists="append", index=False, chunksize=5000)
-    logger.info(f" -> Đã nạp dim_genre: {len(dim_genre)} bản ghi.")
-
-    bridge_movie_genre.to_sql("bridge_movie_genre", con=engine, if_exists="append", index=False, chunksize=10000)
-    logger.info(f" -> Đã nạp bridge_movie_genre: {len(bridge_movie_genre)} bản ghi.")
-
-    dim_time.to_sql("dim_time", con=engine, if_exists="append", index=False, chunksize=5000)
-    logger.info(f" -> Đã nạp dim_time: {len(dim_time)} bản ghi.")
-
-    logger.info("Hoàn tất nạp tất cả các bảng Dimension và Bridge.")
+        for table, keys, updates in upsert_spec:
+            _upsert_dataframe(conn, dataframes[table], table, keys, updates)
+            logger.info(" -> Đã upsert %s: %s dòng đầu vào.", table, len(dataframes[table]))
+    logger.info("Hoàn tất upsert dimensions và bridge. Không xóa dữ liệu cũ.")
 
 
 # ============================================================
 # 4. LOAD FACT (Nạp bảng sự kiện vào Postgres)
 # ============================================================
 def load_fact_rating():
-    """Nạp bảng Fact Rating vào Data Warehouse bằng append bảo toàn ràng buộc toàn vẹn."""
-    logger.info("[4/4] Nạp bảng fact_rating vào PostgreSQL Data Warehouse...")
+    """Upsert fact ratings by the existing (user_id, movie_id) natural key."""
+    logger.info("[4/4] Upsert bảng fact_rating vào PostgreSQL Data Warehouse...")
     engine = get_dw_engine()
-
     fact_rating = pd.read_pickle(os.path.join(STAGING_DIR, "fact_rating.pkl"))
-    fact_rating.to_sql("fact_rating", con=engine, if_exists="append", index=False, chunksize=10000)
-    logger.info(f" -> Nạp thành công fact_rating: {len(fact_rating)} bản ghi.")
+    _verify_conflict_keys(engine, "fact_rating", ["user_id", "movie_id"])
+    with engine.begin() as conn:
+        _upsert_dataframe(
+            conn, fact_rating, "fact_rating", ["user_id", "movie_id"],
+            ["time_id", "rating", "rating_timestamp"],
+        )
+    logger.info(" -> Đã upsert fact_rating: %s dòng đầu vào.", len(fact_rating))
 
 
 # ============================================================

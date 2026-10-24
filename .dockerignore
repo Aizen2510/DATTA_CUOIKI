@@ -1,0 +1,12 @@
+.git
+.venv
+venv
+__pycache__
+airflow_home
+dw_data
+minio_storage
+warehouse_exported_data
+staging
+*.pbix
+*.odt
+.env

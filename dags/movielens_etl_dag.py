@@ -1,6 +1,7 @@
 import sys
 import os
 from datetime import datetime, timedelta
+import pendulum
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 
@@ -16,11 +17,12 @@ from etl_process import (
     load_fact_rating,
     validate_data_warehouse
 )
+from ingest_to_minio import upload_raw_to_minio
 
 default_args = {
     'owner': 'aizen',
     'depends_on_past': False,
-    'start_date': datetime(2026, 1, 1),
+    'start_date': datetime(2026, 1, 1, tzinfo=pendulum.timezone('Asia/Ho_Chi_Minh')),
     'retries': 1,
     'retry_delay': timedelta(minutes=1),
 }
@@ -29,9 +31,17 @@ with DAG(
     dag_id='movielens_data_warehouse_etl',
     default_args=default_args,
     description='Tự động trích xuất từ MinIO, làm sạch, nạp vào Data Warehouse Star Schema & kiểm tra chất lượng tự động',
-    schedule_interval='@daily',
-    catchup=False
+    schedule='@daily',
+    catchup=False,
+    max_active_runs=1,
+    dagrun_timeout=timedelta(hours=2),
 ) as dag:
+
+    # Upload current raw_data snapshots to MinIO before the ETL reads them.
+    task_ingest = PythonOperator(
+        task_id='ingest_raw_to_minio',
+        python_callable=upload_raw_to_minio,
+    )
 
     # Task 1: Trích xuất dữ liệu thô từ MinIO Data Lake
     task_extract = PythonOperator(
@@ -64,4 +74,4 @@ with DAG(
     )
 
     # Pipeline: Thứ tự thực thi chuẩn ETL Data Warehouse
-    task_extract >> task_transform >> task_load_dims >> task_load_fact >> task_validate
+    task_ingest >> task_extract >> task_transform >> task_load_dims >> task_load_fact >> task_validate

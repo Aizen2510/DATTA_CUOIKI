@@ -65,7 +65,7 @@ Bạn có thể đưa dữ liệu vào Power BI Desktop trên Windows theo **1 t
 4. **Xác thực tài khoản (Authentication):**
    - Chọn mục **Database** ở cột bên trái.
    - **User name:** `dw_user`
-   - **Password:** `B23DCCC`
+   - **Password:** use the private value configured for the PostgreSQL DW in `.env`.
    - Bấm **Connect**.
 5. **Chọn dữ liệu:** Tích chọn toàn bộ 6 bảng (`dim_user`, `dim_movie`, `dim_genre`, `bridge_movie_genre`, `dim_time`, `fact_rating`) → bấm **Load**.
 

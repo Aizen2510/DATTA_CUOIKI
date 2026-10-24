@@ -5,7 +5,9 @@ import requests
 import pandas as pd
 
 # Api TheMovieDB 
-API_KEY = "7818eada14040a0d32a8e292cfb39e7a"
+API_KEY = os.getenv("TMDB_API_KEY")
+if not API_KEY:
+    raise RuntimeError("Set TMDB_API_KEY in the environment before fetching TMDB metadata.")
 
 DATA_DIR = "raw_data"
 links_path = os.path.join(DATA_DIR, "links.csv")
