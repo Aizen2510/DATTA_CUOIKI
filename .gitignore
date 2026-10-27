@@ -27,3 +27,6 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+
+# Recommendation artifacts and local verification logs
+ml_artifacts/

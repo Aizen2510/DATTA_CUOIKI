@@ -1,5 +1,11 @@
 # HỆ THỐNG XỬ LÝ DỮ LIỆU & DATA WAREHOUSE (MOVIELENS + TMDB)
 
+Phần Recommendation đã có CLI LightFM + WARP và baseline Most Popular.
+Xem [báo cáo, kết quả thực tế và hướng dẫn chạy](RECOMMENDATION_AUDIT.md).
+Để học từng bước, xem [luồng chi tiết, các trường và thuật toán Recommendation](RECOMMENDATION_FLOW.md).
+Trên môi trường đã chuẩn bị: `.venv/bin/python recommend.py --user-id 15 --top-k 10`.
+Lần chạy ML đã kiểm chứng dùng Raw Storage local → ETL → PostgreSQL; MinIO chưa khả dụng.
+
 Dự án xây dựng quy trình Kỹ thuật Dữ liệu (Data Engineering) hoàn chỉnh: từ thu thập đa nguồn, lưu trữ hồ dữ liệu thô (Data Lake), xử lý chuẩn hóa ETL theo mô hình hình sao (Star Schema có Bridge Table), lưu trữ vào Kho dữ liệu (Data Warehouse) trên PostgreSQL, đến điều phối và kiểm định chất lượng tự động bằng Apache Airflow.
 
 ---

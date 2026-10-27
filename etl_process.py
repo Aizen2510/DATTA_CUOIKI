@@ -141,11 +141,17 @@ def init_schema():
 # 1. EXTRACT (Trích xuất từ MinIO Data Lake)
 # ============================================================
 def extract_data():
-    """Trích xuất dữ liệu từ MinIO Data Lake và lưu vào staging."""
-    logger.info("[1/4] Bắt đầu trích xuất dữ liệu từ MinIO Data Lake...")
-    client = get_minio_client()
+    """Đọc raw từ MinIO (mặc định) hoặc thư mục local được chọn rõ ràng."""
+    raw_storage = os.getenv("RAW_STORAGE", "minio")
+    if raw_storage not in {"minio", "local"}:
+        raise ValueError("RAW_STORAGE must be minio or local")
+    data_dir = os.getenv("DATA_DIR", os.path.join(BASE_DIR, "raw_data"))
+    logger.info("[1/4] Trích xuất raw từ %s", raw_storage)
+    client = get_minio_client() if raw_storage == "minio" else None
 
     def _read_csv(object_name):
+        if raw_storage == "local":
+            return pd.read_csv(os.path.join(data_dir, os.path.basename(object_name)))
         obj = client.get_object(BUCKET_NAME, object_name)
         df = pd.read_csv(io.BytesIO(obj.read()))
         obj.close()
@@ -153,6 +159,9 @@ def extract_data():
         return df
 
     def _read_json(object_name):
+        if raw_storage == "local":
+            with open(os.path.join(data_dir, os.path.basename(object_name)), encoding="utf-8") as source:
+                return json.load(source)
         obj = client.get_object(BUCKET_NAME, object_name)
         data = json.loads(obj.read().decode("utf-8"))
         obj.close()
