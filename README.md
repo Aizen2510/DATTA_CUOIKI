@@ -13,7 +13,7 @@ Dự án xây dựng một quy trình Kỹ thuật Dữ liệu (Data Engineering
 4. **Lưu trữ Kho dữ liệu (Data Warehouse):** Triển khai trên **PostgreSQL (OLAP schema)** với toàn vẹn tham chiếu nghiêm ngặt (PK, FK, Indexes, Upsert Idempotent).
 5. **Điều phối & Kiểm định tự động (Orchestration & Data Quality Gate):** Điều phối tự động bằng **Apache Airflow DAG**, tích hợp chốt chặn chất lượng dữ liệu (Data Quality Gate) trước khi cung cấp cho các ứng dụng hạ nguồn.
 6. **Ứng dụng hạ nguồn (Serving Layer):**
-   - **Business Intelligence & Trực quan hóa:** Dashboard phân tích kinh doanh trên **Power BI** ([MovieLens_TMDB_BI.pbix](MovieLens_TMDB_BI.pbix)) và báo cáo đồ án ([BTL.odt](BTL.odt)).
+   - **Business Intelligence & Trực quan hóa:** Dashboard phân tích kinh doanh trên **Power BI** ([MovieLens_TMDB_BI.pbix](MovieLens_TMDB_BI.pbix)).
    - **Machine Learning & Khai phá dữ liệu:** Hệ thống gợi ý phim cá nhân hóa kết hợp (Hybrid Recommender System) sử dụng **LightFM với WARP Loss** ([recommend.py](recommend.py)) và baseline Most Popular.
 
 ---
@@ -59,8 +59,7 @@ flowchart TD
 
     subgraph SERVINGLAYER ["7. Ứng Dụng Hạ Nguồn (Serving Layer)"]
         subgraph BI_ANALYTICS ["Business Intelligence & Analytics"]
-            PBI["Power BI Desktop<br/>(MovieLens_TMDB_BI.pbix)"]
-            REPORT["Báo cáo BTL (BTL.odt)"]
+            PBI["Power BI Dashboard<br/>(MovieLens_TMDB_BI.pbix)"]
             SQL_QUERY["Truy vấn SQL Phân tích<br/>(query_dw.sql)"]
         end
         subgraph ML_RECSYS ["Machine Learning & RecSys"]
@@ -230,7 +229,7 @@ graph LR
 ## 6. Ứng dụng Phân tích Kinh doanh (BI & Analytics)
 
 ### 6.1. Báo cáo & Dashboard Power BI
-Dự án đã hoàn thiện file dashboard báo cáo chuyên sâu: **[MovieLens_TMDB_BI.pbix](MovieLens_TMDB_BI.pbix)** cùng báo cáo chi tiết **[BTL.odt](BTL.odt)**.
+Dự án đã hoàn thiện file dashboard báo cáo chuyên sâu: **[MovieLens_TMDB_BI.pbix](MovieLens_TMDB_BI.pbix)**.
 
 **Hướng dẫn kết nối Power BI với Data Warehouse:**
 1. Khởi động **Power BI Desktop** $\rightarrow$ chọn **Get Data** $\rightarrow$ **PostgreSQL database**.
