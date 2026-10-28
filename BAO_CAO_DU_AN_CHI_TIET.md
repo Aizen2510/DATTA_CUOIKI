@@ -27,15 +27,14 @@ Dự án xây dựng một hệ thống nền tảng dữ liệu hiện đại (
 3. **Business Intelligence (Kinh doanh thông minh)**: Xây dựng báo cáo trực quan tương tác đa chiều trên Microsoft Power BI với hệ thống chỉ số đo lường DAX.
 4. **Machine Learning / Artificial Intelligence (Học máy & Trí tuệ nhân tạo)**: Xây dựng hệ thống gợi ý phim cá nhân hóa kết hợp (Hybrid Recommender) dựa trên thuật toán LightFM với hàm mất mát xếp hạng WARP và cơ chế Fallback xử lý bài toán Cold-Start.
 
-### Sơ đồ kiến trúc 7 tầng (7-Layer Horizontal Architecture)
+### Sơ đồ kiến trúc tổng thể (Horizontal Architecture)
 
 ```mermaid
 flowchart LR
-    %% 1. Data Sources
-    subgraph S1 ["1. DATA SOURCES"]
+    %% 1. Data Source
+    subgraph S1 ["1. DATA SOURCE"]
         direction TB
-        ML["MovieLens 100K<br/>(9.742 movies, 100K ratings)"]
-        TMDB["TMDB REST API<br/>(Overviews, Metadata, Posters)"]
+        TMDB["The Movie Database (TMDB)<br/>(REST API / JSON Metadata)"]
     end
 
     %% 2. Data Lake
@@ -62,24 +61,24 @@ flowchart LR
         DW[("PostgreSQL 15 (Star Schema)<br/>Fact: fact_rating<br/>Dims: dim_movie, dim_user, dim_time<br/>Bridge: bridge_movie_genre")]
     end
 
-    %% 6. Business Intelligence
-    subgraph S6 ["6. BUSINESS INTELLIGENCE"]
+    %% 6. Service Layer
+    subgraph S6 ["6. SERVICE LAYER"]
         direction TB
-        PBI["Microsoft Power BI<br/>Data Model Star Schema<br/>Interactive Dashboards & DAX"]
-    end
-
-    %% 7. Machine Learning
-    subgraph S7 ["7. MACHINE LEARNING"]
-        direction TB
-        ML_REC["LightFM Hybrid Recommender<br/>Collaborative + Content-Based<br/>WARP Loss & Top-K Ranking"]
+        subgraph BI ["Business Intelligence"]
+            PBI["Power BI Dashboard<br/>(MovieLens_TMDB_BI.pbix)"]
+        end
+        subgraph ML ["Machine Learning & RecSys"]
+            ML_TEST["File Test Truy Vấn & Đánh Giá<br/>(run_ml.bat / recommend.py)"]
+            ML_REC["LightFM Hybrid Recommender<br/>WARP Loss & Top-K Ranking"]
+        end
     end
 
     S1 -->|Ingest Raw| S2
     S2 -->|Extract Object| S4
     S3 -.->|Điều phối Trigger & Monitor| S4
     S4 -->|Load Star Schema| S5
-    S5 -->|Truy vấn OLAP| S6
-    S5 -->|Read Only (Train/Infer)| S7
+    S5 -->|Truy vấn OLAP| BI
+    S5 -->|Read Only (Train/Infer)| ML
 ```
 
 ---

@@ -25,11 +25,10 @@ Hệ thống được thiết kế theo kiến trúc chuẩn công nghiệp nhi�
 ```mermaid
 flowchart LR
     %% ========================================================
-    %% 1. NGUỒN DỮ LIỆU ĐA NGUỒN
+    %% 1. NGUỒN DỮ LIỆU
     %% ========================================================
-    subgraph SOURCELAYER ["1. Data Sources (Nguồn Dữ Liệu)"]
+    subgraph SOURCELAYER ["1. Data Source (Nguồn Dữ Liệu)"]
         direction TB
-        ML["MovieLens 100k Dataset<br/>(movies.csv, ratings.csv, links.csv, tags.csv)"]
         TMDB["The Movie Database (TMDB)<br/>(REST API / JSON Metadata)"]
     end
 
@@ -73,16 +72,17 @@ flowchart LR
     end
 
     %% ========================================================
-    %% 6. SERVING LAYER (ỨNG DỤNG HẠ NGUỒN)
+    %% 6. SERVICE LAYER (TẦNG DỊCH VỤ & ỨNG DỤNG)
     %% ========================================================
-    subgraph SERVINGLAYER ["6. Serving Layer (Ứng Dụng Phục Vụ)"]
+    subgraph SERVINGLAYER ["6. Service Layer (Tầng Dịch Vụ & Ứng Dụng)"]
         direction TB
         subgraph BI ["Business Intelligence"]
             PBI["Power BI Dashboard<br/>(MovieLens_TMDB_BI.pbix)"]
             SQL_QUERY["Truy vấn OLAP SQL<br/>(query_dw.sql)"]
         end
         subgraph ML ["Machine Learning & RecSys"]
-            LFM["Hybrid LightFM (WARP Loss)<br/>(recommend.py)"]
+            ML_TEST["File Test Truy Vấn & Đánh Giá<br/>(run_ml.bat / recommend.py)"]
+            LFM["Hybrid LightFM (WARP Loss)"]
             BASELINE["Most Popular Fallback Engine"]
         end
     end
@@ -95,7 +95,6 @@ flowchart LR
     end
 
     %% LUỒNG DỮ LIỆU TUẦN TỰ TỪ TRÁI SANG PHẢI (CHẠY NGANG)
-    ML --> INGEST
     TMDB --> INGEST
     INGEST --> MINIO
     INGEST -.-> RAW_LOCAL
