@@ -2,6 +2,9 @@
 ### Đề tài: Xây dựng kho dữ liệu đa nguồn phục vụ phân tích hành vi người dùng và gợi ý phim cá nhân hóa (MovieLens + TMDB)
 **Repository:** https://github.com/Aizen2510/DATTA_CUOIKI
 
+Để xóa Warehouse/model và chạy lại từ raw, xem [quy trình chạy từ đầu](RUN_FROM_SCRATCH.md).
+Để chạy pipeline và demo bằng giao diện web local, xem [hướng dẫn MovieLab](WEB_DEMO.md).
+
 ---
 
 ## 1. Giới thiệu Tổng quan Dự án

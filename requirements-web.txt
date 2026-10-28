@@ -1,0 +1,2 @@
+# Cài sau requirements-ml.txt, trong cùng môi trường Python 3.11.
+Flask==3.1.2

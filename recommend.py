@@ -222,9 +222,14 @@ def train_models(args):
               epochs=args.epochs, num_threads=1)
     bundle.update(model=model, report=report, popular=popularity(positive, item_map))
     ARTIFACTS.mkdir(exist_ok=True)
-    with (ARTIFACTS / "model.pkl").open("wb") as out:
+    # Ghi file tạm để demo vẫn giữ được model cũ nếu quá trình lưu bị lỗi.
+    model_temp = ARTIFACTS / "model.pkl.tmp"
+    with model_temp.open("wb") as out:
         pickle.dump(bundle, out, protocol=pickle.HIGHEST_PROTOCOL)
-    (ARTIFACTS / "metrics.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+    metrics_temp = ARTIFACTS / "metrics.json.tmp"
+    metrics_temp.write_text(json.dumps(report, indent=2), encoding="utf-8")
+    os.replace(model_temp, ARTIFACTS / "model.pkl")
+    os.replace(metrics_temp, ARTIFACTS / "metrics.json")
     print("Đã lưu model đánh giá, model demo refit và metrics trong ml_artifacts/.")
 
 
