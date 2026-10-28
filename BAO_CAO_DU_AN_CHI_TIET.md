@@ -27,58 +27,103 @@ Dự án xây dựng một hệ thống nền tảng dữ liệu hiện đại (
 3. **Business Intelligence (Kinh doanh thông minh)**: Xây dựng báo cáo trực quan tương tác đa chiều trên Microsoft Power BI với hệ thống chỉ số đo lường DAX.
 4. **Machine Learning / Artificial Intelligence (Học máy & Trí tuệ nhân tạo)**: Xây dựng hệ thống gợi ý phim cá nhân hóa kết hợp (Hybrid Recommender) dựa trên thuật toán LightFM với hàm mất mát xếp hạng WARP và cơ chế Fallback xử lý bài toán Cold-Start.
 
-### Sơ đồ kiến trúc tổng thể (Horizontal Architecture)
+### Sơ đồ Kiến trúc Tổng quan Hệ thống (System Architecture)
 
 ```mermaid
 flowchart LR
-    %% 1. Data Source
-    subgraph S1 ["1. DATA SOURCE"]
+    %% ========================================================
+    %% 1. NGUỒN DỮ LIỆU
+    %% ========================================================
+    subgraph SOURCELAYER ["1. Data Source (Nguồn Dữ Liệu)"]
         direction TB
         TMDB["The Movie Database (TMDB)<br/>(REST API / JSON Metadata)"]
     end
 
-    %% 2. Data Lake
-    subgraph S2 ["2. DATA LAKE"]
+    %% ========================================================
+    %% 2. INGESTION & DATA LAKE
+    %% ========================================================
+    subgraph INGESTLAYER ["2. Ingestion & Data Lake (Hồ Dữ Liệu Thô)"]
         direction TB
-        MINIO[("MinIO Data Lake (S3 API)<br/>Bucket: raw-datalake<br/>/movielens & /tmdb")]
+        INGEST["ingest_to_minio.py<br/>fetch_raw_data.py"]
+        MINIO[("MinIO Data Lake (S3 API)<br/>bucket: raw-datalake<br/>Port 9000 / 9001")]
+        RAW_LOCAL[("Local Raw Storage<br/>raw_data/")]
     end
 
-    %% 3. Orchestration
-    subgraph S3 ["3. ORCHESTRATION"]
+    %% ========================================================
+    %% 3. ETL ENGINE & STAGING
+    %% ========================================================
+    subgraph ETLLAYER ["3. ETL Engine & Staging (Xử Lý & Chuẩn Hóa)"]
         direction TB
-        AIRFLOW["Apache Airflow 2.8<br/>DAG: movielens_data_warehouse_etl<br/>6 Tasks tuần tự"]
+        STAGING["Staging Area (staging/)<br/>• Trích xuất năm/thập niên từ title<br/>• Khử trùng lặp cặp (user_id, movie_id)<br/>• Chuẩn hóa grain giờ (%Y%m%d%H)<br/>• Tách thể loại & sinh bảng cầu nối N-N<br/>• Làm giàu thông tin & cờ has_tmdb_metadata"]
     end
 
-    %% 4. ETL Engine
-    subgraph S4 ["4. ETL & STAGING"]
+    %% ========================================================
+    %% 4. KHO DỮ LIỆU DATA WAREHOUSE (OLAP)
+    %% ========================================================
+    subgraph DWLAYER ["4. PostgreSQL Data Warehouse (OLAP - Port 5434)"]
         direction TB
-        ETL["Python ETL Engine<br/>Pandas & SQLAlchemy<br/>Cleaning, Dedup, Bridge Splitting"]
+        subgraph STAR_SCHEMA ["Mô Hình Hình Sao Mở Rộng (Star Schema + Bridge Table)"]
+            direction TB
+            DIMS["Các Bảng Chiều (Dimensions)<br/>• dim_user (610 users)<br/>• dim_movie (9.742 movies)<br/>• dim_genre (19 genres)<br/>• dim_time (7.761 hours)"]
+            BMG["Bảng Cầu Nối (Bridge Table)<br/>• bridge_movie_genre (22.050 records)<br/>PK/FK: (movie_id, genre_id)"]
+            FR["Bảng Sự Kiện (Fact Table)<br/>• fact_rating (100.836 ratings)<br/>PK: (user_id, movie_id) • FK: time_id"]
+        end
     end
 
-    %% 5. Data Warehouse
-    subgraph S5 ["5. DATA WAREHOUSE"]
+    %% ========================================================
+    %% 5. DATA QUALITY GATE
+    %% ========================================================
+    subgraph DQLAYER ["5. Data Quality Gate (Kiểm Định Chất Lượng)"]
         direction TB
-        DW[("PostgreSQL 15 (Star Schema)<br/>Fact: fact_rating<br/>Dims: dim_movie, dim_user, dim_time<br/>Bridge: bridge_movie_genre")]
+        DQ["Kiểm Định Tự Động<br/>• 0 bảng rỗng (> 0 records)<br/>• 0 Orphan Records (Toàn vẹn FK)<br/>• Uniqueness PK & NOT NULL<br/>• Rating hợp lệ: 0.5 <= rating <= 5.0<br/>• Upsert Idempotent an toàn"]
     end
 
-    %% 6. Service Layer
-    subgraph S6 ["6. SERVICE LAYER"]
+    %% ========================================================
+    %% 6. SERVICE LAYER (TẦNG DỊCH VỤ & ỨNG DỤNG)
+    %% ========================================================
+    subgraph SERVINGLAYER ["6. Service Layer (Tầng Dịch Vụ & Ứng Dụng)"]
         direction TB
         subgraph BI ["Business Intelligence"]
             PBI["Power BI Dashboard<br/>(MovieLens_TMDB_BI.pbix)"]
         end
         subgraph ML ["Machine Learning & RecSys"]
             ML_TEST["File Test Truy Vấn & Đánh Giá<br/>(run_ml.bat / recommend.py)"]
-            ML_REC["LightFM Hybrid Recommender<br/>WARP Loss & Top-K Ranking"]
+            LFM["Hybrid LightFM (WARP Loss)"]
+            BASELINE["Most Popular Fallback Engine"]
         end
     end
 
-    S1 -->|Ingest Raw| S2
-    S2 -->|Extract Object| S4
-    S3 -.->|Điều phối Trigger & Monitor| S4
-    S4 -->|Load Star Schema| S5
-    S5 -->|Truy vấn OLAP| BI
-    S5 -->|Read Only (Train/Infer)| ML
+    %% ========================================================
+    %% 7. HỆ THỐNG ĐIỀU PHỐI (APACHE AIRFLOW)
+    %% ========================================================
+    subgraph ORCHESTRATION ["Điều Phối Tự Động (Apache Airflow • Port 8080)"]
+        AF_DAG["DAG: movielens_data_warehouse_etl (@daily)<br/>Task 1: Ingest ➔ Task 2: Extract ➔ Task 3: Transform ➔ Task 4: Load Dims ➔ Task 5: Load Fact ➔ Task 6: Validate"]
+    end
+
+    %% LUỒNG DỮ LIỆU TUẦN TỰ TỪ TRÁI SANG PHẢI (CHẠY NGANG)
+    TMDB --> INGEST
+    INGEST --> MINIO
+    INGEST -.-> RAW_LOCAL
+
+    MINIO --> STAGING
+    RAW_LOCAL -.-> STAGING
+
+    STAGING --> DIMS
+    STAGING --> BMG
+    STAGING --> FR
+
+    DIMS --> DQ
+    BMG --> DQ
+    FR --> DQ
+
+    DQ --> BI
+    DQ --> ML
+
+    %% LIÊN KẾT ĐIỀU PHỐI AIRFLOW
+    AF_DAG -.->|Điều phối tự động 6 tasks| INGESTLAYER
+    AF_DAG -.->|Điều phối tự động 6 tasks| ETLLAYER
+    AF_DAG -.->|Điều phối tự động 6 tasks| DWLAYER
+    AF_DAG -.->|Điều phối tự động 6 tasks| DQLAYER
 ```
 
 ---
