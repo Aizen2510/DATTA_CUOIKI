@@ -96,20 +96,27 @@ flowchart LR
 
 ---
 
-### SLIDE 5: TẦNG 1 - NGUỒN DỮ LIỆU ĐIỆN ẢNH (DATA SOURCE)
-* **Nguồn dữ liệu The Movie Database (TMDB)**:
-  * Thu thập qua REST API chuẩn JSON.
-  * Cung cấp thông tin chi tiết về từng bộ phim:
-    * `overview`: Tóm tắt nội dung cốt truyện (phục vụ trích xuất từ khóa cho ML).
-    * `poster_path`: Đường dẫn hình ảnh hiển thị trên Dashboard trực quan.
-    * `vote_average` & `vote_count`: Thước đo mức độ phổ biến toàn cầu.
-  * Tích hợp qua khóa liên kết ánh xạ chuẩn hóa `tmdb_id`.
-* **Dữ liệu đánh giá người dùng**:
-  * 100.836 lượt đánh giá từ 610 người dùng thật trên 9.742 bộ phim.
-  * Thang điểm từ 0.5 đến 5.0 sao.
+### SLIDE 5: TẦNG 1 - NGUỒN DỮ LIỆU ĐIỆN ẢNH (DATA SOURCES & ENRICHMENT)
+* **Tổng quan 2 Nguồn Dữ Liệu Kết Hợp**:
+
+| Nguồn Dữ Liệu | Loại Dữ Liệu | Định dạng | Quy mô thực tế | Vai trò trong hệ thống |
+| :--- | :--- | :---: | :---: | :--- |
+| **MovieLens 100K** | Tương tác & Đánh giá người dùng | CSV (Có cấu trúc) | **100.836** ratings<br/>**9.742** phim<br/>**610** users | Cung cấp dữ liệu sự kiện (Fact) về hành vi đánh giá và danh mục phim gốc. |
+| **The Movie Database (TMDB)** | Siêu dữ liệu mở rộng (Metadata) | JSON qua REST API (Bán cấu trúc) | **300+** phim chi tiết metadata | Làm giàu dữ liệu: Cốt truyện (`overview`), ảnh bìa (`poster`), vote cộng đồng quốc tế. |
+
+* **Chi tiết cấu trúc các tệp dữ liệu thô**:
+  * `movies.csv` (9.742 dòng): `movieId`, `title` (kèm năm phát hành), `genres` (phân cách bằng `|`).
+  * `ratings.csv` (100.836 dòng): `userId`, `movieId`, `rating` (0.5 - 5.0 sao), `timestamp` (Unix epoch).
+  * `links.csv` (9.742 dòng): **Cầu nối ánh xạ cốt lõi** `movieId` $\rightarrow$ `imdbId` và `tmdbId`.
+  * `tags.csv` (3.683 dòng): Nhãn mô tả cảm xúc của người dùng gắn với phim.
+  * `tmdb_movies_raw.json`: Siêu dữ liệu TMDB làm giàu (`overview`, `poster_path`, `vote_average`, `vote_count`).
+
+* **Cơ chế liên kết làm giàu dữ liệu (Data Enrichment)**:
+  * Ánh xạ tự động: `movies.movieId` $\rightarrow$ `links.movieId` $\rightarrow$ `links.tmdbId = TMDB.id`.
+  * Phục vụ trọn vẹn 3 phân hệ: Fact/Dim cho **Data Warehouse**, Biểu đồ trực quan cho **Power BI**, và Vector hóa cốt truyện cho **Machine Learning**.
 
 > 🎤 **Speaker Notes**:  
-> *"Dữ liệu nguồn được thu thập từ TMDB API dưới dạng JSON. Dữ liệu này chứa đựng cả thông tin định tính như nội dung tóm tắt cốt truyện và thông tin định lượng như điểm vote của cộng đồng quốc tế."*
+> *"Tại tầng nguồn dữ liệu, hệ thống tích hợp hai nguồn quan trọng: MovieLens cung cấp hơn 100 nghìn lượt đánh giá chuẩn học thuật từ 610 người dùng, và TMDB API cung cấp siêu dữ liệu cốt truyện, poster và điểm vote quốc tế. Cầu nối ánh xạ qua file links.csv giúp làm giàu toàn bộ dữ liệu phim trước khi nạp vào hồ dữ liệu MinIO."*
 
 ---
 
