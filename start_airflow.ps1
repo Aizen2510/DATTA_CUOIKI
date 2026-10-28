@@ -2,7 +2,7 @@ $ErrorActionPreference = 'Stop'
 Set-Location -LiteralPath $PSScriptRoot
 
 if (-not (Test-Path -LiteralPath '.env')) {
-    throw 'Missing .env. Copy .env.example to .env and set private credentials first.'
+    throw 'Missing .env. Please configure .env with credentials first.'
 }
 
 docker compose up --build -d

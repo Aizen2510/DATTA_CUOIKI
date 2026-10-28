@@ -20,80 +20,122 @@ Dự án xây dựng một quy trình Kỹ thuật Dữ liệu (Data Engineering
 
 ## 2. Sơ đồ Kiến trúc Tổng quan Hệ thống (System Architecture)
 
+Hệ thống được thiết kế theo kiến trúc chuẩn công nghiệp nhiều tầng (Multi-tier Enterprise Data Architecture), kết hợp chặt chẽ từ thu thập, lưu trữ, xử lý, điều phối tự động cho đến tầng ứng dụng phân tích kinh doanh và gợi ý thông minh:
+
 ```mermaid
-flowchart TD
-    subgraph SOURCELAYER ["1. Data Sources (Nguồn Dữ Liệu Đa Nguồn)"]
+flowchart LR
+    %% ========================================================
+    %% 1. NGUỒN DỮ LIỆU ĐA NGUỒN
+    %% ========================================================
+    subgraph SOURCELAYER ["1. Data Sources (Nguồn Dữ Liệu)"]
+        direction TB
         ML["MovieLens 100k Dataset<br/>(movies.csv, ratings.csv, links.csv, tags.csv)"]
         TMDB["The Movie Database (TMDB)<br/>(REST API / JSON Metadata)"]
     end
 
+    %% ========================================================
+    %% 2. INGESTION & DATA LAKE
+    %% ========================================================
     subgraph INGESTLAYER ["2. Ingestion & Data Lake (Hồ Dữ Liệu Thô)"]
-        INGEST["ingest_to_minio.py / fetch_raw_data.py"]
-        MINIO[("MinIO Object Storage (S3 API)<br/>Bucket: raw-datalake<br/>Private • Snapshot Dữ liệu Thô")]
+        direction TB
+        INGEST["ingest_to_minio.py<br/>fetch_raw_data.py"]
+        MINIO[("MinIO Data Lake (S3 API)<br/>bucket: raw-datalake<br/>Port 9000 / 9001")]
         RAW_LOCAL[("Local Raw Storage<br/>raw_data/")]
     end
 
-    subgraph ORCHESTRATION ["3. Điều Phối Tự Động (Apache Airflow)"]
-        AF_DAG["Airflow DAG: movielens_data_warehouse_etl<br/>Schedule: @daily • Docker Container"]
-        AF_TASKS["1. Ingest Raw → 2. Extract → 3. Clean & Transform<br/>→ 4. Load Dims → 5. Load Fact → 6. Validate DW"]
+    %% ========================================================
+    %% 3. ETL ENGINE & STAGING
+    %% ========================================================
+    subgraph ETLLAYER ["3. ETL Engine & Staging (Xử Lý & Chuẩn Hóa)"]
+        direction TB
+        STAGING["Staging Area (staging/)<br/>• Trích xuất năm/thập niên từ title<br/>• Khử trùng lặp cặp (user_id, movie_id)<br/>• Chuẩn hóa grain giờ (%Y%m%d%H)<br/>• Tách thể loại & sinh bảng cầu nối N-N<br/>• Làm giàu thông tin & cờ has_tmdb_metadata"]
     end
 
-    subgraph ETLLAYER ["4. Xử Lý & Chuyển Đổi (ETL Engine - Pandas & SQLAlchemy)"]
-        STAGING["Staging Area (staging/)<br/>- Khử trùng lặp cặp (user_id, movie_id)<br/>- Chuẩn hóa Time Grain (%Y%m%d%H)<br/>- Sinh bảng cầu nối N-N Movie-Genre<br/>- Ghép Metadata TMDB & Cờ has_tmdb_metadata"]
-    end
-
-    subgraph DWLAYER ["5. Kho Dữ Liệu (Data Warehouse - PostgreSQL OLAP)"]
-        subgraph STAR_SCHEMA ["Star Schema + Bridge Table"]
-            DU["dim_user (610 users)"]
-            DM["dim_movie (9.742 movies)"]
-            DG["dim_genre (19 genres)"]
-            BMG["bridge_movie_genre (22.050 records)"]
-            DT["dim_time (7.761 hours)"]
-            FR["fact_rating (100.836 ratings)"]
+    %% ========================================================
+    %% 4. KHO DỮ LIỆU DATA WAREHOUSE (OLAP)
+    %% ========================================================
+    subgraph DWLAYER ["4. PostgreSQL Data Warehouse (OLAP - Port 5434)"]
+        direction TB
+        subgraph STAR_SCHEMA ["Mô Hình Hình Sao Mở Rộng (Star Schema + Bridge Table)"]
+            direction TB
+            DIMS["Các Bảng Chiều (Dimensions)<br/>• dim_user (610 users)<br/>• dim_movie (9.742 movies)<br/>• dim_genre (19 genres)<br/>• dim_time (7.761 hours)"]
+            BMG["Bảng Cầu Nối (Bridge Table)<br/>• bridge_movie_genre (22.050 records)<br/>PK/FK: (movie_id, genre_id)"]
+            FR["Bảng Sự Kiện (Fact Table)<br/>• fact_rating (100.836 ratings)<br/>PK: (user_id, movie_id) • FK: time_id"]
         end
     end
 
-    subgraph DQLAYER ["6. Data Quality Gate (Kiểm Định Chất Lượng Tự Động)"]
-        DQ["Kiểm tra tự động:<br/>- Uniqueness & NOT NULL trên Primary Keys<br/>- Referential Integrity (0 orphan records)<br/>- Range Check Rating [0.5, 5.0]<br/>- Upsert Idempotent (ON CONFLICT DO UPDATE)"]
+    %% ========================================================
+    %% 5. DATA QUALITY GATE
+    %% ========================================================
+    subgraph DQLAYER ["5. Data Quality Gate (Kiểm Định Chất Lượng)"]
+        direction TB
+        DQ["Kiểm Định Tự Động<br/>• 0 bảng rỗng (> 0 records)<br/>• 0 Orphan Records (Toàn vẹn FK)<br/>• Uniqueness PK & NOT NULL<br/>• Rating hợp lệ: 0.5 <= rating <= 5.0<br/>• Upsert Idempotent an toàn"]
     end
 
-    subgraph SERVINGLAYER ["7. Ứng Dụng Hạ Nguồn (Serving Layer)"]
-        subgraph BI_ANALYTICS ["Business Intelligence & Analytics"]
+    %% ========================================================
+    %% 6. SERVING LAYER (ỨNG DỤNG HẠ NGUỒN)
+    %% ========================================================
+    subgraph SERVINGLAYER ["6. Serving Layer (Ứng Dụng Phục Vụ)"]
+        direction TB
+        subgraph BI ["Business Intelligence"]
             PBI["Power BI Dashboard<br/>(MovieLens_TMDB_BI.pbix)"]
-            SQL_QUERY["Truy vấn SQL Phân tích<br/>(query_dw.sql)"]
+            SQL_QUERY["Truy vấn OLAP SQL<br/>(query_dw.sql)"]
         end
-        subgraph ML_RECSYS ["Machine Learning & RecSys"]
-            LFM["Hybrid LightFM (WARP Loss)<br/>(Matrix Factorization + Content Features)"]
-            CLI["CLI Gợi ý Phim Top-K<br/>(recommend.py)"]
+        subgraph ML ["Machine Learning & RecSys"]
+            LFM["Hybrid LightFM (WARP Loss)<br/>(recommend.py)"]
             BASELINE["Most Popular Fallback Engine"]
         end
     end
 
-    %% Luồng dữ liệu (Data Flow)
+    %% ========================================================
+    %% 7. HỆ THỐNG ĐIỀU PHỐI (APACHE AIRFLOW)
+    %% ========================================================
+    subgraph ORCHESTRATION ["Điều Phối Tự Động (Apache Airflow • Port 8080)"]
+        AF_DAG["DAG: movielens_data_warehouse_etl (@daily)<br/>Task 1: Ingest ➔ Task 2: Extract ➔ Task 3: Transform ➔ Task 4: Load Dims ➔ Task 5: Load Fact ➔ Task 6: Validate"]
+    end
+
+    %% LUỒNG DỮ LIỆU TUẦN TỰ TỪ TRÁI SANG PHẢI (CHẠY NGANG)
     ML --> INGEST
     TMDB --> INGEST
     INGEST --> MINIO
     INGEST -.-> RAW_LOCAL
 
-    AF_DAG -.->|Điều phối| INGEST
-    AF_DAG -.->|Điều phối| STAGING
-    AF_DAG -.->|Điều phối| DWLAYER
-    AF_DAG -.->|Điều phối| DQ
-
     MINIO --> STAGING
     RAW_LOCAL -.-> STAGING
-    STAGING --> DWLAYER
-    DWLAYER --> DQ
 
-    DU --> FR
-    DM --> FR
-    DT --> FR
-    DM --- BMG
-    DG --- BMG
+    STAGING --> DIMS
+    STAGING --> BMG
+    STAGING --> FR
 
-    DQ --> BI_ANALYTICS
-    DQ --> ML_RECSYS
+    DIMS --> DQ
+    BMG --> DQ
+    FR --> DQ
+
+    DQ --> BI
+    DQ --> ML
+
+    %% LIÊN KẾT ĐIỀU PHỐI AIRFLOW
+    AF_DAG -.->|Điều phối tự động 6 tasks| INGESTLAYER
+    AF_DAG -.->|Điều phối tự động 6 tasks| ETLLAYER
+    AF_DAG -.->|Điều phối tự động 6 tasks| DWLAYER
+    AF_DAG -.->|Điều phối tự động 6 tasks| DQLAYER
 ```
+
+---
+
+### 2.1. Tóm Tắt Tác Dụng Từng Thành Phần Cốt Lõi trong Kiến Trúc
+
+Nhìn vào sơ đồ kiến trúc, dữ liệu được chuyển hóa qua 7 tầng rõ ràng:
+
+1. **Tầng 1 - Nguồn Dữ Liệu (Data Sources):** Kết hợp dữ liệu đánh giá nội bộ từ MovieLens 100k (`movies`, `ratings`, `links`, `tags`) với siêu dữ liệu phong phú từ The Movie Database (TMDB) API (overview, vote, popularity) để tăng giá trị thông tin.
+2. **Tầng 2 - Thu Thập & Hồ Dữ Liệu (Ingestion & Data Lake):** Scripts `ingest_to_minio.py` và `fetch_raw_data.py` nạp toàn bộ snapshot thô vào **MinIO Object Storage** (chuẩn S3 API). Giữ nguyên trạng dữ liệu gốc bất biến (immutable), giúp độc lập hoàn toàn với API bên ngoài và cho phép tái hiện (replay) dữ liệu bất kỳ lúc nào.
+3. **Tầng 3 - Điều Phối Tự Động (Apache Airflow):** DAG `movielens_data_warehouse_etl` chạy định kỳ `@daily`, quản lý thứ tự thực thi 6 task tự động từ Ingest, Extract, Transform, Load Dimension, Load Fact đến Validate chất lượng, tự động xử lý retry và giám sát qua Web UI.
+4. **Tầng 4 - Xử Lý & Chuẩn Hóa (ETL Engine & Staging):** Vùng đệm `staging/` và module `etl_process.py` (Pandas & SQLAlchemy) đảm nhiệm tiền xử lý quan trọng: khử trùng lặp `(user_id, movie_id)`, đồng nhất grain thời gian theo giờ `%Y%m%d%H`, ghép siêu dữ liệu TMDB, và đặc biệt là sinh bảng cầu nối `bridge_movie_genre` giải quyết triệt để quan hệ Nhiều - Nhiều (N:N).
+5. **Tầng 5 - Kho Dữ Liệu OLAP (PostgreSQL Data Warehouse):** Mô hình **Star Schema + Bridge Table** chuẩn OLAP gồm 5 bảng Dimension (`dim_user`, `dim_movie`, `dim_genre`, `bridge_movie_genre`, `dim_time`) và 1 bảng Fact trung tâm (`fact_rating`). Áp dụng cơ chế **Upsert Idempotent (`ON CONFLICT DO UPDATE`)** bảo toàn toàn vẹn khóa chính và khóa ngoại khi pipeline chạy lại.
+6. **Tầng 6 - Chốt Chặn Kiểm Định Chất Lượng (Data Quality Gate):** Task `validate_data_warehouse` tự động chặn lỗi: xác minh 0 bảng rỗng, 0 giá trị NULL trên PK, 0 bản ghi mồ côi (toàn vẹn khóa ngoại 100%), và miền giá trị rating hợp lệ $0.5 \le \text{rating} \le 5.0$.
+7. **Tầng 7 - Ứng Dụng Hạ Nguồn (Serving Layer):**
+   - **Business Intelligence:** Dashboard trực quan hóa trên **Power BI** ([MovieLens_TMDB_BI.pbix](MovieLens_TMDB_BI.pbix)) với Cross-filtering hai chiều qua Bridge Table và các câu lệnh phân tích nâng cao trong [query_dw.sql](query_dw.sql).
+   - **Machine Learning & Gợi Ý Phim:** Thuật toán **Hybrid LightFM** kết hợp lọc cộng tác và đặc trưng nội dung (WARP Loss) phục vụ gợi ý cá nhân hóa Top-K ([recommend.py](recommend.py)), kèm engine **Most Popular** giải quyết bài toán Cold-Start.
 
 ---
 
@@ -310,28 +352,48 @@ python recommend.py --user-id 15 --top-k 10
 
 ---
 
-## 8. Cấu hình Hạ tầng & Hướng dẫn Triển khai Nhanh
+### 8.1. Thông tin Cổng Dịch vụ & Kết nối Cơ sở Dữ liệu
 
-### 8.1. Thông tin Cổng Dịch vụ & Kết nối
+Toàn bộ thông số kết nối đã được thiết lập đầy đủ trong file [`.env`](.env):
 
-| Dịch vụ | Địa chỉ | Port | Tài khoản mặc định | Cơ sở dữ liệu / Tài nguyên |
-|---|---|---:|---|---|
-| **PostgreSQL Data Warehouse** | `localhost` | **`5434`** | Cấu hình trong `.env` | Database: `dw_movies` |
-| **MinIO Web Console** | `http://localhost:9001` | **`9001`** | Cấu hình trong `.env` | Giao diện quản lý Data Lake |
-| **MinIO S3 API Endpoint** | `localhost:9000` | **`9000`** | Cấu hình trong `.env` | Bucket: `raw-datalake` |
-| **Airflow Web UI** | `http://localhost:8080` | **`8080`** | Cấu hình trong `.env` | DAG: `movielens_data_warehouse_etl` |
+| Dịch vụ | Địa chỉ Host | Cổng (Port) | Tài khoản (User) | Mật khẩu (Password) | Database / Bucket | Ghi chú & Mục đích |
+|---|---|---:|---|---|---|---|
+| **PostgreSQL Data Warehouse** | `localhost` | **`5434`** | `dw_user` | `dw_password` | `dw_movies` | Kho dữ liệu OLAP (Power BI, DBeaver, Python) |
+| **MinIO Web Console** | `http://localhost:9001` | **`9001`** | `minioadmin` | `minioadmin` | - | Giao diện Web quản trị Data Lake |
+| **MinIO S3 API Endpoint** | `localhost:9000` | **`9000`** | `minioadmin` | `minioadmin` | `raw-datalake` | Endpoint S3 API nạp/xuất dữ liệu thô |
+| **Airflow Web UI** | `http://localhost:8080` | **`8080`** | `admin` | `admin` | - | Giao diện điều phối & kích hoạt DAG |
+| **Airflow Metadata DB** | `airflow-db` (nội bộ) | `5432` | `airflow` | `airflow_password` | `airflow` | CSDL lưu trạng thái nội bộ của Airflow |
 
-*Chuỗi kết nối chuẩn (PostgreSQL Connection String):*
-```text
-postgresql://<DW_USER>:<DW_PASSWORD>@localhost:5434/<DW_DATABASE>
-```
+#### Chuỗi kết nối chuẩn (Connection Strings):
+- **Python / SQLAlchemy (dùng cho script ngoài Docker hoặc máy host Windows):**
+  ```text
+  postgresql+psycopg2://dw_user:dw_password@localhost:5434/dw_movies
+  ```
+- **Java / JDBC (dùng cho DBeaver, DataGrip, Navicat, v.v.):**
+  ```text
+  jdbc:postgresql://localhost:5434/dw_movies
+  ```
+- **Lệnh kết nối nhanh qua dòng lệnh (psql qua Docker container):**
+  ```powershell
+  docker compose exec postgres-dw psql -U dw_user -d dw_movies
+  ```
+
+#### Hướng dẫn kết nối từ các công cụ phổ biến:
+1. **Power BI Desktop:**
+   - Chọn **Get Data** $\rightarrow$ **PostgreSQL database**.
+   - **Server:** `localhost:5434` | **Database:** `dw_movies` | **Data Connectivity mode:** `Import`.
+   - **User:** `dw_user` | **Password:** `dw_password`.
+2. **DBeaver / DataGrip / pgAdmin:**
+   - **Host:** `localhost` | **Port:** `5434` | **Database:** `dw_movies`.
+   - **Username:** `dw_user` | **Password:** `dw_password`.
+3. **Môi trường nội bộ giữa các container trong Docker:**
+   - Host nội bộ: `postgres-dw` | Port nội bộ: `5432` (URL: `postgresql+psycopg2://dw_user:dw_password@postgres-dw:5432/dw_movies`).
 
 ### 8.2. Hướng dẫn Khởi chạy Hệ thống
 
 #### Bước 1: Thiết lập biến môi trường
-Tạo file `.env` từ file mẫu và chỉnh sửa mật khẩu theo ý muốn:
+Kiểm tra hoặc tùy chỉnh các biến môi trường và mật khẩu trong file `.env`:
 ```powershell
-Copy-Item .env.example .env
 notepad .env
 ```
 

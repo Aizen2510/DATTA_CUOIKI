@@ -3,7 +3,7 @@ set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 if [[ ! -f .env ]]; then
-  echo "Missing .env. Copy .env.example to .env and set private credentials first." >&2
+  echo "Missing .env. Please configure .env with credentials first." >&2
   exit 1
 fi
 

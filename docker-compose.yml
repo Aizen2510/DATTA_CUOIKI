@@ -1,6 +1,6 @@
 services:
   minio:
-    image: quay.io/minio/minio:latest
+    image: cgr.dev/chainguard/minio:latest
     container_name: minio_datalake
     ports:
       - "9000:9000"
@@ -91,7 +91,7 @@ services:
     environment: *airflow-environment
     volumes: *airflow-volumes
     ports:
-      - "8081:8080"
+      - "8080:8080"
     command: webserver
     restart: unless-stopped
 
