@@ -78,7 +78,6 @@ flowchart LR
         direction TB
         subgraph BI ["Business Intelligence"]
             PBI["Power BI Dashboard<br/>(MovieLens_TMDB_BI.pbix)"]
-            SQL_QUERY["Truy vấn OLAP SQL<br/>(query_dw.sql)"]
         end
         subgraph ML ["Machine Learning & RecSys"]
             ML_TEST["File Test Truy Vấn & Đánh Giá<br/>(run_ml.bat / recommend.py)"]
